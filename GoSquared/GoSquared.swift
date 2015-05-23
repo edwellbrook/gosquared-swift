@@ -36,6 +36,10 @@ public class GoSquared {
 		return Now(client: self)
 	}()
 
+	lazy public var ecommerce: Ecommerce = {
+		return Ecommerce(client: self)
+	}()
+
 
 	public init(config: GSConfig) {
 		self.config = config

@@ -16,6 +16,10 @@
 		B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
 		B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquared.swift */; };
 		B70F334E1B10F2CA0056DECE /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33191B0FB93A0056DECE /* Now.swift */; };
+		B70F33521B10FCAA0056DECE /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33511B10FCAA0056DECE /* Ecommerce.swift */; };
+		B70F33531B10FCAA0056DECE /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33511B10FCAA0056DECE /* Ecommerce.swift */; };
+		B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
+		B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 		B70F331B1B0FD42D0056DECE /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowTests.swift; sourceTree = "<group>"; };
 		B70F33321B10E91A0056DECE /* GoSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F33511B10FCAA0056DECE /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecommerce.swift; sourceTree = "<group>"; };
+		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,7 @@
 			children = (
 				B70F32F91B0F8CF20056DECE /* GoSquared.h */,
 				B70F33101B0F8D090056DECE /* GoSquared.swift */,
-				B70F33191B0FB93A0056DECE /* Now.swift */,
+				B70F33501B10FC810056DECE /* Namespaces */,
 				B70F32F71B0F8CF20056DECE /* Supporting Files */,
 			);
 			path = GoSquared;
@@ -124,6 +130,7 @@
 		B70F33031B0F8CF20056DECE /* GoSquaredTests */ = {
 			isa = PBXGroup;
 			children = (
+				B70F33571B1107C90056DECE /* EcommerceTests.swift */,
 				B70F331B1B0FD42D0056DECE /* NowTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
@@ -136,6 +143,15 @@
 				B70F33051B0F8CF20056DECE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B70F33501B10FC810056DECE /* Namespaces */ = {
+			isa = PBXGroup;
+			children = (
+				B70F33511B10FCAA0056DECE /* Ecommerce.swift */,
+				B70F33191B0FB93A0056DECE /* Now.swift */,
+			);
+			name = Namespaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F33521B10FCAA0056DECE /* Ecommerce.swift in Sources */,
 				B70F331A1B0FB93A0056DECE /* Now.swift in Sources */,
 				B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */,
 			);
@@ -311,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */,
 				B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F33531B10FCAA0056DECE /* Ecommerce.swift in Sources */,
 				B70F334E1B10F2CA0056DECE /* Now.swift in Sources */,
 				B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */,
 			);
@@ -328,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */,
 				B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
