@@ -13,7 +13,7 @@ public struct GSConfig {
 	let key: String
 	let token: String
 	let URLSession: NSURLSession
-	let baseURL = "https://api.gosquared.com"
+	static let baseURL = "https://api.gosquared.com"
 
 
 	public init(key: String, token: String, URLSession: NSURLSession = NSURLSession.sharedSession()) {
@@ -27,14 +27,13 @@ public struct GSConfig {
 public class GoSquared {
 
 	public typealias Handler = (response: AnyObject?, error: NSError?) -> Void
-	public typealias CompletionHandler = (NSData!, NSURLResponse!, NSError!) -> Void
 
 
-	private let config: GSConfig
+	let config: GSConfig
 
 
 	lazy public var now: Now = {
-		return Now(config: self.config)
+		return Now(client: self)
 	}()
 
 
@@ -42,8 +41,9 @@ public class GoSquared {
 		self.config = config
 	}
 
-	public static func handleResponse(handler: GoSquared.Handler) -> GoSquared.CompletionHandler {
-		return { (data: NSData!, response: NSURLResponse!, error: NSError!) in
+	public func makeRequest(url: NSURL, handler: GoSquared.Handler) {
+		let req = NSURLRequest(URL: url)
+		let task = config.URLSession.dataTaskWithRequest(req, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
 			if error != nil {
 				handler(response: nil, error: error)
 			}
@@ -52,7 +52,8 @@ public class GoSquared {
 			let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: &err)
 
 			handler(response: json, error: err)
-		}
+		})
+		task.resume()
 	}
 
 }
