@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B70F32FA1B0F8CF20056DECE /* GoSquared.h in Headers */ = {isa = PBXBuildFile; fileRef = B70F32F91B0F8CF20056DECE /* GoSquared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70F33001B0F8CF20056DECE /* GoSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F32F41B0F8CF20056DECE /* GoSquared.framework */; };
+		B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquared.swift */; };
+		B70F331A1B0FB93A0056DECE /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33191B0FB93A0056DECE /* Now.swift */; };
+		B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
+		B70F333D1B10E91B0056DECE /* GoSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F33321B10E91A0056DECE /* GoSquared.framework */; };
+		B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
+		B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquared.swift */; };
+		B70F334E1B10F2CA0056DECE /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33191B0FB93A0056DECE /* Now.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B70F33011B0F8CF20056DECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70F32F31B0F8CF20056DECE;
+			remoteInfo = GoSquared;
+		};
+		B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70F33311B10E91A0056DECE;
+			remoteInfo = GoSquared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B70F32F41B0F8CF20056DECE /* GoSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F32F81B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70F32F91B0F8CF20056DECE /* GoSquared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSquared.h; sourceTree = "<group>"; };
+		B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F33051B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70F33101B0F8D090056DECE /* GoSquared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoSquared.swift; sourceTree = "<group>"; };
+		B70F33191B0FB93A0056DECE /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Now.swift; sourceTree = "<group>"; };
+		B70F331B1B0FD42D0056DECE /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowTests.swift; sourceTree = "<group>"; };
+		B70F33321B10E91A0056DECE /* GoSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B70F32F01B0F8CF20056DECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F32FC1B0F8CF20056DECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F33001B0F8CF20056DECE /* GoSquared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F332E1B10E91A0056DECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F33391B10E91B0056DECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F333D1B10E91B0056DECE /* GoSquared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B70F32EA1B0F8CF20056DECE = {
+			isa = PBXGroup;
+			children = (
+				B70F32F61B0F8CF20056DECE /* GoSquared */,
+				B70F33031B0F8CF20056DECE /* GoSquaredTests */,
+				B70F32F51B0F8CF20056DECE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B70F32F51B0F8CF20056DECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B70F32F41B0F8CF20056DECE /* GoSquared.framework */,
+				B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */,
+				B70F33321B10E91A0056DECE /* GoSquared.framework */,
+				B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B70F32F61B0F8CF20056DECE /* GoSquared */ = {
+			isa = PBXGroup;
+			children = (
+				B70F32F91B0F8CF20056DECE /* GoSquared.h */,
+				B70F33101B0F8D090056DECE /* GoSquared.swift */,
+				B70F33191B0FB93A0056DECE /* Now.swift */,
+				B70F32F71B0F8CF20056DECE /* Supporting Files */,
+			);
+			path = GoSquared;
+			sourceTree = "<group>";
+		};
+		B70F32F71B0F8CF20056DECE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B70F32F81B0F8CF20056DECE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B70F33031B0F8CF20056DECE /* GoSquaredTests */ = {
+			isa = PBXGroup;
+			children = (
+				B70F331B1B0FD42D0056DECE /* NowTests.swift */,
+				B70F33041B0F8CF20056DECE /* Supporting Files */,
+			);
+			path = GoSquaredTests;
+			sourceTree = "<group>";
+		};
+		B70F33041B0F8CF20056DECE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B70F33051B0F8CF20056DECE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B70F32F11B0F8CF20056DECE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F32FA1B0F8CF20056DECE /* GoSquared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F332F1B10E91A0056DECE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B70F32F31B0F8CF20056DECE /* GoSquared iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS" */;
+			buildPhases = (
+				B70F32EF1B0F8CF20056DECE /* Sources */,
+				B70F32F01B0F8CF20056DECE /* Frameworks */,
+				B70F32F11B0F8CF20056DECE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoSquared iOS";
+			productName = GoSquared;
+			productReference = B70F32F41B0F8CF20056DECE /* GoSquared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B70F32FE1B0F8CF20056DECE /* GoSquared iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS Tests" */;
+			buildPhases = (
+				B70F32FB1B0F8CF20056DECE /* Sources */,
+				B70F32FC1B0F8CF20056DECE /* Frameworks */,
+				B70F32FD1B0F8CF20056DECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B70F33021B0F8CF20056DECE /* PBXTargetDependency */,
+			);
+			name = "GoSquared iOS Tests";
+			productName = GoSquaredTests;
+			productReference = B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B70F33311B10E91A0056DECE /* GoSquared OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX" */;
+			buildPhases = (
+				B70F332D1B10E91A0056DECE /* Sources */,
+				B70F332E1B10E91A0056DECE /* Frameworks */,
+				B70F332F1B10E91A0056DECE /* Headers */,
+				B70F33301B10E91A0056DECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoSquared OSX";
+			productName = GoSquared;
+			productReference = B70F33321B10E91A0056DECE /* GoSquared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B70F333B1B10E91B0056DECE /* GoSquared OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX Tests" */;
+			buildPhases = (
+				B70F33381B10E91B0056DECE /* Sources */,
+				B70F33391B10E91B0056DECE /* Frameworks */,
+				B70F333A1B10E91B0056DECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B70F333F1B10E91B0056DECE /* PBXTargetDependency */,
+			);
+			name = "GoSquared OSX Tests";
+			productName = GoSquaredTests;
+			productReference = B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B70F32EB1B0F8CF20056DECE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Go Squared Ltd";
+				TargetAttributes = {
+					B70F32F31B0F8CF20056DECE = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					B70F32FE1B0F8CF20056DECE = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					B70F33311B10E91A0056DECE = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					B70F333B1B10E91B0056DECE = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquared" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B70F32EA1B0F8CF20056DECE;
+			productRefGroup = B70F32F51B0F8CF20056DECE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B70F32F31B0F8CF20056DECE /* GoSquared iOS */,
+				B70F32FE1B0F8CF20056DECE /* GoSquared iOS Tests */,
+				B70F33311B10E91A0056DECE /* GoSquared OSX */,
+				B70F333B1B10E91B0056DECE /* GoSquared OSX Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B70F32FD1B0F8CF20056DECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F33301B10E91A0056DECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F333A1B10E91B0056DECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B70F32EF1B0F8CF20056DECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F331A1B0FB93A0056DECE /* Now.swift in Sources */,
+				B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F32FB1B0F8CF20056DECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F332D1B10E91A0056DECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F334E1B10F2CA0056DECE /* Now.swift in Sources */,
+				B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70F33381B10E91B0056DECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B70F33021B0F8CF20056DECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70F32F31B0F8CF20056DECE /* GoSquared iOS */;
+			targetProxy = B70F33011B0F8CF20056DECE /* PBXContainerItemProxy */;
+		};
+		B70F333F1B10E91B0056DECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70F33311B10E91A0056DECE /* GoSquared OSX */;
+			targetProxy = B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B70F33081B0F8CF20056DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B70F33091B0F8CF20056DECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B70F330B1B0F8CF20056DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = GoSquared;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B70F330C1B0F8CF20056DECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = GoSquared;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B70F330E1B0F8CF20056DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B70F330F1B0F8CF20056DECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B70F33461B10E91B0056DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = GoSquared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B70F33471B10E91B0056DECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = GoSquared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B70F33491B10E91B0056DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B70F334A1B10E91B0056DECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70F33081B0F8CF20056DECE /* Debug */,
+				B70F33091B0F8CF20056DECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70F330B1B0F8CF20056DECE /* Debug */,
+				B70F330C1B0F8CF20056DECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70F330E1B0F8CF20056DECE /* Debug */,
+				B70F330F1B0F8CF20056DECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70F33461B10E91B0056DECE /* Debug */,
+				B70F33471B10E91B0056DECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70F33491B10E91B0056DECE /* Debug */,
+				B70F334A1B10E91B0056DECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B70F32EB1B0F8CF20056DECE /* Project object */;
+}
