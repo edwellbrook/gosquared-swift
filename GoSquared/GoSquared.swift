@@ -32,12 +32,16 @@ public class GoSquared {
 	let config: GSConfig
 
 
-	lazy public var now: Now = {
-		return Now(client: self)
+	lazy public var account: Account = {
+		return Account(client: self)
 	}()
 
 	lazy public var ecommerce: Ecommerce = {
 		return Ecommerce(client: self)
+	}()
+
+	lazy public var now: Now = {
+		return Now(client: self)
 	}()
 
 

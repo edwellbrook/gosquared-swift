@@ -20,6 +20,10 @@
 		B70F33531B10FCAA0056DECE /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33511B10FCAA0056DECE /* Ecommerce.swift */; };
 		B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
 		B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
+		B70F335B1B111D0A0056DECE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335A1B111D0A0056DECE /* Account.swift */; };
+		B70F335C1B111D0A0056DECE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335A1B111D0A0056DECE /* Account.swift */; };
+		B70F335E1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
+		B70F335F1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,8 @@
 		B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F33511B10FCAA0056DECE /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecommerce.swift; sourceTree = "<group>"; };
 		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
+		B70F335A1B111D0A0056DECE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B70F335D1B111EEA0056DECE /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 		B70F33031B0F8CF20056DECE /* GoSquaredTests */ = {
 			isa = PBXGroup;
 			children = (
+				B70F335D1B111EEA0056DECE /* AccountTests.swift */,
 				B70F33571B1107C90056DECE /* EcommerceTests.swift */,
 				B70F331B1B0FD42D0056DECE /* NowTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
@@ -148,6 +155,7 @@
 		B70F33501B10FC810056DECE /* Namespaces */ = {
 			isa = PBXGroup;
 			children = (
+				B70F335A1B111D0A0056DECE /* Account.swift */,
 				B70F33511B10FCAA0056DECE /* Ecommerce.swift */,
 				B70F33191B0FB93A0056DECE /* Now.swift */,
 			);
@@ -319,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70F33521B10FCAA0056DECE /* Ecommerce.swift in Sources */,
+				B70F335B1B111D0A0056DECE /* Account.swift in Sources */,
 				B70F331A1B0FB93A0056DECE /* Now.swift in Sources */,
 				B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */,
 			);
@@ -329,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */,
+				B70F335E1B111EEA0056DECE /* AccountTests.swift in Sources */,
 				B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70F33531B10FCAA0056DECE /* Ecommerce.swift in Sources */,
+				B70F335C1B111D0A0056DECE /* Account.swift in Sources */,
 				B70F334E1B10F2CA0056DECE /* Now.swift in Sources */,
 				B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */,
 			);
@@ -348,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */,
+				B70F335F1B111EEA0056DECE /* AccountTests.swift in Sources */,
 				B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
