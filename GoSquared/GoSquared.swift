@@ -45,7 +45,7 @@ public class GoSquared {
 		self.config = config
 	}
 
-	public func makeRequest(url: NSURL, handler: GoSquared.Handler) {
+	func makeRequest(url: NSURL, handler: GoSquared.Handler) {
 		let req = NSURLRequest(URL: url)
 		let task = config.URLSession.dataTaskWithRequest(req, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
 			if error != nil {
