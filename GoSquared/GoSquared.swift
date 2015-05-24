@@ -31,35 +31,26 @@ public class GoSquared {
 
 	let config: GSConfig
 
-
-	lazy public var account: Account = {
-		return Account(client: self)
-	}()
-
-	lazy public var ecommerce: Ecommerce = {
-		return Ecommerce(client: self)
-	}()
-
-	lazy public var now: Now = {
-		return Now(client: self)
-	}()
+	lazy public var account: Account = Account(client: self)
+	lazy public var ecommerce: Ecommerce = Ecommerce(client: self)
+	lazy public var now: Now = Now(client: self)
 
 
 	public init(config: GSConfig) {
 		self.config = config
 	}
 
-	func makeRequest(url: NSURL, handler: GoSquared.Handler) {
-		let req = NSURLRequest(URL: url)
-		let task = config.URLSession.dataTaskWithRequest(req, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
+
+	func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) {
+		let task = config.URLSession.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
 			if error != nil {
-				handler(response: nil, error: error)
+				handler?(response: nil, error: error)
 			}
 
 			var err: NSError?
 			let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: &err)
 
-			handler(response: json, error: err)
+			handler?(response: json, error: err)
 		})
 		task.resume()
 	}

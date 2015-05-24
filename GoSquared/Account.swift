@@ -26,54 +26,60 @@ public class Account {
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/alertPreferences/
 	//
-	public func alertPreferences(handler: GoSquared.Handler) {
+	public func alertPreferences(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/alertPreferences/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/blocked/
 	//
-	public func blocked(handler: GoSquared.Handler) {
+	public func blocked(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/blocked/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/reportPreferences/
 	//
-	public func reportPreferences(handler: GoSquared.Handler) {
+	public func reportPreferences(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/reportPreferences/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/sharedUsers/
 	//
-	public func sharedUsers(handler: GoSquared.Handler) {
+	public func sharedUsers(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/sharedUsers/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/sites/
 	//
-	public func sites(handler: GoSquared.Handler) {
+	public func sites(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/sites/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/account/v1/taggedVisitors/
 	//
-	public func taggedVisitors(handler: GoSquared.Handler) {
+	public func taggedVisitors(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/taggedVisitors/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 }

@@ -26,81 +26,90 @@ public class Ecommerce {
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/aggregate/
 	//
-	public func aggregate(handler: GoSquared.Handler) {
+	public func aggregate(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/aggregate/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/browser/
 	//
-	public func browser(handler: GoSquared.Handler) {
+	public func browser(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/browser/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/category/
 	//
-	public func category(handler: GoSquared.Handler) {
+	public func category(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/category/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/country/
 	//
-	public func country(handler: GoSquared.Handler) {
+	public func country(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/country/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/language/
 	//
-	public func language(handler: GoSquared.Handler) {
+	public func language(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/language/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/os/
 	//
-	public func os(handler: GoSquared.Handler) {
+	public func os(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/os/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/product/
 	//
-	public func product(handler: GoSquared.Handler) {
+	public func product(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/product/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/sources/
 	//
-	public func sources(handler: GoSquared.Handler) {
+	public func sources(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/sources/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 	//
 	// docs:
 	// https://www.gosquared.com/developer/api/ecommerce/v1/transaction/
 	//
-	public func transaction(handler: GoSquared.Handler) {
+	public func transaction(completionHandler: GoSquared.Handler) {
 		let url = NSURL(string: "\(baseURL)/transaction/?api_key=\(key)&site_token=\(token)")!
-		client.makeRequest(url, handler: handler)
+		let req = NSURLRequest(URL: url)
+		client.makeRequest(req, handler: completionHandler)
 	}
 
 }
