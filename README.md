@@ -8,7 +8,7 @@ GoSquared API in Swift
 import GoSquared
 
 // Setup a client
-let gs = GoSquared(config: GSConfig(key: "your key", token: "your site token"))
+let gs = GoSquared(key: "your key", token: "your site token")
 
 // Track an event with optional addtional information
 gs.tracking.event("Event Name", data: [

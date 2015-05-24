@@ -16,10 +16,10 @@ public class Tracking {
 	private let baseURL: String
 
 	public init(client: GoSquared) {
-		self.key = client.config.key
-		self.token = client.config.token
+		self.key = client.key
+		self.token = client.token
 		self.client = client
-		self.baseURL = "\(GSConfig.baseURL)/tracking/v1/"
+		self.baseURL = "\(GoSquared.baseURL)/tracking/v1/"
 	}
 
 	//

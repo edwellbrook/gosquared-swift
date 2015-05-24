@@ -8,28 +8,15 @@
 
 import Foundation
 
-public struct GSConfig {
-
-	let key: String
-	let token: String
-	let URLSession: NSURLSession
-	static let baseURL = "https://api.gosquared.com"
-
-
-	public init(key: String, token: String, URLSession: NSURLSession = NSURLSession.sharedSession()) {
-		self.key = key
-		self.token = token
-		self.URLSession = URLSession
-	}
-
-}
-
 public class GoSquared {
 
 	public typealias Handler = (response: AnyObject?, error: NSError?) -> Void
 
 
-	let config: GSConfig
+	let key: String
+	let token: String
+	let URLSession: NSURLSession
+	static let baseURL = "https://api.gosquared.com"
 
 	lazy public var account: Account = Account(client: self)
 	lazy public var ecommerce: Ecommerce = Ecommerce(client: self)
@@ -37,13 +24,15 @@ public class GoSquared {
 	lazy public var tracking: Tracking = Tracking(client: self)
 
 
-	public init(config: GSConfig) {
-		self.config = config
-	}
+	public init(key: String, token: String, URLSession: NSURLSession = NSURLSession.sharedSession()) {
+ 		self.key = key
+ 		self.token = token
+ 		self.URLSession = URLSession
+ 	}
 
 
 	func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) {
-		let task = config.URLSession.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
+		let task = self.URLSession.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) in
 			if error != nil {
 				handler?(response: nil, error: error)
 			}

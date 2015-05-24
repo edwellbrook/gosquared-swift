@@ -11,7 +11,7 @@ import GoSquared
 
 class NowTests: XCTestCase {
 
-	let gosquared = GoSquared(config: GSConfig(key: "demo", token: "GSN-106863-S"))
+	let gosquared = GoSquared(key: "demo", token: "GSN-106863-S")
 
 
 	func testAggregateStats() {
