@@ -34,6 +34,7 @@ public class GoSquared {
 	lazy public var account: Account = Account(client: self)
 	lazy public var ecommerce: Ecommerce = Ecommerce(client: self)
 	lazy public var now: Now = Now(client: self)
+	lazy public var tracking: Tracking = Tracking(client: self)
 
 
 	public init(config: GSConfig) {
