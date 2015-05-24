@@ -80,6 +80,10 @@ public class Tracking {
 		client.makeRequest(req, handler: completionHandler)
 	}
 
+	//
+	// docs:
+	// https://www.gosquared.com/docs/tracking/api/http#events
+	//
 	public func userEvent(id: String, name: String, data: [String: AnyObject]? = nil, completionHandler: GoSquared.Handler? = nil) {
 		let url = NSURL(string: "\(baseURL)/event/?api_key=\(key)&site_token=\(token)")!
 		let req = NSMutableURLRequest(URL: url)
