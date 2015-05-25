@@ -2,7 +2,7 @@
 
 GoSquared API in Swift
 
-## Example Installation
+## Installation
 
 Until this libary is completed, the best way to use install it is with git submodules:
 
