@@ -46,3 +46,9 @@ public class GoSquared {
     }
 
 }
+
+func iso8601(string: String) -> NSDate? {
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+    return formatter.dateFromString(string)
+}
