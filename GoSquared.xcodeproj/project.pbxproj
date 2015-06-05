@@ -20,24 +20,24 @@
 		B70F335F1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
 		B70F33661B1148180056DECE /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33651B1148180056DECE /* TrackingTests.swift */; };
 		B70F33671B1148180056DECE /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33651B1148180056DECE /* TrackingTests.swift */; };
-		B7F25B431B225EA7009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3A1B225EA7009D8E97 /* Account.swift */; };
-		B7F25B441B225EA7009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3A1B225EA7009D8E97 /* Account.swift */; };
-		B7F25B451B225EA7009D8E97 /* Concurrents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3B1B225EA7009D8E97 /* Concurrents.swift */; };
-		B7F25B461B225EA7009D8E97 /* Concurrents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3B1B225EA7009D8E97 /* Concurrents.swift */; };
-		B7F25B471B225EA7009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3C1B225EA7009D8E97 /* Ecommerce.swift */; };
-		B7F25B481B225EA7009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3C1B225EA7009D8E97 /* Ecommerce.swift */; };
-		B7F25B491B225EA7009D8E97 /* Engagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3D1B225EA7009D8E97 /* Engagement.swift */; };
-		B7F25B4A1B225EA7009D8E97 /* Engagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3D1B225EA7009D8E97 /* Engagement.swift */; };
-		B7F25B4B1B225EA7009D8E97 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3E1B225EA7009D8E97 /* Geo.swift */; };
-		B7F25B4C1B225EA7009D8E97 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3E1B225EA7009D8E97 /* Geo.swift */; };
-		B7F25B4D1B225EA7009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3F1B225EA7009D8E97 /* Now.swift */; };
-		B7F25B4E1B225EA7009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B3F1B225EA7009D8E97 /* Now.swift */; };
-		B7F25B4F1B225EA7009D8E97 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B401B225EA7009D8E97 /* Overview.swift */; };
-		B7F25B501B225EA7009D8E97 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B401B225EA7009D8E97 /* Overview.swift */; };
-		B7F25B511B225EA7009D8E97 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B411B225EA7009D8E97 /* Pages.swift */; };
-		B7F25B521B225EA7009D8E97 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B411B225EA7009D8E97 /* Pages.swift */; };
-		B7F25B531B225EA7009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B421B225EA7009D8E97 /* Tracking.swift */; };
-		B7F25B541B225EA7009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B421B225EA7009D8E97 /* Tracking.swift */; };
+		B7F25B591B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
+		B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
+		B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
+		B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
+		B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B571B225F7E009D8E97 /* Now.swift */; };
+		B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B571B225F7E009D8E97 /* Now.swift */; };
+		B7F25B5F1B225F7E009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B581B225F7E009D8E97 /* Tracking.swift */; };
+		B7F25B601B225F7E009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B581B225F7E009D8E97 /* Tracking.swift */; };
+		B7F25B661B225F8C009D8E97 /* Concurrents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B611B225F8C009D8E97 /* Concurrents.swift */; };
+		B7F25B671B225F8C009D8E97 /* Concurrents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B611B225F8C009D8E97 /* Concurrents.swift */; };
+		B7F25B681B225F8C009D8E97 /* Engagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B621B225F8C009D8E97 /* Engagement.swift */; };
+		B7F25B691B225F8C009D8E97 /* Engagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B621B225F8C009D8E97 /* Engagement.swift */; };
+		B7F25B6A1B225F8C009D8E97 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B631B225F8C009D8E97 /* Geo.swift */; };
+		B7F25B6B1B225F8C009D8E97 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B631B225F8C009D8E97 /* Geo.swift */; };
+		B7F25B6C1B225F8C009D8E97 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B641B225F8C009D8E97 /* Overview.swift */; };
+		B7F25B6D1B225F8C009D8E97 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B641B225F8C009D8E97 /* Overview.swift */; };
+		B7F25B6E1B225F8C009D8E97 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B651B225F8C009D8E97 /* Pages.swift */; };
+		B7F25B6F1B225F8C009D8E97 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B651B225F8C009D8E97 /* Pages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,15 +70,15 @@
 		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
 		B70F335D1B111EEA0056DECE /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		B70F33651B1148180056DECE /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
-		B7F25B3A1B225EA7009D8E97 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		B7F25B3B1B225EA7009D8E97 /* Concurrents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concurrents.swift; sourceTree = "<group>"; };
-		B7F25B3C1B225EA7009D8E97 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecommerce.swift; sourceTree = "<group>"; };
-		B7F25B3D1B225EA7009D8E97 /* Engagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engagement.swift; sourceTree = "<group>"; };
-		B7F25B3E1B225EA7009D8E97 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
-		B7F25B3F1B225EA7009D8E97 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Now.swift; sourceTree = "<group>"; };
-		B7F25B401B225EA7009D8E97 /* Overview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
-		B7F25B411B225EA7009D8E97 /* Pages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
-		B7F25B421B225EA7009D8E97 /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		B7F25B551B225F7E009D8E97 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Namespaces/Account.swift; sourceTree = "<group>"; };
+		B7F25B561B225F7E009D8E97 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Namespaces/Ecommerce.swift; sourceTree = "<group>"; };
+		B7F25B571B225F7E009D8E97 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Namespaces/Now.swift; sourceTree = "<group>"; };
+		B7F25B581B225F7E009D8E97 /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tracking.swift; path = Namespaces/Tracking.swift; sourceTree = "<group>"; };
+		B7F25B611B225F8C009D8E97 /* Concurrents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Concurrents.swift; path = Responses/Concurrents.swift; sourceTree = "<group>"; };
+		B7F25B621B225F8C009D8E97 /* Engagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Engagement.swift; path = Responses/Engagement.swift; sourceTree = "<group>"; };
+		B7F25B631B225F8C009D8E97 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geo.swift; path = Responses/Geo.swift; sourceTree = "<group>"; };
+		B7F25B641B225F8C009D8E97 /* Overview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Overview.swift; path = Responses/Overview.swift; sourceTree = "<group>"; };
+		B7F25B651B225F8C009D8E97 /* Pages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pages.swift; path = Responses/Pages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +178,10 @@
 		B7F25B1D1B22599F009D8E97 /* Namespaces */ = {
 			isa = PBXGroup;
 			children = (
-				B7F25B3A1B225EA7009D8E97 /* Account.swift */,
-				B7F25B3C1B225EA7009D8E97 /* Ecommerce.swift */,
-				B7F25B3F1B225EA7009D8E97 /* Now.swift */,
-				B7F25B421B225EA7009D8E97 /* Tracking.swift */,
+				B7F25B551B225F7E009D8E97 /* Account.swift */,
+				B7F25B561B225F7E009D8E97 /* Ecommerce.swift */,
+				B7F25B571B225F7E009D8E97 /* Now.swift */,
+				B7F25B581B225F7E009D8E97 /* Tracking.swift */,
 			);
 			name = Namespaces;
 			sourceTree = "<group>";
@@ -189,11 +189,11 @@
 		B7F25B2A1B2259B5009D8E97 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				B7F25B3B1B225EA7009D8E97 /* Concurrents.swift */,
-				B7F25B3D1B225EA7009D8E97 /* Engagement.swift */,
-				B7F25B3E1B225EA7009D8E97 /* Geo.swift */,
-				B7F25B401B225EA7009D8E97 /* Overview.swift */,
-				B7F25B411B225EA7009D8E97 /* Pages.swift */,
+				B7F25B611B225F8C009D8E97 /* Concurrents.swift */,
+				B7F25B621B225F8C009D8E97 /* Engagement.swift */,
+				B7F25B631B225F8C009D8E97 /* Geo.swift */,
+				B7F25B641B225F8C009D8E97 /* Overview.swift */,
+				B7F25B651B225F8C009D8E97 /* Pages.swift */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -362,16 +362,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F25B431B225EA7009D8E97 /* Account.swift in Sources */,
-				B7F25B531B225EA7009D8E97 /* Tracking.swift in Sources */,
-				B7F25B511B225EA7009D8E97 /* Pages.swift in Sources */,
-				B7F25B451B225EA7009D8E97 /* Concurrents.swift in Sources */,
-				B7F25B4D1B225EA7009D8E97 /* Now.swift in Sources */,
-				B7F25B4F1B225EA7009D8E97 /* Overview.swift in Sources */,
-				B7F25B491B225EA7009D8E97 /* Engagement.swift in Sources */,
+				B7F25B661B225F8C009D8E97 /* Concurrents.swift in Sources */,
+				B7F25B681B225F8C009D8E97 /* Engagement.swift in Sources */,
+				B7F25B6E1B225F8C009D8E97 /* Pages.swift in Sources */,
+				B7F25B5F1B225F7E009D8E97 /* Tracking.swift in Sources */,
+				B7F25B6C1B225F8C009D8E97 /* Overview.swift in Sources */,
+				B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */,
+				B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */,
-				B7F25B471B225EA7009D8E97 /* Ecommerce.swift in Sources */,
-				B7F25B4B1B225EA7009D8E97 /* Geo.swift in Sources */,
+				B7F25B591B225F7E009D8E97 /* Account.swift in Sources */,
+				B7F25B6A1B225F8C009D8E97 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,16 +390,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F25B441B225EA7009D8E97 /* Account.swift in Sources */,
-				B7F25B541B225EA7009D8E97 /* Tracking.swift in Sources */,
-				B7F25B521B225EA7009D8E97 /* Pages.swift in Sources */,
-				B7F25B461B225EA7009D8E97 /* Concurrents.swift in Sources */,
-				B7F25B4E1B225EA7009D8E97 /* Now.swift in Sources */,
-				B7F25B501B225EA7009D8E97 /* Overview.swift in Sources */,
-				B7F25B4A1B225EA7009D8E97 /* Engagement.swift in Sources */,
+				B7F25B671B225F8C009D8E97 /* Concurrents.swift in Sources */,
+				B7F25B691B225F8C009D8E97 /* Engagement.swift in Sources */,
+				B7F25B6F1B225F8C009D8E97 /* Pages.swift in Sources */,
+				B7F25B601B225F7E009D8E97 /* Tracking.swift in Sources */,
+				B7F25B6D1B225F8C009D8E97 /* Overview.swift in Sources */,
+				B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */,
+				B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */,
-				B7F25B481B225EA7009D8E97 /* Ecommerce.swift in Sources */,
-				B7F25B4C1B225EA7009D8E97 /* Geo.swift in Sources */,
+				B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */,
+				B7F25B6B1B225F8C009D8E97 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
