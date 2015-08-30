@@ -4,7 +4,7 @@ GoSquared API in Swift
 
 ## Installation
 
-Until this libary is completed, the best way to use install it is with git submodules:
+Until this libary is completed, the best way to install is with git submodules:
 
  - In your project directory, run: `git submodule add git@github.com:edwellbrook/gosquared-swift.git`
  - Drag in `GoSquared.xcodeproj` into the sidebar of you project in Xcode
