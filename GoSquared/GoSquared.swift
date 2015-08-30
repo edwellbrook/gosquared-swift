@@ -22,6 +22,7 @@ public class GoSquared {
     lazy public var ecommerce: Ecommerce = Ecommerce(client: self)
     lazy public var now: Now = Now(client: self)
     lazy public var tracking: Tracking = Tracking(client: self)
+    lazy public var people: People = People(client: self)
 
 
     public init(key: String, token: String, URLSession: NSURLSession = NSURLSession.sharedSession()) {
