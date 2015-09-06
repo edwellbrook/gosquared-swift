@@ -22,16 +22,16 @@ public class People {
         self.baseURL = "\(GoSquared.baseURL)/people/v1"
     }
 
-    public func search(query: String = "", count: Int = 35, offset: Int = 0, completionHandler: GoSquared.Handler? = nil) {
+    public func search(query: String = "", count: Int = 35, offset: Int = 0, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask {
         let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&limit=\(offset),\(count)&sort=last.seen:desc")!
         let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+        return client.makeRequest(req, handler: completionHandler)
     }
 
-    public func feed(user: Int, completionHandler: GoSquared.Handler? = nil) {
+    public func feed(user: String, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask {
         let url = NSURL(string: "\(baseURL)/person/\(user)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice")!
         let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+        return client.makeRequest(req, handler: completionHandler)
     }
 
 }

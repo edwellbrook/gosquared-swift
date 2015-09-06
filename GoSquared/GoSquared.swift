@@ -32,8 +32,8 @@ public class GoSquared {
     }
 
 
-    func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) {
-        self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
+    func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) -> NSURLSessionDataTask {
+        return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
             if error != nil {
                 handler?(response: nil, error: error)
                 return
@@ -43,7 +43,7 @@ public class GoSquared {
             let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: &err)
 
             handler?(response: json, error: err)
-        }.resume()
+        }
     }
 
 }
