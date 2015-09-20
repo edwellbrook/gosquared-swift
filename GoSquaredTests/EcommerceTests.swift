@@ -20,7 +20,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.aggregate({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -31,7 +31,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.browser({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -42,7 +42,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.category({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -53,7 +53,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.country({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -64,7 +64,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.language({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -75,7 +75,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.os({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -86,7 +86,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.product({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -97,7 +97,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.sources({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -108,7 +108,7 @@ class EcommerceTests: XCTestCase {
         gosquared.ecommerce.transaction({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }

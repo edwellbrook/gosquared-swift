@@ -26,60 +26,60 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/alertPreferences/
     //
-    public func alertPreferences(completionHandler: GoSquared.Handler) {
+    public func alertPreferences(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/alertPreferences/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/blocked/
     //
-    public func blocked(completionHandler: GoSquared.Handler) {
+    public func blocked(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/blocked/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/reportPreferences/
     //
-    public func reportPreferences(completionHandler: GoSquared.Handler) {
+    public func reportPreferences(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/reportPreferences/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/sharedUsers/
     //
-    public func sharedUsers(completionHandler: GoSquared.Handler) {
+    public func sharedUsers(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/sharedUsers/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/sites/
     //
-    public func sites(completionHandler: GoSquared.Handler) {
+    public func sites(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/sites/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/taggedVisitors/
     //
-    public func taggedVisitors(completionHandler: GoSquared.Handler) {
+    public func taggedVisitors(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/taggedVisitors/?api_key=\(key)&site_token=\(token)")!
-        let req = NSURLRequest(URL: url)
-        client.makeRequest(req, handler: completionHandler)
+
+        return client.get(url, handler: completionHandler)
     }
 
 }

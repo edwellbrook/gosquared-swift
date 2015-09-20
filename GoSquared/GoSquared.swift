@@ -32,18 +32,44 @@ public class GoSquared {
     }
 
 
-    func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) -> NSURLSessionDataTask {
+    private func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
         return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
             if error != nil {
                 handler?(response: nil, error: error)
                 return
             }
 
-            var err: NSError?
-            let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: &err)
-
-            handler?(response: json, error: err)
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                handler?(response: json, error: nil)
+            } catch let err as NSError {
+                handler?(response: nil, error: err)
+            }
         }
+    }
+
+
+    func get(url: NSURL, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
+        let request = NSURLRequest(URL: url)
+        return makeRequest(request, handler: handler)
+    }
+    
+
+    func post(url: NSURL, data: AnyObject, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
+        let request = NSMutableURLRequest(URL: url)
+
+        do {
+            let body = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0))
+
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.HTTPMethod = "POST"
+            request.HTTPBody = body
+
+        } catch let err as NSError {
+            handler?(response: nil, error: err)
+        }
+
+        return makeRequest(request, handler: handler)
     }
 
 }

@@ -26,82 +26,68 @@ public class Tracking {
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#identify
     //
-    public func identify(id: String, properties: [String: AnyObject], completionHandler: GoSquared.Handler? = nil) {
+    public func identify(id: String, properties: [String: AnyObject], completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/identify/?api_key=\(key)&site_token=\(token)")!
-        let req = NSMutableURLRequest(URL: url)
-        let data = ["person_id": id, "properties": properties]
+        let data = [
+            "person_id": id,
+            "properties": properties
+        ]
 
-        if let body = NSJSONSerialization.dataWithJSONObject(data, options: .allZeros, error: nil) {
-            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            req.HTTPMethod = "POST"
-            req.HTTPBody = body
-        }
-        
-        client.makeRequest(req, handler: completionHandler)
+        return client.post(url, data: data, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#properties
     //
-    public func properties(id: String, properties: [String: AnyObject], completionHandler: GoSquared.Handler? = nil) {
+    public func properties(id: String, properties: [String: AnyObject], completionHandler: GoSquared.Handler? = nil) -> NSURLSessionTask? {
         let url = NSURL(string: "\(baseURL)/properties/?api_key=\(key)&site_token=\(token)")!
-        let req = NSMutableURLRequest(URL: url)
-        let payload = ["person_id": id, "properties": properties]
+        let data = [
+            "person_id": id,
+            "properties": properties
+        ]
 
-        if let body = NSJSONSerialization.dataWithJSONObject(payload, options: .allZeros, error: nil) {
-            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            req.HTTPMethod = "POST"
-            req.HTTPBody = body
-        }
-
-        client.makeRequest(req, handler: completionHandler)
+        return client.post(url, data: data, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func event(name: String, data: [String: AnyObject]? = nil, completionHandler: GoSquared.Handler? = nil) {
+    public func event(name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/event/?api_key=\(key)&site_token=\(token)")!
-        let req = NSMutableURLRequest(URL: url)
-        var payload: [String: AnyObject] = ["event": name]
+        var data: [String: AnyObject] = [
+            "event": name
+        ]
 
-        if let additional = data {
-            payload.updateValue(additional, forKey: "data")
+        if let additional = properties {
+            data.updateValue(additional, forKey: "data")
         }
 
-        if let body = NSJSONSerialization.dataWithJSONObject(payload, options: .allZeros, error: nil) {
-            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            req.HTTPMethod = "POST"
-            req.HTTPBody = body
-        }
-
-        client.makeRequest(req, handler: completionHandler)
+        return client.post(url, data: data, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func userEvent(id: String, name: String, data: [String: AnyObject]? = nil, completionHandler: GoSquared.Handler? = nil) {
+    public func userEvent(id: String, name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/event/?api_key=\(key)&site_token=\(token)")!
-        let req = NSMutableURLRequest(URL: url)
-        var payload: [String: AnyObject]
+        
+        var event: [String: AnyObject] = [
+            "name": name
+        ]
 
-        if let additional = data {
-            payload = ["person_id": id, "event": ["name": name, "event": additional]]
-        } else {
-            payload = ["person_id": id, "event": ["name": name]]
+        if let props = properties {
+            event["event"] = props
         }
 
-        if let body = NSJSONSerialization.dataWithJSONObject(payload, options: .allZeros, error: nil) {
-            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            req.HTTPMethod = "POST"
-            req.HTTPBody = body
-        }
+        let data: [String: AnyObject] = [
+            "person_id": id,
+            "event": event
+        ]
 
-        client.makeRequest(req, handler: completionHandler)
+        return client.post(url, data: data, handler: completionHandler)
     }
 
 }

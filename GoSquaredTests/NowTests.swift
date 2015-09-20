@@ -20,7 +20,7 @@ class NowTests: XCTestCase {
         gosquared.now.aggregateStats({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -31,7 +31,7 @@ class NowTests: XCTestCase {
         gosquared.now.campaigns({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -42,7 +42,7 @@ class NowTests: XCTestCase {
         gosquared.now.concurrents({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -53,7 +53,7 @@ class NowTests: XCTestCase {
         gosquared.now.engagement({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -64,7 +64,7 @@ class NowTests: XCTestCase {
         gosquared.now.geo({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -75,7 +75,7 @@ class NowTests: XCTestCase {
         gosquared.now.overview({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -86,7 +86,7 @@ class NowTests: XCTestCase {
         gosquared.now.pages({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -97,7 +97,7 @@ class NowTests: XCTestCase {
         gosquared.now.sources({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -108,7 +108,7 @@ class NowTests: XCTestCase {
         gosquared.now.timeSeries({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -119,7 +119,7 @@ class NowTests: XCTestCase {
         gosquared.now.visitors({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }

@@ -20,7 +20,7 @@ class AccountTests: XCTestCase {
         gosquared.account.alertPreferences({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -31,7 +31,7 @@ class AccountTests: XCTestCase {
         gosquared.account.blocked({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -42,7 +42,7 @@ class AccountTests: XCTestCase {
         gosquared.account.reportPreferences({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -53,7 +53,7 @@ class AccountTests: XCTestCase {
         gosquared.account.sharedUsers({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -64,7 +64,7 @@ class AccountTests: XCTestCase {
         gosquared.account.sites({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -75,7 +75,7 @@ class AccountTests: XCTestCase {
         gosquared.account.taggedVisitors({ response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }

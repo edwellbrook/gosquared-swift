@@ -27,7 +27,7 @@ class TrackingTests: XCTestCase {
         gosquared.tracking.identify("test-node-gosquared", properties: props, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -45,7 +45,7 @@ class TrackingTests: XCTestCase {
         gosquared.tracking.properties("test-node-gosquared", properties: props, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -56,10 +56,10 @@ class TrackingTests: XCTestCase {
             "additional": "data"
         ]
 
-        gosquared.tracking.event("Event Name", data: event, completionHandler: { response, error in
+        gosquared.tracking.event("Event Name", properties: event, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
@@ -70,10 +70,10 @@ class TrackingTests: XCTestCase {
             "additional": "data"
         ]
 
-        gosquared.tracking.userEvent("test-node-gosquared", name: "Event Name", data: event, completionHandler: { response, error in
+        gosquared.tracking.userEvent("test-node-gosquared", name: "Event Name", properties: event, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
-        })
+        })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
