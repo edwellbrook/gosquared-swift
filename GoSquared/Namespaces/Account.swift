@@ -67,7 +67,7 @@ public class Account {
     // https://www.gosquared.com/developer/api/account/v1/sites/
     //
     public func sites(completionHandler: GoSquared.Handler) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/sites/?api_key=\(key)&site_token=\(token)")!
+        let url = NSURL(string: "\(baseURL)/sites/?api_key=\(key)")!
 
         return client.get(url, handler: completionHandler)
     }

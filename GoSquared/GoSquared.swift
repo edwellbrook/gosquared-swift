@@ -14,8 +14,8 @@ public class GoSquared {
 
 
     let key: String
-    let token: String
     let URLSession: NSURLSession
+    public var token: String
     static let baseURL = "https://api.gosquared.com"
 
     lazy public var account: Account = Account(client: self)
@@ -25,7 +25,7 @@ public class GoSquared {
     lazy public var people: People = People(client: self)
 
 
-    public init(key: String, token: String, URLSession: NSURLSession = NSURLSession.sharedSession()) {
+    public init(key: String, token: String = "", URLSession: NSURLSession = NSURLSession.sharedSession()) {
         self.key = key
         self.token = token
         self.URLSession = URLSession
