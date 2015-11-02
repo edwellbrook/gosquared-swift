@@ -28,6 +28,12 @@ public class People {
         return client.get(url, handler: completionHandler)
     }
 
+    public func details(user: String, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask? {
+        let url = NSURL(string: "\(baseURL)/person/\(user)/details?api_key=\(key)&site_token=\(token)")!
+
+        return client.get(url, handler: completionHandler)
+    }
+
     public func feed(user: String, completionHandler: GoSquared.Handler? = nil) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/person/\(user)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice")!
 
