@@ -1,6 +1,6 @@
 //
 //  Overview.swift
-//  GoSquared
+//  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 05/06/2015.
 //  Copyright (c) 2015 Go Squared Ltd. All rights reserved.

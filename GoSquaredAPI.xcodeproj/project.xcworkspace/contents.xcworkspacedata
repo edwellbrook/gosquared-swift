@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GoSquared.xcodeproj">
+      location = "self:GoSquaredAPI.xcodeproj">
    </FileRef>
 </Workspace>

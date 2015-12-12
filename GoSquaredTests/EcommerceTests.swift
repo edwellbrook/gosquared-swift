@@ -1,17 +1,17 @@
 //
 //  EcommerceTests.swift
-//  GoSquared
+//  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 23/05/2015.
 //  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
 //
 
 import XCTest
-@testable import GoSquared
+@testable import GoSquaredAPI
 
 class EcommerceTests: XCTestCase {
 
-    let gosquared = GoSquared(key: "demo", token: "GSN-106863-S")
+    let gosquared = GoSquaredAPI(key: "demo", token: "GSN-106863-S")
 
 
     func testAggregate() {

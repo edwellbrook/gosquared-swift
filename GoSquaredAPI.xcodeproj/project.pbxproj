@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B70F32FA1B0F8CF20056DECE /* GoSquared.h in Headers */ = {isa = PBXBuildFile; fileRef = B70F32F91B0F8CF20056DECE /* GoSquared.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B70F33001B0F8CF20056DECE /* GoSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F32F41B0F8CF20056DECE /* GoSquared.framework */; };
-		B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquared.swift */; };
+		B70F32FA1B0F8CF20056DECE /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70F33001B0F8CF20056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */; };
+		B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */; };
 		B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
-		B70F333D1B10E91B0056DECE /* GoSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F33321B10E91A0056DECE /* GoSquared.framework */; };
+		B70F333D1B10E91B0056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */; };
 		B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
-		B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquared.swift */; };
+		B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */; };
 		B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
 		B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
 		B70F335E1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
@@ -60,15 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B70F32F41B0F8CF20056DECE /* GoSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F32F81B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B70F32F91B0F8CF20056DECE /* GoSquared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSquared.h; sourceTree = "<group>"; };
-		B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSquaredAPI.h; sourceTree = "<group>"; };
+		B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GoSquaredAPI.xctest; path = "GoSquaredAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F33051B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B70F33101B0F8D090056DECE /* GoSquared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoSquared.swift; sourceTree = "<group>"; };
+		B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoSquaredAPI.swift; sourceTree = "<group>"; };
 		B70F331B1B0FD42D0056DECE /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowTests.swift; sourceTree = "<group>"; };
-		B70F33321B10E91A0056DECE /* GoSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquared OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GoSquaredAPI.xctest; path = "GoSquaredAPI OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
 		B70F335D1B111EEA0056DECE /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		B70F33651B1148180056DECE /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F33001B0F8CF20056DECE /* GoSquared.framework in Frameworks */,
+				B70F33001B0F8CF20056DECE /* GoSquaredAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F333D1B10E91B0056DECE /* GoSquared.framework in Frameworks */,
+				B70F333D1B10E91B0056DECE /* GoSquaredAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 		B70F32EA1B0F8CF20056DECE = {
 			isa = PBXGroup;
 			children = (
-				B70F32F61B0F8CF20056DECE /* GoSquared */,
-				B70F33031B0F8CF20056DECE /* GoSquaredTests */,
+				B70F32F61B0F8CF20056DECE /* GoSquaredAPI */,
+				B70F33031B0F8CF20056DECE /* GoSquaredAPITests */,
 				B70F32F51B0F8CF20056DECE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,23 +130,24 @@
 		B70F32F51B0F8CF20056DECE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B70F32F41B0F8CF20056DECE /* GoSquared.framework */,
-				B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */,
-				B70F33321B10E91A0056DECE /* GoSquared.framework */,
-				B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */,
+				B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */,
+				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */,
+				B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */,
+				B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B70F32F61B0F8CF20056DECE /* GoSquared */ = {
+		B70F32F61B0F8CF20056DECE /* GoSquaredAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B70F32F91B0F8CF20056DECE /* GoSquared.h */,
-				B70F33101B0F8D090056DECE /* GoSquared.swift */,
+				B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */,
+				B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */,
 				B7F25B1D1B22599F009D8E97 /* Namespaces */,
 				B7F25B2A1B2259B5009D8E97 /* Responses */,
 				B70F32F71B0F8CF20056DECE /* Supporting Files */,
 			);
+			name = GoSquaredAPI;
 			path = GoSquared;
 			sourceTree = "<group>";
 		};
@@ -158,7 +159,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B70F33031B0F8CF20056DECE /* GoSquaredTests */ = {
+		B70F33031B0F8CF20056DECE /* GoSquaredAPITests */ = {
 			isa = PBXGroup;
 			children = (
 				B70F335D1B111EEA0056DECE /* AccountTests.swift */,
@@ -167,6 +168,7 @@
 				B70F33651B1148180056DECE /* TrackingTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
+			name = GoSquaredAPITests;
 			path = GoSquaredTests;
 			sourceTree = "<group>";
 		};
@@ -209,7 +211,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F32FA1B0F8CF20056DECE /* GoSquared.h in Headers */,
+				B70F32FA1B0F8CF20056DECE /* GoSquaredAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +225,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B70F32F31B0F8CF20056DECE /* GoSquared iOS */ = {
+		B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS" */;
+			buildConfigurationList = B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS" */;
 			buildPhases = (
 				B70F32EF1B0F8CF20056DECE /* Sources */,
 				B70F32F01B0F8CF20056DECE /* Frameworks */,
@@ -235,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = "GoSquared iOS";
+			name = "GoSquaredAPI iOS";
 			productName = GoSquared;
-			productReference = B70F32F41B0F8CF20056DECE /* GoSquared.framework */;
+			productReference = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B70F32FE1B0F8CF20056DECE /* GoSquared iOS Tests */ = {
+		B70F32FE1B0F8CF20056DECE /* GoSquaredAPI iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS Tests" */;
+			buildConfigurationList = B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS Tests" */;
 			buildPhases = (
 				B70F32FB1B0F8CF20056DECE /* Sources */,
 				B70F32FC1B0F8CF20056DECE /* Frameworks */,
@@ -253,14 +255,14 @@
 			dependencies = (
 				B70F33021B0F8CF20056DECE /* PBXTargetDependency */,
 			);
-			name = "GoSquared iOS Tests";
+			name = "GoSquaredAPI iOS Tests";
 			productName = GoSquaredTests;
-			productReference = B70F32FF1B0F8CF20056DECE /* GoSquared iOS Tests.xctest */;
+			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B70F33311B10E91A0056DECE /* GoSquared OSX */ = {
+		B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX" */;
+			buildConfigurationList = B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX" */;
 			buildPhases = (
 				B70F332D1B10E91A0056DECE /* Sources */,
 				B70F332E1B10E91A0056DECE /* Frameworks */,
@@ -271,14 +273,14 @@
 			);
 			dependencies = (
 			);
-			name = "GoSquared OSX";
+			name = "GoSquaredAPI OSX";
 			productName = GoSquared;
-			productReference = B70F33321B10E91A0056DECE /* GoSquared.framework */;
+			productReference = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B70F333B1B10E91B0056DECE /* GoSquared OSX Tests */ = {
+		B70F333B1B10E91B0056DECE /* GoSquaredAPI OSX Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX Tests" */;
+			buildConfigurationList = B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX Tests" */;
 			buildPhases = (
 				B70F33381B10E91B0056DECE /* Sources */,
 				B70F33391B10E91B0056DECE /* Frameworks */,
@@ -289,9 +291,9 @@
 			dependencies = (
 				B70F333F1B10E91B0056DECE /* PBXTargetDependency */,
 			);
-			name = "GoSquared OSX Tests";
+			name = "GoSquaredAPI OSX Tests";
 			productName = GoSquaredTests;
-			productReference = B70F333C1B10E91B0056DECE /* GoSquared OSX Tests.xctest */;
+			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -318,7 +320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquared" */;
+			buildConfigurationList = B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquaredAPI" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -330,10 +332,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B70F32F31B0F8CF20056DECE /* GoSquared iOS */,
-				B70F32FE1B0F8CF20056DECE /* GoSquared iOS Tests */,
-				B70F33311B10E91A0056DECE /* GoSquared OSX */,
-				B70F333B1B10E91B0056DECE /* GoSquared OSX Tests */,
+				B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */,
+				B70F32FE1B0F8CF20056DECE /* GoSquaredAPI iOS Tests */,
+				B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */,
+				B70F333B1B10E91B0056DECE /* GoSquaredAPI OSX Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,7 +377,7 @@
 				B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */,
 				B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B76F339D1B905C2900D1FB63 /* People.swift in Sources */,
-				B70F33111B0F8D090056DECE /* GoSquared.swift in Sources */,
+				B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B591B225F7E009D8E97 /* Account.swift in Sources */,
 				B7F25B6A1B225F8C009D8E97 /* Geo.swift in Sources */,
 			);
@@ -404,7 +406,7 @@
 				B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */,
 				B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B76F339E1B905C2900D1FB63 /* People.swift in Sources */,
-				B70F334D1B10F2C70056DECE /* GoSquared.swift in Sources */,
+				B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */,
 				B7F25B6B1B225F8C009D8E97 /* Geo.swift in Sources */,
 			);
@@ -426,12 +428,12 @@
 /* Begin PBXTargetDependency section */
 		B70F33021B0F8CF20056DECE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B70F32F31B0F8CF20056DECE /* GoSquared iOS */;
+			target = B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */;
 			targetProxy = B70F33011B0F8CF20056DECE /* PBXContainerItemProxy */;
 		};
 		B70F333F1B10E91B0056DECE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B70F33311B10E91A0056DECE /* GoSquared OSX */;
+			target = B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */;
 			targetProxy = B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -543,7 +545,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquared;
+				PRODUCT_NAME = GoSquaredAPI;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,7 +566,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquared;
+				PRODUCT_NAME = GoSquaredAPI;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -613,7 +615,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquared;
+				PRODUCT_NAME = GoSquaredAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -633,7 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquared;
+				PRODUCT_NAME = GoSquaredAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -681,7 +683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquared" */ = {
+		B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquaredAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B70F33081B0F8CF20056DECE /* Debug */,
@@ -690,7 +692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS" */ = {
+		B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B70F330B1B0F8CF20056DECE /* Debug */,
@@ -699,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquared iOS Tests" */ = {
+		B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B70F330E1B0F8CF20056DECE /* Debug */,
@@ -708,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX" */ = {
+		B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B70F33461B10E91B0056DECE /* Debug */,
@@ -717,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquared OSX Tests" */ = {
+		B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B70F33491B10E91B0056DECE /* Debug */,

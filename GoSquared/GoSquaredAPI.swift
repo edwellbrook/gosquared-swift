@@ -1,6 +1,6 @@
 //
 //  GoSquared.swift
-//  GoSquared
+//  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 22/05/2015.
 //  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class GoSquared {
+public class GoSquaredAPI {
 
     public typealias Handler = (response: AnyObject?, error: NSError?) -> Void
 
@@ -32,7 +32,7 @@ public class GoSquared {
     }
 
 
-    private func makeRequest(request: NSURLRequest, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
+    private func makeRequest(request: NSURLRequest, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
         return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
             if error != nil {
                 handler?(response: nil, error: error)
@@ -49,13 +49,13 @@ public class GoSquared {
     }
 
 
-    func get(url: NSURL, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
+    func get(url: NSURL, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
         let request = NSURLRequest(URL: url)
         return makeRequest(request, handler: handler)
     }
     
 
-    func post(url: NSURL, data: AnyObject, handler: GoSquared.Handler?) -> NSURLSessionDataTask? {
+    func post(url: NSURL, data: AnyObject, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
         let request = NSMutableURLRequest(URL: url)
 
         do {
