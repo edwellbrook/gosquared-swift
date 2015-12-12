@@ -17,6 +17,7 @@ public class GoSquaredAPI {
     let URLSession: NSURLSession
     public var token: String
     static let baseURL = "https://api.gosquared.com"
+    static let stagingBaseURL = "https://api-staging.gosquared.com"
 
     lazy public var account: Account = Account(client: self)
     lazy public var ecommerce: Ecommerce = Ecommerce(client: self)
