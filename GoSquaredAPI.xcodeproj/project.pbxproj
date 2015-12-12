@@ -50,14 +50,14 @@
 			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B70F32F31B0F8CF20056DECE;
-			remoteInfo = GoSquared;
+			remoteInfo = GoSquaredAPI;
 		};
 		B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B70F33311B10E91A0056DECE;
-			remoteInfo = GoSquared;
+			remoteInfo = GoSquaredAPI;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */,
-				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */,
+				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */,
 				B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */,
-				B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */,
+				B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 				B70F32F71B0F8CF20056DECE /* Supporting Files */,
 			);
 			name = GoSquaredAPI;
-			path = GoSquared;
+			path = GoSquaredAPI;
 			sourceTree = "<group>";
 		};
 		B70F32F71B0F8CF20056DECE /* Supporting Files */ = {
@@ -172,7 +172,7 @@
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
 			name = GoSquaredAPITests;
-			path = GoSquaredTests;
+			path = GoSquaredAPITests;
 			sourceTree = "<group>";
 		};
 		B70F33041B0F8CF20056DECE /* Supporting Files */ = {
@@ -189,8 +189,8 @@
 				B7F25B551B225F7E009D8E97 /* Account.swift */,
 				B7F25B561B225F7E009D8E97 /* Ecommerce.swift */,
 				B7F25B571B225F7E009D8E97 /* Now.swift */,
-				B7F25B581B225F7E009D8E97 /* Tracking.swift */,
 				B76F339C1B905C2900D1FB63 /* People.swift */,
+				B7F25B581B225F7E009D8E97 /* Tracking.swift */,
 				B76351921C1CCCDB00E92B01 /* Trends.swift */,
 			);
 			name = Namespaces;
@@ -242,7 +242,7 @@
 			dependencies = (
 			);
 			name = "GoSquaredAPI iOS";
-			productName = GoSquared;
+			productName = GoSquaredAPI;
 			productReference = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -260,8 +260,8 @@
 				B70F33021B0F8CF20056DECE /* PBXTargetDependency */,
 			);
 			name = "GoSquaredAPI iOS Tests";
-			productName = GoSquaredTests;
-			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */;
+			productName = GoSquaredAPITests;
+			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */ = {
@@ -278,7 +278,7 @@
 			dependencies = (
 			);
 			name = "GoSquaredAPI OSX";
-			productName = GoSquared;
+			productName = GoSquaredAPI;
 			productReference = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -296,8 +296,8 @@
 				B70F333F1B10E91B0056DECE /* PBXTargetDependency */,
 			);
 			name = "GoSquaredAPI OSX Tests";
-			productName = GoSquaredTests;
-			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */;
+			productName = GoSquaredAPITests;
+			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -546,7 +546,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -567,7 +567,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -585,7 +585,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -595,7 +595,7 @@
 		B70F330F1B0F8CF20056DECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -616,7 +616,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -636,7 +636,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquared/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -660,7 +660,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
@@ -677,7 +677,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredTests/Info.plist;
+				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
