@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import GoSquared
+@testable import GoSquared
 
 class TrackingTests: XCTestCase {
 
