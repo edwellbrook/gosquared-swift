@@ -24,8 +24,11 @@ public class People {
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/people/v1"
     }
 
-    public func search(query: String = "", count: Int = 35, offset: Int = 0, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&limit=\(offset),\(count)&sort=last.seen:desc")!
+    public func search(query: String = "", filters: String = "[]", count: Int = 35, offset: Int = 0, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
+
+        let fltrs = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+
+        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&filters=\(fltrs!)&limit=\(offset),\(count)&sort=last.seen:desc")!
 
         return client.get(url, handler: completionHandler)
     }

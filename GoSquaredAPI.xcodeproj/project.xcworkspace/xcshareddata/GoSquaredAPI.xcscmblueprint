@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "710AE78A42D498F09291B867E0EBD01326A26ACD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "710AE78A42D498F09291B867E0EBD01326A26ACD" : 0,
+    "A8997737C68869E5FAE05DC2C4BD5FB70139496D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "27E836F3-1A0C-41E9-BE5E-DDD05D8AF3C9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "710AE78A42D498F09291B867E0EBD01326A26ACD" : "gosquared-swift\/",
+    "A8997737C68869E5FAE05DC2C4BD5FB70139496D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GoSquaredAPI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GoSquaredAPI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:edwellbrook\/gosquared-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "710AE78A42D498F09291B867E0EBD01326A26ACD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:edwellbrook\/gosquared-people.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8997737C68869E5FAE05DC2C4BD5FB70139496D"
+    }
+  ]
+}
