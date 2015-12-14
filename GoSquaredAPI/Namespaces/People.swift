@@ -28,7 +28,7 @@ public class People {
 
         let fltrs = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
 
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&filters=\(fltrs!)&limit=\(offset),\(count)&sort=last.seen:desc")!
+        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&rawFilters=\(fltrs!)&limit=\(offset),\(count)&sort=last.seen:desc")!
 
         return client.get(url, handler: completionHandler)
     }
