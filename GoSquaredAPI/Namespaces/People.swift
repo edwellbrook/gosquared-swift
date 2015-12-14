@@ -26,9 +26,10 @@ public class People {
 
     public func search(query: String = "", filters: String = "[]", count: Int = 35, offset: Int = 0, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
 
-        let fltrs = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        let safeFilters = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
 
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(query)&rawFilters=\(fltrs!)&limit=\(offset),\(count)&sort=last.seen:desc")!
+        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&rawFilters=\(safeFilters)&limit=\(offset),\(count)&sort=last.seen:desc")!
 
         return client.get(url, handler: completionHandler)
     }
