@@ -8,6 +8,20 @@
 
 import Foundation
 
+public struct SearchOptions {
+    public var filters: String
+    public var count: Int
+    public var offset: Int
+    public var sort: (key: String, direction: String)
+
+    public init() {
+        self.filters = "[]"
+        self.count = 35
+        self.offset = 0
+        self.sort = (key: "last.seen", direction: "desc")
+    }
+}
+
 public class People {
 
     private let key: String
@@ -24,12 +38,13 @@ public class People {
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/people/v1"
     }
 
-    public func search(query: String = "", filters: String = "[]", count: Int = 35, offset: Int = 0, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
+    public func search(query: String = "", options opts: SearchOptions, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
 
-        let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
-        let safeFilters = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+        let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        let safeFilters = opts.filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        let safeSortKey = opts.sort.key.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
 
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&filters=\(safeFilters)&limit=\(offset),\(count)&sort=last.seen:desc")!
+        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&filters=\(safeFilters)&limit=\(opts.offset),\(opts.count)&sort=\(safeSortKey):\(opts.sort.direction)")!
 
         return client.get(url, handler: completionHandler)
     }
