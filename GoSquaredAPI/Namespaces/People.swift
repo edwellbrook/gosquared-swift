@@ -29,7 +29,7 @@ public class People {
         let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let safeFilters = filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
 
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&rawFilters=\(safeFilters)&limit=\(offset),\(count)&sort=last.seen:desc")!
+        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&filters=\(safeFilters)&limit=\(offset),\(count)&sort=last.seen:desc")!
 
         return client.get(url, handler: completionHandler)
     }
