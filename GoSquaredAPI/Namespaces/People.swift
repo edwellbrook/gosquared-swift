@@ -22,6 +22,18 @@ public struct SearchOptions {
     }
 }
 
+public struct FeedOptions {
+    public var eventTypes: [String]
+    public var count: Int
+    public var offset: Int
+
+    public init() {
+        self.eventTypes = ["sessionEvent", "event"]
+        self.count = 25
+        self.offset = 0
+    }
+}
+
 public class People {
 
     private let key: String
@@ -38,7 +50,7 @@ public class People {
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/people/v1"
     }
 
-    public func search(query: String = "", options opts: SearchOptions, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
+    public func search(query: String = "", options opts: SearchOptions = SearchOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
 
         let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
         let safeFilters = opts.filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
@@ -55,9 +67,9 @@ public class People {
         return client.get(url, handler: completionHandler)
     }
 
-    public func feed(user: String, eventTypes: [String], completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let types = eventTypes.joinWithSeparator(",")
-        let url = NSURL(string: "\(baseURL)/person/\(user)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice&type=\(types)")!
+    public func feed(user: String, options opts: FeedOptions = FeedOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
+        let types = opts.eventTypes.joinWithSeparator(",")
+        let url = NSURL(string: "\(baseURL)/person/\(user)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice&type=\(types)&limit=\(opts.offset),\(opts.count)")!
 
         return client.get(url, handler: completionHandler)
     }
