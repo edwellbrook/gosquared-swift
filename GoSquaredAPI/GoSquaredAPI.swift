@@ -55,7 +55,13 @@ public class GoSquaredAPI {
         let request = NSURLRequest(URL: url)
         return makeRequest(request, handler: handler)
     }
-    
+
+    func delete(url: NSURL, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "DELETE"
+
+        return makeRequest(request, handler: handler)
+    }
 
     func post(url: NSURL, data: AnyObject, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
         let request = NSMutableURLRequest(URL: url)

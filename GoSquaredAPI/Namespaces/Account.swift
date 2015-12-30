@@ -87,7 +87,7 @@ public class Account {
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_webhooks
     //
     public func webhooks(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "https://api.gosquared.com/account/v1/webhooks?api_key=\(key)&site_token=\(token)")!
+        let url = NSURL(string: "\(baseURL)/webhooks?api_key=\(key)&site_token=\(token)")!
 
         return client.get(url, handler: completionHandler)
     }
@@ -97,9 +97,33 @@ public class Account {
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_triggers_for_a_webhook
     // 
     public func webhookTriggers(webhookId: Int, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "https://api.gosquared.com/account/v1/webhooks/\(webhookId)/triggers?api_key=\(key)&site_token=\(token)")!
+        let url = NSURL(string: "\(baseURL)/webhooks/\(webhookId)/triggers?api_key=\(key)&site_token=\(token)")!
 
         return client.get(url, handler: completionHandler)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/webhooks/http#add_an_trigger_to_a_webhook
+    // 
+    public func addWebhookTrigger(webhookId: Int, trigger: String, value: String, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let url = NSURL(string: "\(baseURL)/webhooks/\(webhookId)/triggers?api_key=\(key)&site_token=\(token)")!
+        let data = [
+            "trigger": trigger,
+            "value": value
+        ]
+
+        return client.post(url, data: data, handler: completionHandler)
+    }
+
+    // 
+    // docs:
+    // https://www.gosquared.com/docs/api/account/webhooks/http#remove_an_trigger_from_a_webhook
+    //
+    public func removeWebhookTrigger(webhookId: Int, triggerId: Int, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let url = NSURL(string: "\(baseURL)/webhooks/\(webhookId)/triggers/\(triggerId)?api_key=\(key)&site_token=\(token)")!
+
+        return client.delete(url, handler: completionHandler)
     }
 
 }
