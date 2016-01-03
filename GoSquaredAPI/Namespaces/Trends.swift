@@ -22,9 +22,16 @@ public class Trends {
         self.baseURL = "\(GoSquaredAPI.baseURL)/trends/v2/"
     }
 
+    lazy var dateFormatter: NSDateFormatter = {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter
+    }()
 
-    public func aggregate(from: String, to: String, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/aggregate/?api_key=\(key)&site_token=\(token)&from=\(from)&to=\(to)")!
+    public func aggregate(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let safeFrom = dateFormatter.stringFromDate(from).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        let safeTo = dateFormatter.stringFromDate(to).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        let url = NSURL(string: "\(baseURL)/aggregate/?api_key=\(key)&site_token=\(token)&from=\(safeFrom)&to=\(safeTo)&interval=hour")!
 
         return client.get(url, handler: completionHandler)
     }
