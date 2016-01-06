@@ -19,7 +19,7 @@ public class Trends {
         self.key = client.key
         self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/trends/v2/"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/trends/v2"
     }
 
     lazy var dateFormatter: NSDateFormatter = {
@@ -35,5 +35,32 @@ public class Trends {
 
         return client.get(url, handler: completionHandler)
     }
-    
+
+    public func aggregate(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+        return GoSquaredAPI.CombiningFunction(endpoint: "aggregate", params: [
+            "from": dateFormatter.stringFromDate(from),
+            "to": dateFormatter.stringFromDate(to),
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "interval": "hour"
+        ])
+    }
+
+    public func executeCombiningFunction(functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let funcs: [(name: String, params: String)] = functions.enumerate().map { idx, fn in
+            let name = "\(fn.endpoint):\(idx)"
+            let params = fn.params.map({ key, val -> String in
+                return "\(name):\(key)=\(val)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+            })
+
+            return (name, params.joinWithSeparator("&"))
+        }
+
+        let fns = funcs.map({ $0.name }).joinWithSeparator(",")
+        let params = funcs.map({ $0.params }).joinWithSeparator("&")
+
+        let url = NSURL(string: "\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)")!
+
+        return client.get(url, handler: completionHandler)
+    }
+
 }
