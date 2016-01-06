@@ -41,7 +41,7 @@ public class GoSquaredAPI {
     }
 
 
-    private func makeRequest(request: NSURLRequest, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+    private func makeRequest(request: NSURLRequest, handler: Handler?) -> NSURLSessionDataTask? {
         return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
             if error != nil {
                 handler?(response: nil, error: error)
@@ -58,19 +58,19 @@ public class GoSquaredAPI {
     }
 
 
-    func get(url: NSURL, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+    func get(url: NSURL, handler: Handler?) -> NSURLSessionDataTask? {
         let request = NSURLRequest(URL: url)
         return makeRequest(request, handler: handler)
     }
 
-    func delete(url: NSURL, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+    func delete(url: NSURL, handler: Handler?) -> NSURLSessionDataTask? {
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "DELETE"
 
         return makeRequest(request, handler: handler)
     }
 
-    func post(url: NSURL, data: AnyObject, handler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+    func post(url: NSURL, data: AnyObject, handler: Handler?) -> NSURLSessionDataTask? {
         let request = NSMutableURLRequest(URL: url)
 
         do {

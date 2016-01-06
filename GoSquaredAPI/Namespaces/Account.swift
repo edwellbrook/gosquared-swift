@@ -15,7 +15,7 @@ public class Account {
 
     public init(client: GoSquaredAPI) {
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/account/v1/"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/account/v1"
     }
 
     //

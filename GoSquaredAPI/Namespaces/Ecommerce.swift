@@ -19,7 +19,7 @@ public class Ecommerce {
         self.key = client.key
         self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/ecommerce/v1/"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/ecommerce/v1"
     }
 
     //

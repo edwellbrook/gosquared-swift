@@ -19,7 +19,7 @@ public class Now {
         self.key = client.key
         self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/now/v3/"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/now/v3"
     }
 
     //

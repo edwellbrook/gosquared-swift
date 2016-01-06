@@ -19,7 +19,7 @@ public class Tracking {
         self.key = client.key
         self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/tracking/v1/"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/tracking/v1"
     }
 
     //
