@@ -45,6 +45,15 @@ public class Trends {
         ])
     }
 
+    public func page(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+        return GoSquaredAPI.CombiningFunction(endpoint: "page", params: [
+            "from": dateFormatter.stringFromDate(from),
+            "to": dateFormatter.stringFromDate(to),
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "limit": "0,3"
+        ])
+    }
+
     public func executeCombiningFunction(functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let funcs: [(name: String, params: String)] = functions.enumerate().map { idx, fn in
             let name = "\(fn.endpoint):\(idx)"
