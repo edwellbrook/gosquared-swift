@@ -12,10 +12,12 @@ public class Account {
 
     private let client: GoSquaredAPI
     private let baseURL: String
+    private let stagingBaseURL: String
 
     public init(client: GoSquaredAPI) {
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/account/v1"
+        self.baseURL = "\(GoSquaredAPI.baseURL)/account/v1/"
+        self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/account/v1"
     }
 
     //
@@ -134,6 +136,13 @@ public class Account {
         let url = NSURL(string: "\(baseURL)/webhooks/\(webhookId)/triggers/\(triggerId)?api_key=\(client.key)&site_token=\(client.token)")!
 
         return client.delete(url, handler: completionHandler)
+    }
+
+
+    public func me(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let  url = NSURL(string: "\(stagingBaseURL)/me?api_key=\(client.key)")!
+
+        return client.get(url, handler: completionHandler)
     }
 
 }
