@@ -75,7 +75,7 @@ public class People {
     }
 
     public func smartGroup(completionHanlder: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(stagingBaseURL)/smartgroups?api_key=\(key)&site_token=\(token)")!
+        let url = NSURL(string: "\(baseURL)/smartgroups?api_key=\(key)&site_token=\(token)")!
 
         return client.get(url, handler: completionHanlder)
     }
