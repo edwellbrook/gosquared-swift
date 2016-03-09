@@ -32,7 +32,9 @@ public class Chat {
     }
 
     public func messages(user: String, limit: Int = 20, offset: Int = 0, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(stagingBaseURL)/chats/\(user)/messages?site_token=\(token)&api_key=\(key)&limit=\(limit)&offset=\(offset)")!
+        let safeUser = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+
+        let url = NSURL(string: "\(stagingBaseURL)/chats/\(safeUser)/messages?site_token=\(token)&api_key=\(key)&limit=\(limit)&offset=\(offset)")!
 
         return self.client.get(url, handler: completionHandler)
     }

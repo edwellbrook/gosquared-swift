@@ -51,7 +51,6 @@ public class People {
     }
 
     public func search(query: String = "", options opts: SearchOptions = SearchOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-
         let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
         let safeFilters = opts.filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
         let safeSortKey = opts.sort.key.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
@@ -62,14 +61,16 @@ public class People {
     }
 
     public func details(user: String, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/person/\(user)/details?api_key=\(key)&site_token=\(token)")!
+        let safeUser = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        let url = NSURL(string: "\(baseURL)/person/\(safeUser)/details?api_key=\(key)&site_token=\(token)")!
 
         return client.get(url, handler: completionHandler)
     }
 
     public func feed(user: String, options opts: FeedOptions = FeedOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
+        let safeUser = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
         let types = opts.eventTypes.joinWithSeparator(",")
-        let url = NSURL(string: "\(baseURL)/person/\(user)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice&type=\(types)&limit=\(opts.offset),\(opts.count)")!
+        let url = NSURL(string: "\(baseURL)/person/\(safeUser)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice&type=\(types)&limit=\(opts.offset),\(opts.count)")!
 
         return client.get(url, handler: completionHandler)
     }
