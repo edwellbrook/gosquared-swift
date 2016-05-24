@@ -24,6 +24,8 @@
 		B76351941C1CCCDB00E92B01 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76351921C1CCCDB00E92B01 /* Trends.swift */; };
 		B76F339D1B905C2900D1FB63 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F339C1B905C2900D1FB63 /* People.swift */; };
 		B76F339E1B905C2900D1FB63 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F339C1B905C2900D1FB63 /* People.swift */; };
+		B7B3C7F91CF4FB3800EC87CD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C7F81CF4FB3800EC87CD /* Chat.swift */; };
+		B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C7F81CF4FB3800EC87CD /* Chat.swift */; };
 		B7F25B591B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
 		B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
 		B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
@@ -66,6 +68,7 @@
 		B70F33651B1148180056DECE /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
 		B76351921C1CCCDB00E92B01 /* Trends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trends.swift; path = Namespaces/Trends.swift; sourceTree = "<group>"; };
 		B76F339C1B905C2900D1FB63 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Namespaces/People.swift; sourceTree = "<group>"; };
+		B7B3C7F81CF4FB3800EC87CD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Namespaces/Chat.swift; sourceTree = "<group>"; };
 		B7F25B551B225F7E009D8E97 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Namespaces/Account.swift; sourceTree = "<group>"; };
 		B7F25B561B225F7E009D8E97 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Namespaces/Ecommerce.swift; sourceTree = "<group>"; };
 		B7F25B571B225F7E009D8E97 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Namespaces/Now.swift; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F25B551B225F7E009D8E97 /* Account.swift */,
+				B7B3C7F81CF4FB3800EC87CD /* Chat.swift */,
 				B7F25B561B225F7E009D8E97 /* Ecommerce.swift */,
 				B7F25B571B225F7E009D8E97 /* Now.swift */,
 				B76F339C1B905C2900D1FB63 /* People.swift */,
@@ -348,6 +352,7 @@
 				B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */,
 				B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B76F339D1B905C2900D1FB63 /* People.swift in Sources */,
+				B7B3C7F91CF4FB3800EC87CD /* Chat.swift in Sources */,
 				B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B591B225F7E009D8E97 /* Account.swift in Sources */,
 			);
@@ -373,6 +378,7 @@
 				B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */,
 				B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
 				B76F339E1B905C2900D1FB63 /* People.swift in Sources */,
+				B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */,
 				B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */,
 			);
