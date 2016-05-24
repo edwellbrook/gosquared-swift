@@ -140,7 +140,7 @@ public class Account {
 
 
     public func me(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let  url = NSURL(string: "\(stagingBaseURL)/me?api_key=\(client.key)")!
+        let  url = NSURL(string: "\(baseURL)/me?api_key=\(client.key)")!
 
         return client.get(url, handler: completionHandler)
     }
