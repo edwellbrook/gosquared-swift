@@ -46,90 +46,50 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/concurrents/
     //
-    public func concurrents(completionHandler: (response: Concurrents?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+    public func concurrents(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/concurrents/?api_key=\(key)&site_token=\(token)")!
 
-        return client.get(url, handler: { response, error in
-            if error != nil {
-                return completionHandler(response: nil, error: error)
-            }
-            if let json = response as? [String: AnyObject] {
-                return completionHandler(response: Concurrents(json: json), error: nil)
-            }
-            completionHandler(response: nil, error: nil)
-        })
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/engagement/
     //
-    public func engagement(completionHandler: (response: Engagement?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+    public func engagement(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/engagement/?api_key=\(key)&site_token=\(token)")!
 
-        return client.get(url, handler: { response, error in
-            if error != nil {
-                return completionHandler(response: nil, error: error)
-            }
-            if let json = response as? [String: AnyObject] {
-                return completionHandler(response: Engagement(json: json), error: nil)
-            }
-            completionHandler(response: nil, error: nil)
-        })
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs
     // https://www.gosquared.com/developer/api/now/v3/geo/
     //
-    public func geo(completionHandler: (response: Geo?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+    public func geo(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/geo/?api_key=\(key)&site_token=\(token)")!
 
-        return client.get(url, handler: { response, error in
-            if error != nil {
-                return completionHandler(response: nil, error: error)
-            }
-            if let json = response as? [String: AnyObject] {
-                return completionHandler(response: Geo(json: json), error: nil)
-            }
-            completionHandler(response: nil, error: nil)
-        })
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/overview/
     //
-    public func overview(completionHandler: (response: Overview?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+    public func overview(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/overview/?api_key=\(key)&site_token=\(token)")!
 
-        return client.get(url, handler: { response, error in
-            if error != nil {
-                return completionHandler(response: nil, error: error)
-            }
-            if let json = response as? [String: AnyObject] {
-                return completionHandler(response: Overview(json: json), error: nil)
-            }
-            completionHandler(response: nil, error: nil)
-        })
+        return client.get(url, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/pages/
     //
-    public func pages(completionHandler: (response: Pages?, error: NSError?) -> Void) -> NSURLSessionDataTask? {
+    public func pages(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let url = NSURL(string: "\(baseURL)/pages/?api_key=\(key)&site_token=\(token)")!
 
-        return client.get(url, handler: { response, error in
-            if error != nil {
-                return completionHandler(response: nil, error: error)
-            }
-            if let json = response as? [String: AnyObject] {
-                return completionHandler(response: Pages(json: json), error: nil)
-            }
-            completionHandler(response: nil, error: nil)
-        })
+        return client.get(url, handler: completionHandler)
     }
 
     //
