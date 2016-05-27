@@ -23,8 +23,9 @@ class TrackingTests: XCTestCase {
                 "test_node_gosquared": "identify"
             ]
         ]
-        
-        gosquared.tracking.identify("test-node-gosquared", properties: props, completionHandler: { response, error in
+        let request = gosquared.tracking.identify("test-node-gosquared", properties: props)
+
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -41,8 +42,9 @@ class TrackingTests: XCTestCase {
                 "test_node_gosquared": "identify"
             ]
         ]
+        let request = gosquared.tracking.properties("test-node-gosquared", properties: props)
 
-        gosquared.tracking.properties("test-node-gosquared", properties: props, completionHandler: { response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -55,8 +57,9 @@ class TrackingTests: XCTestCase {
         let event: [String: AnyObject] = [
             "additional": "data"
         ]
+        let request = gosquared.tracking.event("Event Name", properties: event)
 
-        gosquared.tracking.event("Event Name", properties: event, completionHandler: { response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -69,8 +72,9 @@ class TrackingTests: XCTestCase {
         let event: [String: AnyObject] = [
             "additional": "data"
         ]
+        let request = gosquared.tracking.userEvent("test-node-gosquared", name: "Event Name", properties: event)
 
-        gosquared.tracking.userEvent("test-node-gosquared", name: "Event Name", properties: event, completionHandler: { response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()

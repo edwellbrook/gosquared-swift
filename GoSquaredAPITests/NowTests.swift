@@ -16,8 +16,9 @@ class NowTests: XCTestCase {
 
     func testAggregateStats() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.aggregateStats()
 
-        gosquared.now.aggregateStats({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -27,8 +28,9 @@ class NowTests: XCTestCase {
 
     func testCampaigns() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.campaigns()
 
-        gosquared.now.campaigns({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -38,8 +40,9 @@ class NowTests: XCTestCase {
 
     func testConcurrents() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.concurrents()
 
-        gosquared.now.concurrents({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -49,8 +52,9 @@ class NowTests: XCTestCase {
 
     func testEngagement() {
         let ex = expectationWithDescription("Handler called")
+let request = gosquared.now.engagement()
 
-        gosquared.now.engagement({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -60,8 +64,9 @@ class NowTests: XCTestCase {
 
     func testGeo() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.geo()
 
-        gosquared.now.geo({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -71,8 +76,9 @@ class NowTests: XCTestCase {
 
     func testOverview() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.overview()
 
-        gosquared.now.overview({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -82,8 +88,9 @@ class NowTests: XCTestCase {
 
     func testPages() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.pages()
 
-        gosquared.now.pages({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -93,8 +100,9 @@ class NowTests: XCTestCase {
 
     func testSources() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.sources()
 
-        gosquared.now.sources({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -104,8 +112,9 @@ class NowTests: XCTestCase {
 
     func testTimeSeries() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.timeSeries()
 
-        gosquared.now.timeSeries({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -115,8 +124,9 @@ class NowTests: XCTestCase {
 
     func testVisitors() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.now.visitors()
 
-        gosquared.now.visitors({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()

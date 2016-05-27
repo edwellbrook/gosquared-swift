@@ -14,7 +14,7 @@ public class Chat {
     private let baseURL: String
     private let stagingBaseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.client = client
         self.baseURL = "\(GoSquaredAPI.baseURL)/chat/v1"
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/chat/v1"
@@ -30,13 +30,7 @@ public class Chat {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/chats/", query: query)
-    }
-
-    public func chats(completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.chats()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/chats/", query: query)
     }
 
     //
@@ -52,13 +46,7 @@ public class Chat {
             "offset": offset
         ]
 
-        return self.client.get("\(baseURL)/chats/\(userId)/messages", query: query)
-    }
-
-    public func messages(user: String, limit: Int = 20, offset: Int = 0, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.messages(user, limit: limit, offset: offset)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/chats/\(userId)/messages", query: query)
     }
 
     //
@@ -71,13 +59,7 @@ public class Chat {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/stream/", query: query)
-    }
-
-    public func stream(completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.stream()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/stream/", query: query)
     }
 
 }

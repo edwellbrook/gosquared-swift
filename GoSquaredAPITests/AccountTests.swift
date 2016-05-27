@@ -16,8 +16,9 @@ class AccountTests: XCTestCase {
 
     func testAlertPreferences() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.alertPreferences()
 
-        gosquared.account.alertPreferences({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -27,8 +28,9 @@ class AccountTests: XCTestCase {
 
     func testBlocked() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.blocked()
 
-        gosquared.account.blocked({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -38,8 +40,9 @@ class AccountTests: XCTestCase {
 
     func testReportPreferences() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.reportPreferences()
 
-        gosquared.account.reportPreferences({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -49,8 +52,9 @@ class AccountTests: XCTestCase {
 
     func testSharedUsers() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.sharedUsers()
 
-        gosquared.account.sharedUsers({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -60,8 +64,9 @@ class AccountTests: XCTestCase {
 
     func testSites() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.sites()
 
-        gosquared.account.sites({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -71,14 +76,14 @@ class AccountTests: XCTestCase {
 
     func testTaggedVisitors() {
         let ex = expectationWithDescription("Handler called")
+        let request = gosquared.account.taggedVisitors()
 
-        gosquared.account.taggedVisitors({ response, error in
+        gosquared.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
 
         waitForExpectationsWithTimeout(2.5, handler: nil)
     }
-
 
 }

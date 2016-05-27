@@ -15,7 +15,7 @@ public class Ecommerce {
     private let client: GoSquaredAPI
     private let baseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.key = client.key
         self.token = client.token
         self.client = client
@@ -32,13 +32,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/aggregate/", query: query)
-    }
-
-    public func aggregate(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.aggregate()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/aggregate/", query: query)
     }
 
     //
@@ -51,13 +45,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/browser/", query: query)
-    }
-
-    public func browser(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.browser()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/browser/", query: query)
     }
 
     //
@@ -70,13 +58,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/category/", query: query)
-    }
-
-    public func category(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.category()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/category/", query: query)
     }
 
     //
@@ -89,13 +71,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/country/", query: query)
-    }
-
-    public func country(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.country()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/country/", query: query)
     }
 
     //
@@ -108,13 +84,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/language/", query: query)
-    }
-
-    public func language(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.language()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/language/", query: query)
     }
 
     //
@@ -127,13 +97,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/os/", query: query)
-    }
-
-    public func os(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.os()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/os/", query: query)
     }
 
     //
@@ -146,13 +110,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/product/", query: query)
-    }
-
-    public func product(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.product()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/product/", query: query)
     }
 
     //
@@ -165,13 +123,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/sources/", query: query)
-    }
-
-    public func sources(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.sources()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/sources/", query: query)
     }
 
     //
@@ -184,13 +136,7 @@ public class Ecommerce {
             "api_key": self.client.key
         ]
 
-        return client.get("\(baseURL)/transaction/", query: query)
-    }
-
-    public func transaction(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.transaction()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/transaction/", query: query)
     }
 
 }

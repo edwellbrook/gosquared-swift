@@ -29,7 +29,7 @@ public class People {
     private let baseURL: String
     private let stagingBaseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.key = client.key
         self.token = client.token
         self.client = client
@@ -51,13 +51,7 @@ public class People {
             "sort": "\(opts.sort.key):\(opts.sort.direction)"
         ]
 
-        return self.client.get("\(baseURL)/search/", query: query)
-    }
-
-    public func search(query: String = "", options opts: SearchOptions = SearchOptions(), completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.search(query, options: opts)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/search/", query: query)
     }
 
     //
@@ -71,13 +65,7 @@ public class People {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/person/\(userId)/details/", query: query)
-    }
-
-    public func details(user: String, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.details(user)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/person/\(userId)/details/", query: query)
     }
 
     //
@@ -94,13 +82,7 @@ public class People {
             "limit": "\(opts.offset),\(opts.count)"
         ]
 
-        return self.client.get("\(baseURL)/person/\(userId)/details/", query: query)
-    }
-
-    public func feed(user: String, options opts: FeedOptions = FeedOptions(), completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.feed(user, options: opts)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/person/\(userId)/details/", query: query)
     }
 
     //
@@ -113,13 +95,7 @@ public class People {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/smartgroups/", query: query)
-    }
-
-    public func smartGroup(completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.smartGroup()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/smartgroups/", query: query)
     }
 
 }

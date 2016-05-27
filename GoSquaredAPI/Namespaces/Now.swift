@@ -15,7 +15,7 @@ public class Now {
     private let client: GoSquaredAPI
     private let baseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.key = client.key
         self.token = client.token
         self.client = client
@@ -32,13 +32,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/aggregateStats/", query: query)
-    }
-    
-    public func aggregateStats(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.aggregateStats()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/aggregateStats/", query: query)
     }
 
     //
@@ -51,13 +45,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/campaigns/", query: query)
-    }
-
-    public func campaigns(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.campaigns()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/campaigns/", query: query)
     }
 
     //
@@ -70,13 +58,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/concurrents/", query: query)
-    }
-
-    public func concurrents(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.concurrents()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/concurrents/", query: query)
     }
 
     //
@@ -89,13 +71,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/engagement/", query: query)
-    }
-
-    public func engagement(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = engagement()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/engagement/", query: query)
     }
 
     //
@@ -108,13 +84,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/geo/", query: query)
-    }
-
-    public func geo(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.geo()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/geo/", query: query)
     }
 
     //
@@ -127,13 +97,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/overview/", query: query)
-    }
-
-    public func overview(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.overview()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/overview/", query: query)
     }
 
     //
@@ -146,13 +110,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/pages/", query: query)
-    }
-
-    public func pages(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.pages()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/pages/", query: query)
     }
 
     //
@@ -165,13 +123,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/sources/", query: query)
-    }
-
-    public func sources(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.sources()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/sources/", query: query)
     }
 
     //
@@ -184,13 +136,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/timeSeries/", query: query)
-    }
-
-    public func timeSeries(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.timeSeries()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/timeSeries/", query: query)
     }
 
     //
@@ -203,13 +149,7 @@ public class Now {
             "api_key": self.client.key
         ]
 
-        return self.client.get("\(baseURL)/visitors/", query: query)
-    }
-
-    public func visitors(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.visitors()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/visitors/", query: query)
     }
 
 }

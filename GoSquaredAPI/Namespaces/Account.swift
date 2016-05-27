@@ -14,7 +14,7 @@ public class Account {
     private let baseURL: String
     private let stagingBaseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.client = client
         self.baseURL = "\(GoSquaredAPI.baseURL)/account/v1/"
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/account/v1"
@@ -30,13 +30,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/alertPreferences/", query: query)
-    }
-
-    public func alertPreferences(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.alertPreferences()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/alertPreferences/", query: query)
     }
 
     //
@@ -49,13 +43,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/blocked/", query: query)
-    }
-
-    public func blocked(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.blocked()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/blocked/", query: query)
     }
 
     //
@@ -68,13 +56,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/reportPreferences/", query: query)
-    }
-
-    public func reportPreferences(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.reportPreferences()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/reportPreferences/", query: query)
     }
 
     //
@@ -87,13 +69,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/sharedUsers/", query: query)
-    }
-
-    public func sharedUsers(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.sharedUsers()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/sharedUsers/", query: query)
     }
 
     //
@@ -106,13 +82,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/sites/", query: query)
-    }
-
-    public func sites(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.sites()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/sites/", query: query)
     }
 
     //
@@ -125,13 +95,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/taggedVisitors/", query: query)
-    }
-
-    public func taggedVisitors(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.taggedVisitors()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/taggedVisitors/", query: query)
     }
 
     //
@@ -144,13 +108,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/webhooks/", query: query)
-    }
-
-    public func webhooks(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.webhooks()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/webhooks/", query: query)
     }
 
     //
@@ -168,13 +126,7 @@ public class Account {
             "url": webhookUrl
         ]
 
-        return self.client.post("\(baseURL)/webhooks/", query: query, body: body)
-    }
-
-    public func addWebhook(webhookUrl: String, name: String = "", completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.addWebhook(webhookUrl, name: name)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/webhooks/", query: query, body: body)
     }
 
     //
@@ -187,13 +139,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/triggers/", query: query)
-    }
-
-    public func webhookTriggers(webhookId: Int, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.webhookTriggers(webhookId)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/triggers/", query: query)
     }
 
     //
@@ -211,13 +157,7 @@ public class Account {
             "value": value
         ]
 
-        return self.client.post("\(baseURL)/webhooks/\(webhookId)/triggers/", query: query, body: body)
-    }
-
-    public func addWebhookTrigger(webhookId: Int, trigger: String, value: String, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.addWebhookTrigger(webhookId, trigger: trigger, value: value)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/webhooks/\(webhookId)/triggers/", query: query, body: body)
     }
 
     // 
@@ -230,13 +170,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.delete("\(baseURL)/webhooks/\(webhookId)/triggers/\(triggerId)/", query: query)
-    }
-
-    public func removeWebhookTrigger(webhookId: Int, triggerId: Int, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.removeWebhookTrigger(webhookId, triggerId: triggerId)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return DELETERequest("\(baseURL)/webhooks/\(webhookId)/triggers/\(triggerId)/", query: query)
     }
 
     //
@@ -249,13 +183,7 @@ public class Account {
             "site_token": self.client.token
         ]
 
-        return self.client.get("\(baseURL)/me/", query: query)
-    }
-
-    public func me(completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.me()
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return GETRequest("\(baseURL)/me/", query: query)
     }
 
 }

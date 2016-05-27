@@ -15,7 +15,7 @@ public class Tracking {
     private let client: GoSquaredAPI
     private let baseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.key = client.key
         self.token = client.token
         self.client = client
@@ -37,13 +37,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return self.client.post("\(baseURL)/identify/", query: query, body: body)
-    }
-
-    public func identify(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.identify(id, properties: properties)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/identify/", query: query, body: body)
     }
 
     //
@@ -61,13 +55,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return self.client.post("\(baseURL)/properties/", query: query, body: body)
-    }
-
-    public func properties(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionTask? {
-        let req = self.properties(id, properties: properties)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/properties/", query: query, body: body)
     }
 
     //
@@ -88,13 +76,7 @@ public class Tracking {
             body.updateValue(additional, forKey: "data")
         }
 
-        return self.client.post("\(baseURL)/event/", query: query, body: body)
-    }
-
-    public func event(name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.event(name, properties: properties)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/event/", query: query, body: body)
     }
 
     //
@@ -120,13 +102,7 @@ public class Tracking {
             "event": event
         ]
 
-        return self.client.post("\(baseURL)/event/", query: query, body: body)
-    }
-
-    public func userEvent(id: String, name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
-        let req = self.userEvent(id, name: name)
-
-        return self.client.performRequest(req, handler: completionHandler)
+        return POSTRequest("\(baseURL)/event/", query: query, body: body)
     }
 
 }

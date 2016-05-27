@@ -15,7 +15,7 @@ public class Trends {
     private let client: GoSquaredAPI
     private let baseURL: String
 
-    public init(client: GoSquaredAPI) {
+    internal init(client: GoSquaredAPI) {
         self.key = client.key
         self.token = client.token
         self.client = client
@@ -41,7 +41,7 @@ public class Trends {
             "interval": "hour"
         ]
 
-        return self.client.get("\(baseURL)/aggregate/", query: query)
+        return GETRequest("\(baseURL)/aggregate/", query: query)
     }
 
     public func aggregateFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
@@ -51,12 +51,6 @@ public class Trends {
             "dateFormat": "YYYY-MM-DD HH:mm:ss",
             "interval": "hour"
         ])
-    }
-
-    public func aggregate(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.aggregate(from, to: to)
-
-        return self.client.performRequest(req, handler: completionHandler)
     }
 
     //
@@ -72,7 +66,7 @@ public class Trends {
             "interval": "hour"
         ]
 
-        return self.client.get("\(baseURL)/page/", query: query)
+        return GETRequest("\(baseURL)/page/", query: query)
     }
 
     public func pageFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
@@ -82,12 +76,6 @@ public class Trends {
             "dateFormat": "YYYY-MM-DD HH:mm:ss",
             "limit": "0,3"
         ])
-    }
-
-    public func page(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let req = self.page(from, to: to)
-
-        return self.client.performRequest(req, handler: completionHandler)
     }
 
     //
@@ -106,9 +94,9 @@ public class Trends {
 
         let fns = funcs.map({ $0.name }).joinWithSeparator(",")
         let params = funcs.map({ $0.params }).joinWithSeparator("&")
-        let req = self.client.get("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
+        let req = GETRequest("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
 
-        return self.client.performRequest(req, handler: completionHandler)
+        return self.client.performRequest(req, completionHandler: completionHandler)
     }
 
 }
