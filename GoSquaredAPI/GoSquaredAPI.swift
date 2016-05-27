@@ -3,7 +3,7 @@
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 22/05/2015.
-//  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
+//  Copyright (c) 2015-2016 Edward Wellbrook. All rights reserved.
 //
 
 import Foundation
@@ -42,7 +42,7 @@ public class GoSquaredAPI {
     }
 
 
-    private func makeRequest(request: NSURLRequest, handler: Handler?) -> NSURLSessionDataTask? {
+    func performRequest(request: NSURLRequest, handler: Handler?) -> NSURLSessionDataTask? {
         return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
             if error != nil {
                 handler?(response: nil, error: error)
@@ -58,39 +58,46 @@ public class GoSquaredAPI {
         }
     }
 
-
-    func get(url: NSURL, handler: Handler?) -> NSURLSessionDataTask? {
-        let request = NSURLRequest(URL: url)
-        return makeRequest(request, handler: handler)
+    func get(URL: String, query: [String: AnyObject]) -> NSURLRequest {
+        return NSURLRequest(URL: buildURL(URL, query: query))
     }
 
-    func delete(url: NSURL, handler: Handler?) -> NSURLSessionDataTask? {
-        let request = NSMutableURLRequest(URL: url)
+    func delete(URL: String, query: [String: AnyObject]) -> NSURLRequest {
+        let request = NSMutableURLRequest(URL: buildURL(URL, query: query))
         request.HTTPMethod = "DELETE"
 
-        return makeRequest(request, handler: handler)
+        return request
     }
 
-    func post(url: NSURL, data: AnyObject, handler: Handler?) -> NSURLSessionDataTask? {
-        let request = NSMutableURLRequest(URL: url)
+    func post(URL: String, query: [String: AnyObject], body: AnyObject) -> NSURLRequest {
+        let request = NSMutableURLRequest(URL: buildURL(URL, query: query))
+        request.HTTPMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         do {
-            let body = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0))
-
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.HTTPMethod = "POST"
-            request.HTTPBody = body
-
-        } catch let err as NSError {
-            handler?(response: nil, error: err)
+            let data = try NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(rawValue: 0))
+            request.HTTPBody = data
+        } catch _ {
         }
 
-        return makeRequest(request, handler: handler)
+        return request
     }
 
 }
 
-func iso8601(string: String) -> NSDate? {
+private func buildURL(baseURL: String, query: [String: AnyObject]) -> NSURL {
+    guard query.count > 0 else {
+        return NSURL(string: baseURL)!
+    }
+
+    let queryString = "?" + query.map { key, val -> String in
+        return "\(key)=\(val)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+        }.joinWithSeparator("&")
+
+    return NSURL(string: baseURL.stringByAppendingString(queryString))!
+}
+
+private func iso8601(string: String) -> NSDate? {
     let formatter = NSDateFormatter()
     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
     return formatter.dateFromString(string)

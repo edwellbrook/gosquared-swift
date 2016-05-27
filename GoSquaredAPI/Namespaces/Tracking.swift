@@ -3,7 +3,7 @@
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 23/05/2015.
-//  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
+//  Copyright (c) 2015-2016 Edward Wellbrook. All rights reserved.
 //
 
 import Foundation
@@ -26,68 +26,107 @@ public class Tracking {
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#identify
     //
-    public func identify(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/identify/?api_key=\(key)&site_token=\(token)")!
-        let data = [
+    public func identify(id: String, properties: [String: AnyObject]) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
+
+        let body = [
             "person_id": id,
             "properties": properties
         ]
 
-        return client.post(url, data: data, handler: completionHandler)
+        return self.client.post("\(baseURL)/identify/", query: query, body: body)
+    }
+
+    public func identify(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.identify(id, properties: properties)
+
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#properties
     //
-    public func properties(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionTask? {
-        let url = NSURL(string: "\(baseURL)/properties/?api_key=\(key)&site_token=\(token)")!
-        let data = [
+    public func properties(id: String, properties: [String: AnyObject]) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
+
+        let body = [
             "person_id": id,
             "properties": properties
         ]
 
-        return client.post(url, data: data, handler: completionHandler)
+        return self.client.post("\(baseURL)/properties/", query: query, body: body)
+    }
+
+    public func properties(id: String, properties: [String: AnyObject], completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionTask? {
+        let req = self.properties(id, properties: properties)
+
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func event(name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/event/?api_key=\(key)&site_token=\(token)")!
-        var data: [String: AnyObject] = [
+    public func event(name: String, properties: [String: AnyObject]? = nil) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
+
+        var body: [String: AnyObject] = [
             "event": name
         ]
 
         if let additional = properties {
-            data.updateValue(additional, forKey: "data")
+            body.updateValue(additional, forKey: "data")
         }
 
-        return client.post(url, data: data, handler: completionHandler)
+        return self.client.post("\(baseURL)/event/", query: query, body: body)
+    }
+
+    public func event(name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.event(name, properties: properties)
+
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func userEvent(id: String, name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/event/?api_key=\(key)&site_token=\(token)")!
-        
+    public func userEvent(id: String, name: String, properties: [String: AnyObject]? = nil) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
+
         var event: [String: AnyObject] = [
             "name": name
         ]
 
         if let props = properties {
-            event["event"] = props
+            event["data"] = props
         }
 
-        let data: [String: AnyObject] = [
+        let body: [String: AnyObject] = [
             "person_id": id,
             "event": event
         ]
 
-        return client.post(url, data: data, handler: completionHandler)
+        return self.client.post("\(baseURL)/event/", query: query, body: body)
+    }
+
+    public func userEvent(id: String, name: String, properties: [String: AnyObject]? = nil, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.userEvent(id, name: name)
+
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
 }

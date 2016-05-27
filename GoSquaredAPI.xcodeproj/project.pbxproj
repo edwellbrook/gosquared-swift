@@ -57,12 +57,12 @@
 		B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F32F81B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSquaredAPI.h; sourceTree = "<group>"; };
-		B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GoSquaredAPI.xctest; path = "GoSquaredAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F33051B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoSquaredAPI.swift; sourceTree = "<group>"; };
 		B70F331B1B0FD42D0056DECE /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowTests.swift; sourceTree = "<group>"; };
 		B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GoSquaredAPI.xctest; path = "GoSquaredAPI OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
 		B70F335D1B111EEA0056DECE /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		B70F33651B1148180056DECE /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
@@ -122,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */,
-				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */,
+				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */,
 				B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */,
-				B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */,
+				B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			);
 			name = "GoSquaredAPI iOS Tests";
 			productName = GoSquaredAPITests;
-			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI.xctest */;
+			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */ = {
@@ -271,7 +271,7 @@
 			);
 			name = "GoSquaredAPI OSX Tests";
 			productName = GoSquaredAPITests;
-			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI.xctest */;
+			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

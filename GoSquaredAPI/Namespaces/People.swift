@@ -3,35 +3,22 @@
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 28/08/2015.
-//  Copyright © 2015 Go Squared Ltd. All rights reserved.
+//  Copyright (c) 2015-2016 Edward Wellbrook. All rights reserved.
 //
 
 import Foundation
 
 public struct SearchOptions {
-    public var filters: String
-    public var count: Int
-    public var offset: Int
-    public var sort: (key: String, direction: String)
-
-    public init() {
-        self.filters = "[]"
-        self.count = 35
-        self.offset = 0
-        self.sort = (key: "last.seen", direction: "desc")
-    }
+    public var filters: String = "[]"
+    public var count: Int = 35
+    public var offset: Int = 0
+    public var sort: (key: String, direction: String) = (key: "last.seen", direction: "desc")
 }
 
 public struct FeedOptions {
-    public var eventTypes: [String]
-    public var count: Int
-    public var offset: Int
-
-    public init() {
-        self.eventTypes = ["sessionEvent", "event"]
-        self.count = 25
-        self.offset = 0
-    }
+    public var eventTypes: [String] = ["sessionEvent", "event"]
+    public var count: Int = 25
+    public var offset: Int = 0
 }
 
 public class People {
@@ -50,35 +37,89 @@ public class People {
         self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/people/v1"
     }
 
-    public func search(query: String = "", options opts: SearchOptions = SearchOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let safeQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let safeFilters = opts.filters.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let safeSortKey = opts.sort.key.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+    //
+    // docs:
+    //
+    //
+    public func search(query: String = "", options opts: SearchOptions = SearchOptions()) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key,
+            "query": query,
+            "filters": opts.filters,
+            "limit": "\(opts.offset),\(opts.count)",
+            "sort": "\(opts.sort.key):\(opts.sort.direction)"
+        ]
 
-        let url = NSURL(string: "\(baseURL)/search/?api_key=\(key)&site_token=\(token)&query=\(safeQuery)&filters=\(safeFilters)&limit=\(opts.offset),\(opts.count)&sort=\(safeSortKey):\(opts.sort.direction)")!
-
-        return client.get(url, handler: completionHandler)
+        return self.client.get("\(baseURL)/search/", query: query)
     }
 
-    public func details(user: String, completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let safeUser = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let url = NSURL(string: "\(baseURL)/person/\(safeUser)/details?api_key=\(key)&site_token=\(token)")!
+    public func search(query: String = "", options opts: SearchOptions = SearchOptions(), completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.search(query, options: opts)
 
-        return client.get(url, handler: completionHandler)
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
-    public func feed(user: String, options opts: FeedOptions = FeedOptions(), completionHandler: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let safeUser = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let types = opts.eventTypes.joinWithSeparator(",")
-        let url = NSURL(string: "\(baseURL)/person/\(safeUser)/feed/?api_key=\(key)&site_token=\(token)&presenter=nice&type=\(types)&limit=\(opts.offset),\(opts.count)")!
+    //
+    // docs:
+    //
+    //
+    public func details(user: String) -> NSURLRequest {
+        let userId = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLPathAllowedCharacterSet())!
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
 
-        return client.get(url, handler: completionHandler)
+        return self.client.get("\(baseURL)/person/\(userId)/details/", query: query)
     }
 
-    public func smartGroup(completionHanlder: GoSquaredAPI.Handler? = nil) -> NSURLSessionDataTask? {
-        let url = NSURL(string: "\(baseURL)/smartgroups?api_key=\(key)&site_token=\(token)")!
+    public func details(user: String, completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.details(user)
 
-        return client.get(url, handler: completionHanlder)
+        return self.client.performRequest(req, handler: completionHandler)
+    }
+
+    //
+    // docs:
+    //
+    //
+    public func feed(user: String, options opts: FeedOptions = FeedOptions()) -> NSURLRequest {
+        let userId = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLPathAllowedCharacterSet())!
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key,
+            "presenter": "nice",
+            "type": opts.eventTypes.joinWithSeparator(","),
+            "limit": "\(opts.offset),\(opts.count)"
+        ]
+
+        return self.client.get("\(baseURL)/person/\(userId)/details/", query: query)
+    }
+
+    public func feed(user: String, options opts: FeedOptions = FeedOptions(), completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.feed(user, options: opts)
+
+        return self.client.performRequest(req, handler: completionHandler)
+    }
+
+    //
+    // docs:
+    //
+    //
+    public func smartGroup() -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key
+        ]
+
+        return self.client.get("\(baseURL)/smartgroups/", query: query)
+    }
+
+    public func smartGroup(completionHandler: GoSquaredAPI.Handler?) -> NSURLSessionDataTask? {
+        let req = self.smartGroup()
+
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
 }

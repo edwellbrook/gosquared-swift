@@ -1,9 +1,9 @@
 //
 //  Trends.swift
-//  GoSquared
+//  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 27/11/2015.
-//  Copyright © 2015 Go Squared Ltd. All rights reserved.
+//  Copyright (c) 2015-2016 Edward Wellbrook. All rights reserved.
 //
 
 import Foundation
@@ -28,15 +28,23 @@ public class Trends {
         return formatter
     }()
 
-    public func aggregate(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let safeFrom = dateFormatter.stringFromDate(from).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let safeTo = dateFormatter.stringFromDate(to).stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        let url = NSURL(string: "\(baseURL)/aggregate/?api_key=\(key)&site_token=\(token)&from=\(safeFrom)&to=\(safeTo)&interval=hour")!
+    //
+    // docs:
+    //
+    //
+    public func aggregate(from: NSDate, to: NSDate) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key,
+            "from": dateFormatter.stringFromDate(from),
+            "to": dateFormatter.stringFromDate(to),
+            "interval": "hour"
+        ]
 
-        return client.get(url, handler: completionHandler)
+        return self.client.get("\(baseURL)/aggregate/", query: query)
     }
 
-    public func aggregate(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+    public func aggregateFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
         return GoSquaredAPI.CombiningFunction(endpoint: "aggregate", params: [
             "from": dateFormatter.stringFromDate(from),
             "to": dateFormatter.stringFromDate(to),
@@ -45,7 +53,29 @@ public class Trends {
         ])
     }
 
-    public func page(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+    public func aggregate(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let req = self.aggregate(from, to: to)
+
+        return self.client.performRequest(req, handler: completionHandler)
+    }
+
+    //
+    // docs:
+    //
+    //
+    public func page(from: NSDate, to: NSDate) -> NSURLRequest {
+        let query = [
+            "site_token": self.client.token,
+            "api_key": self.client.key,
+            "from": dateFormatter.stringFromDate(from),
+            "to": dateFormatter.stringFromDate(to),
+            "interval": "hour"
+        ]
+
+        return self.client.get("\(baseURL)/page/", query: query)
+    }
+
+    public func pageFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
         return GoSquaredAPI.CombiningFunction(endpoint: "page", params: [
             "from": dateFormatter.stringFromDate(from),
             "to": dateFormatter.stringFromDate(to),
@@ -54,6 +84,16 @@ public class Trends {
         ])
     }
 
+    public func page(from: NSDate, to: NSDate, completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
+        let req = self.page(from, to: to)
+
+        return self.client.performRequest(req, handler: completionHandler)
+    }
+
+    //
+    // docs:
+    //
+    //
     public func executeCombiningFunction(functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
         let funcs: [(name: String, params: String)] = functions.enumerate().map { idx, fn in
             let name = "\(fn.endpoint):\(idx)"
@@ -66,10 +106,9 @@ public class Trends {
 
         let fns = funcs.map({ $0.name }).joinWithSeparator(",")
         let params = funcs.map({ $0.params }).joinWithSeparator("&")
+        let req = self.client.get("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
 
-        let url = NSURL(string: "\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)")!
-
-        return client.get(url, handler: completionHandler)
+        return self.client.performRequest(req, handler: completionHandler)
     }
 
 }
