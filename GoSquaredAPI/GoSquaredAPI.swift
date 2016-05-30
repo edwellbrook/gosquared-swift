@@ -92,7 +92,7 @@ private func buildURL(baseURL: String, query: [String: AnyObject]) -> NSURL {
 
     let queryString = "?" + query.map { key, val -> String in
         return "\(key)=\(val)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-        }.joinWithSeparator("&")
+    }.joinWithSeparator("&")
 
     return NSURL(string: baseURL.stringByAppendingString(queryString))!
 }
