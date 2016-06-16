@@ -41,7 +41,7 @@ public class People {
     // docs:
     //
     //
-    public func search(query: String = "", options opts: SearchOptions = SearchOptions()) -> NSURLRequest {
+    public func search(_ query: String = "", options opts: SearchOptions = SearchOptions()) -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key,
@@ -58,8 +58,8 @@ public class People {
     // docs:
     //
     //
-    public func details(user: String) -> NSURLRequest {
-        let userId = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLPathAllowedCharacterSet())!
+    public func details(_ user: String) -> URLRequest {
+        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -72,13 +72,13 @@ public class People {
     // docs:
     //
     //
-    public func feed(user: String, options opts: FeedOptions = FeedOptions()) -> NSURLRequest {
-        let userId = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLPathAllowedCharacterSet())!
+    public func feed(_ user: String, options opts: FeedOptions = FeedOptions()) -> URLRequest {
+        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key,
             "presenter": "nice",
-            "type": opts.eventTypes.joinWithSeparator(","),
+            "type": opts.eventTypes.joined(separator: ","),
             "limit": "\(opts.offset),\(opts.count)"
         ]
 
@@ -89,7 +89,7 @@ public class People {
     // docs:
     //
     //
-    public func smartGroup() -> NSURLRequest {
+    public func smartGroup() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key

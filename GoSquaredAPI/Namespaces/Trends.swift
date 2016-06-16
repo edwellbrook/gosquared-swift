@@ -22,8 +22,8 @@ public class Trends {
         self.baseURL = "\(GoSquaredAPI.baseURL)/trends/v2"
     }
 
-    lazy var dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
@@ -32,22 +32,22 @@ public class Trends {
     // docs:
     //
     //
-    public func aggregate(from: NSDate, to: NSDate) -> NSURLRequest {
+    public func aggregate(_ from: Date, to: Date) -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key,
-            "from": dateFormatter.stringFromDate(from),
-            "to": dateFormatter.stringFromDate(to),
+            "from": dateFormatter.string(from: from),
+            "to": dateFormatter.string(from: to),
             "interval": "hour"
         ]
 
         return GETRequest("\(baseURL)/aggregate/", query: query)
     }
 
-    public func aggregateFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+    public func aggregateFunction(_ from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
         return GoSquaredAPI.CombiningFunction(endpoint: "aggregate", params: [
-            "from": dateFormatter.stringFromDate(from),
-            "to": dateFormatter.stringFromDate(to),
+            "from": dateFormatter.string(from: from),
+            "to": dateFormatter.string(from: to),
             "dateFormat": "YYYY-MM-DD HH:mm:ss",
             "interval": "hour"
         ])
@@ -57,22 +57,22 @@ public class Trends {
     // docs:
     //
     //
-    public func page(from: NSDate, to: NSDate) -> NSURLRequest {
+    public func page(_ from: Date, to: Date) -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key,
-            "from": dateFormatter.stringFromDate(from),
-            "to": dateFormatter.stringFromDate(to),
+            "from": dateFormatter.string(from: from),
+            "to": dateFormatter.string(from: to),
             "interval": "hour"
         ]
 
         return GETRequest("\(baseURL)/page/", query: query)
     }
 
-    public func pageFunction(from: NSDate, to: NSDate) -> GoSquaredAPI.CombiningFunction {
+    public func pageFunction(_ from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
         return GoSquaredAPI.CombiningFunction(endpoint: "page", params: [
-            "from": dateFormatter.stringFromDate(from),
-            "to": dateFormatter.stringFromDate(to),
+            "from": dateFormatter.string(from: from),
+            "to": dateFormatter.string(from: to),
             "dateFormat": "YYYY-MM-DD HH:mm:ss",
             "limit": "0,3"
         ])
@@ -82,18 +82,18 @@ public class Trends {
     // docs:
     //
     //
-    public func executeCombiningFunction(functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> NSURLSessionDataTask? {
-        let funcs: [(name: String, params: String)] = functions.enumerate().map { idx, fn in
+    public func executeCombiningFunction(_ functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> URLSessionDataTask? {
+        let funcs: [(name: String, params: String)] = functions.enumerated().map { idx, fn in
             let name = "\(fn.endpoint):\(idx)"
             let params = fn.params.map({ key, val -> String in
-                return "\(name):\(key)=\(val)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
+                return "\(name):\(key)=\(val)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             })
 
-            return (name, params.joinWithSeparator("&"))
+            return (name, params.joined(separator: "&"))
         }
 
-        let fns = funcs.map({ $0.name }).joinWithSeparator(",")
-        let params = funcs.map({ $0.params }).joinWithSeparator("&")
+        let fns = funcs.map({ $0.name }).joined(separator: ",")
+        let params = funcs.map({ $0.params }).joined(separator: "&")
         let req = GETRequest("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
 
         return self.client.performRequest(req, completionHandler: completionHandler)

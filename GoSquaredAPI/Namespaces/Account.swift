@@ -24,7 +24,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/alertPreferences/
     //
-    public func alertPreferences() -> NSURLRequest {
+    public func alertPreferences() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -37,7 +37,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/blocked/
     //
-    public func blocked() -> NSURLRequest {
+    public func blocked() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -50,7 +50,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/reportPreferences/
     //
-    public func reportPreferences() -> NSURLRequest {
+    public func reportPreferences() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -63,7 +63,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/sharedUsers/
     //
-    public func sharedUsers() -> NSURLRequest {
+    public func sharedUsers() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -76,7 +76,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/sites/
     //
-    public func sites() -> NSURLRequest {
+    public func sites() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -89,7 +89,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/taggedVisitors/
     //
-    public func taggedVisitors() -> NSURLRequest {
+    public func taggedVisitors() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -102,7 +102,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_webhooks
     //
-    public func webhooks() -> NSURLRequest {
+    public func webhooks() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -115,7 +115,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http/#add_a_webhook
     // 
-    public func addWebhook(webhookUrl: String, name: String = "") -> NSURLRequest {
+    public func addWebhook(_ webhookUrl: String, name: String = "") -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -133,7 +133,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_triggers_for_a_webhook
     // 
-    public func webhookTriggers(webhookId: Int) -> NSURLRequest {
+    public func webhookTriggers(_ webhookId: Int) -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -146,7 +146,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#add_an_trigger_to_a_webhook
     // 
-    public func addWebhookTrigger(webhookId: Int, trigger: String, value: String) -> NSURLRequest {
+    public func addWebhookTrigger(_ webhookId: Int, trigger: String, value: String) -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -164,7 +164,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#remove_an_trigger_from_a_webhook
     //
-    public func removeWebhookTrigger(webhookId: Int, triggerId: Int) -> NSURLRequest {
+    public func removeWebhookTrigger(_ webhookId: Int, triggerId: Int) -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token
@@ -177,7 +177,7 @@ public class Account {
     // docs:
     // 
     //
-    public func me() -> NSURLRequest {
+    public func me() -> URLRequest {
         let query = [
             "api_key": self.client.key,
             "site_token": self.client.token

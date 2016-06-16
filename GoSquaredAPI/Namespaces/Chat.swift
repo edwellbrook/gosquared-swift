@@ -24,7 +24,7 @@ public class Chat {
     // docs:
     // 
     //
-    public func chats() -> NSURLRequest {
+    public func chats() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -37,8 +37,8 @@ public class Chat {
     // docs:
     //
     //
-    public func messages(user: String, limit: Int = 20, offset: Int = 0) -> NSURLRequest {
-        let userId = user.stringByAddingPercentEncodingWithAllowedCharacters(.URLPathAllowedCharacterSet())!
+    public func messages(_ user: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
+        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
         let query: [String : AnyObject] = [
             "site_token": self.client.token,
             "api_key": self.client.key,
@@ -53,7 +53,7 @@ public class Chat {
     // docs:
     //
     //
-    public func stream() -> NSURLRequest {
+    public func stream() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key

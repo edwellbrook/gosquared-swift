@@ -15,7 +15,7 @@ class AccountTests: XCTestCase {
 
 
     func testAlertPreferences() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.alertPreferences()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -23,11 +23,11 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testBlocked() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.blocked()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -35,11 +35,11 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testReportPreferences() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.reportPreferences()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -47,11 +47,11 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testSharedUsers() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.sharedUsers()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -59,11 +59,11 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testSites() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.sites()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -71,11 +71,11 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testTaggedVisitors() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.taggedVisitors()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -83,7 +83,7 @@ class AccountTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
 }

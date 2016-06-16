@@ -15,7 +15,7 @@ class TrackingTests: XCTestCase {
 
 
     func testIdentify() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let props: [String: AnyObject] = [
             "name": "Node GoSquared",
             "email": "test-node@gosquared.com",
@@ -30,11 +30,11 @@ class TrackingTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testProperties() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let props: [String: AnyObject] = [
             "name": "Node GoSquared",
             "email": "test-node@gosquared.com",
@@ -49,11 +49,11 @@ class TrackingTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testEvent() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let event: [String: AnyObject] = [
             "additional": "data"
         ]
@@ -64,11 +64,11 @@ class TrackingTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testUserEvent() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let event: [String: AnyObject] = [
             "additional": "data"
         ]
@@ -79,7 +79,7 @@ class TrackingTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
 }

@@ -15,7 +15,7 @@ class EcommerceTests: XCTestCase {
 
 
     func testAggregate() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.aggregate()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -23,11 +23,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testBrowser() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.browser()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -35,11 +35,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testCategory() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.category()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -47,11 +47,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testCountry() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.country()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -59,11 +59,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testLanguage() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.language()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -71,11 +71,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testOs() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.os()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -83,11 +83,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testProduct() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.product()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -95,11 +95,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testSources() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.sources()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -107,11 +107,11 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
     func testTransaction() {
-        let ex = expectationWithDescription("Handler called")
+        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.transaction()
 
         gosquared.performRequest(request, completionHandler: { response, error in
@@ -119,7 +119,7 @@ class EcommerceTests: XCTestCase {
             XCTAssertNil(error)
         })?.resume()
 
-        waitForExpectationsWithTimeout(2.5, handler: nil)
+        waitForExpectations(withTimeout: 2.5, handler: nil)
     }
 
 }

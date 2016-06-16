@@ -26,7 +26,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/aggregateStats/
     //
-    public func aggregateStats() -> NSURLRequest {
+    public func aggregateStats() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -39,7 +39,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/campaigns/
     //
-    public func campaigns() -> NSURLRequest {
+    public func campaigns() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -52,7 +52,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/concurrents/
     //
-    public func concurrents() -> NSURLRequest {
+    public func concurrents() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -65,7 +65,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/engagement/
     //
-    public func engagement() -> NSURLRequest {
+    public func engagement() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -78,7 +78,7 @@ public class Now {
     // docs
     // https://www.gosquared.com/developer/api/now/v3/geo/
     //
-    public func geo() -> NSURLRequest {
+    public func geo() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -91,7 +91,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/overview/
     //
-    public func overview() -> NSURLRequest {
+    public func overview() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -104,7 +104,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/pages/
     //
-    public func pages() -> NSURLRequest {
+    public func pages() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -117,7 +117,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/sources/
     //
-    public func sources() -> NSURLRequest {
+    public func sources() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -130,7 +130,7 @@ public class Now {
     // docs:
     // https://www.gosquared.com/developer/api/now/v3/timeSeries/
     //
-    public func timeSeries() -> NSURLRequest {
+    public func timeSeries() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -143,7 +143,7 @@ public class Now {
     // visitors:
     // https://www.gosquared.com/developer/api/now/v3/visitors/
     //
-    public func visitors() -> NSURLRequest {
+    public func visitors() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key

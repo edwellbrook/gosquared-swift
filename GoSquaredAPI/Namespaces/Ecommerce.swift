@@ -26,7 +26,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/aggregate/
     //
-    public func aggregate() -> NSURLRequest {
+    public func aggregate() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -39,7 +39,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/browser/
     //
-    public func browser() -> NSURLRequest {
+    public func browser() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -52,7 +52,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/category/
     //
-    public func category() -> NSURLRequest {
+    public func category() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -65,7 +65,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/country/
     //
-    public func country() -> NSURLRequest {
+    public func country() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -78,7 +78,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/language/
     //
-    public func language() -> NSURLRequest {
+    public func language() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -91,7 +91,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/os/
     //
-    public func os() -> NSURLRequest {
+    public func os() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -104,7 +104,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/product/
     //
-    public func product() -> NSURLRequest {
+    public func product() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -117,7 +117,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/sources/
     //
-    public func sources() -> NSURLRequest {
+    public func sources() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key
@@ -130,7 +130,7 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/transaction/
     //
-    public func transaction() -> NSURLRequest {
+    public func transaction() -> URLRequest {
         let query = [
             "site_token": self.client.token,
             "api_key": self.client.key

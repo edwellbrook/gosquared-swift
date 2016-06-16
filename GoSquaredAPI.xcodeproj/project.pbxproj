@@ -292,9 +292,11 @@
 					};
 					B70F33311B10E91A0056DECE = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 					};
 					B70F333B1B10E91B0056DECE = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -590,6 +592,7 @@
 				PRODUCT_NAME = GoSquaredAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -610,6 +613,7 @@
 				PRODUCT_NAME = GoSquaredAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -632,6 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -649,6 +654,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

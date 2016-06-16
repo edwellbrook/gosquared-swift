@@ -20,7 +20,7 @@ public class GoSquaredAPI {
 
 
     let key: String
-    let URLSession: NSURLSession
+    let URLSession: Foundation.URLSession
     public var token: String
 
     static let baseURL = "https://api.gosquared.com"
@@ -35,22 +35,22 @@ public class GoSquaredAPI {
     lazy public var people: People = People(client: self)
 
 
-    public init(key: String, token: String = "", URLSession: NSURLSession = NSURLSession.sharedSession()) {
+    public init(key: String, token: String = "", URLSession: Foundation.URLSession = Foundation.URLSession.shared()) {
         self.key = key
         self.token = token
         self.URLSession = URLSession
     }
 
 
-    public func performRequest(request: NSURLRequest, completionHandler: Handler?) -> NSURLSessionDataTask? {
-        return self.URLSession.dataTaskWithRequest(request) { (data, response, error) in
+    public func performRequest(_ request: URLRequest, completionHandler: Handler?) -> URLSessionDataTask? {
+        return self.URLSession.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 completionHandler?(response: nil, error: error)
                 return
             }
 
             do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                 completionHandler?(response: json, error: nil)
             } catch let err as NSError {
                 completionHandler?(response: nil, error: err)
@@ -60,39 +60,39 @@ public class GoSquaredAPI {
     
 }
 
-internal func GETRequest(URL: String, query: [String: AnyObject]) -> NSURLRequest {
-    return NSURLRequest(URL: buildURL(URL, query: query))
+internal func GETRequest(_ URL: String, query: [String: AnyObject]) -> URLRequest {
+    return URLRequest(url: buildURL(URL, query: query))
 }
 
-internal func DELETERequest(URL: String, query: [String: AnyObject]) -> NSURLRequest {
-    let request = NSMutableURLRequest(URL: buildURL(URL, query: query))
-    request.HTTPMethod = "DELETE"
+internal func DELETERequest(_ URL: String, query: [String: AnyObject]) -> URLRequest {
+    let request = NSMutableURLRequest(url: buildURL(URL, query: query))
+    request.httpMethod = "DELETE"
 
-    return request
+    return request as URLRequest
 }
 
-internal func POSTRequest(URL: String, query: [String: AnyObject], body: AnyObject) -> NSURLRequest {
-    let request = NSMutableURLRequest(URL: buildURL(URL, query: query))
-    request.HTTPMethod = "POST"
+internal func POSTRequest(_ URL: String, query: [String: AnyObject], body: AnyObject) -> URLRequest {
+    let request = NSMutableURLRequest(url: buildURL(URL, query: query))
+    request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
     do {
-        let data = try NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(rawValue: 0))
-        request.HTTPBody = data
+        let data = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions(rawValue: 0))
+        request.httpBody = data
     } catch _ {
     }
 
-    return request
+    return request as URLRequest
 }
 
-private func buildURL(baseURL: String, query: [String: AnyObject]) -> NSURL {
+private func buildURL(_ baseURL: String, query: [String: AnyObject]) -> URL {
     guard query.count > 0 else {
-        return NSURL(string: baseURL)!
+        return URL(string: baseURL)!
     }
 
     let queryString = "?" + query.map { key, val -> String in
-        return "\(key)=\(val)".stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-    }.joinWithSeparator("&")
+        return "\(key)=\(val)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }.joined(separator: "&")
 
-    return NSURL(string: baseURL.stringByAppendingString(queryString))!
+    return URL(string: baseURL + queryString)!
 }
