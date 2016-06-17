@@ -13,12 +13,16 @@ public struct SearchOptions {
     public var count: Int = 35
     public var offset: Int = 0
     public var sort: (key: String, direction: String) = (key: "last.seen", direction: "desc")
+    
+    public init() {}
 }
 
 public struct FeedOptions {
     public var eventTypes: [String] = ["sessionEvent", "event"]
     public var count: Int = 25
     public var offset: Int = 0
+    
+    public init() {}
 }
 
 public class People {
