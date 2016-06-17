@@ -86,7 +86,7 @@ public class People {
             "limit": "\(opts.offset),\(opts.count)"
         ]
 
-        return GETRequest("\(baseURL)/person/\(userId)/details/", query: query)
+        return GETRequest("\(baseURL)/person/\(userId)/feed/", query: query)
     }
 
     //
