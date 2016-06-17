@@ -18,7 +18,7 @@ class NowTests: XCTestCase {
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.aggregateStats()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -30,7 +30,7 @@ class NowTests: XCTestCase {
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.campaigns()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -42,7 +42,7 @@ class NowTests: XCTestCase {
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.concurrents()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -54,7 +54,7 @@ class NowTests: XCTestCase {
         let ex = expectation(withDescription: "Handler called")
 let request = gosquared.now.engagement()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -66,7 +66,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.geo()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -78,7 +78,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.overview()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -90,7 +90,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.pages()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -102,7 +102,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.sources()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -114,7 +114,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.timeSeries()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()
@@ -126,7 +126,7 @@ let request = gosquared.now.engagement()
         let ex = expectation(withDescription: "Handler called")
         let request = gosquared.now.visitors()
 
-        gosquared.performRequest(request, completionHandler: { response, error in
+        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
             ex.fulfill()
             XCTAssertNil(error)
         })?.resume()

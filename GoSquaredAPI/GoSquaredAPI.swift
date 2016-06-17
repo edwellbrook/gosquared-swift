@@ -20,9 +20,9 @@ public class GoSquaredAPI {
 
 
     let key: String
-    let URLSession: Foundation.URLSession
     public var token: String
 
+    static var URLSession = Foundation.URLSession.shared()
     static let baseURL = "https://api.gosquared.com"
     static let stagingBaseURL = "https://api-staging.gosquared.com"
 
@@ -35,15 +35,14 @@ public class GoSquaredAPI {
     lazy public var people: People = People(client: self)
 
 
-    public init(key: String, token: String = "", URLSession: Foundation.URLSession = Foundation.URLSession.shared()) {
+    public init(key: String, token: String = "") {
         self.key = key
         self.token = token
-        self.URLSession = URLSession
     }
 
 
-    public func performRequest(_ request: URLRequest, completionHandler: Handler?) -> URLSessionDataTask? {
-        return self.URLSession.dataTask(with: request) { (data, response, error) in
+    public static func performRequest(_ request: URLRequest, completionHandler: Handler?) -> URLSessionDataTask? {
+        return GoSquaredAPI.URLSession.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 completionHandler?(response: nil, error: error)
                 return

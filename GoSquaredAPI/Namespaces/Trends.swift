@@ -96,7 +96,7 @@ public class Trends {
         let params = funcs.map({ $0.params }).joined(separator: "&")
         let req = GETRequest("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
 
-        return self.client.performRequest(req, completionHandler: completionHandler)
+        return GoSquaredAPI.performRequest(req, completionHandler: completionHandler)
     }
 
 }
