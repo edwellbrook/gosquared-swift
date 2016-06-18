@@ -28,7 +28,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/aggregateStats/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/aggregateStats/", queryItems: queryItems)
     }
 
     //
@@ -41,7 +41,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/campaigns/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/campaigns/", queryItems: queryItems)
     }
 
     //
@@ -54,7 +54,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/concurrents/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/concurrents/", queryItems: queryItems)
     }
 
     //
@@ -67,7 +67,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/engagement/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/engagement/", queryItems: queryItems)
     }
 
     //
@@ -80,7 +80,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/geo/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/geo/", queryItems: queryItems)
     }
 
     //
@@ -93,7 +93,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/overview/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/overview/", queryItems: queryItems)
     }
 
     //
@@ -106,7 +106,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/pages/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/pages/", queryItems: queryItems)
     }
 
     //
@@ -119,7 +119,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/sources/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/sources/", queryItems: queryItems)
     }
 
     //
@@ -132,7 +132,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/timeSeries/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/timeSeries/", queryItems: queryItems)
     }
 
     //
@@ -145,7 +145,7 @@ public class Now {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/visitors/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/visitors/", queryItems: queryItems)
     }
 
 }

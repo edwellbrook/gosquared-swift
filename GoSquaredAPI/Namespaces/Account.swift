@@ -28,7 +28,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/alertPreferences/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/alertPreferences/", queryItems: queryItems)
     }
 
     //
@@ -41,7 +41,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/blocked/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/blocked/", queryItems: queryItems)
     }
 
     //
@@ -54,7 +54,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/reportPreferences/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/reportPreferences/", queryItems: queryItems)
     }
 
     //
@@ -67,7 +67,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/sharedUsers/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/sharedUsers/", queryItems: queryItems)
     }
 
     //
@@ -80,7 +80,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/sites/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/sites/", queryItems: queryItems)
     }
 
     //
@@ -93,7 +93,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/taggedVisitors/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/taggedVisitors/", queryItems: queryItems)
     }
 
     //
@@ -106,7 +106,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/webhooks/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/webhooks/", queryItems: queryItems)
     }
 
     //
@@ -124,7 +124,7 @@ public class Account {
             "url": webhookUrl
         ]
 
-        return POSTRequest("\(self.basePath)/webhooks/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/webhooks/", queryItems: queryItems, body: body)
     }
 
     //
@@ -137,7 +137,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/triggers/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/triggers/", queryItems: queryItems)
     }
 
     //
@@ -155,7 +155,7 @@ public class Account {
             "value": value
         ]
 
-        return POSTRequest("\(self.basePath)/webhooks/\(webhookId)/triggers/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/webhooks/\(webhookId)/triggers/", queryItems: queryItems, body: body)
     }
 
     // 
@@ -168,7 +168,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return DELETERequest("\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)/", queryItems: queryItems)
+        return DELETERequest(path: "\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)/", queryItems: queryItems)
     }
 
     //
@@ -181,7 +181,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/me/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/me/", queryItems: queryItems)
     }
 
 }

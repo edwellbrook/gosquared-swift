@@ -28,7 +28,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/aggregate/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/aggregate/", queryItems: queryItems)
     }
 
     //
@@ -41,7 +41,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/browser/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/browser/", queryItems: queryItems)
     }
 
     //
@@ -54,7 +54,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/category/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/category/", queryItems: queryItems)
     }
 
     //
@@ -67,7 +67,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/country/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/country/", queryItems: queryItems)
     }
 
     //
@@ -80,7 +80,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/language/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/language/", queryItems: queryItems)
     }
 
     //
@@ -93,7 +93,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/os/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/os/", queryItems: queryItems)
     }
 
     //
@@ -106,7 +106,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/product/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/product/", queryItems: queryItems)
     }
 
     //
@@ -119,7 +119,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/sources/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/sources/", queryItems: queryItems)
     }
 
     //
@@ -132,7 +132,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/transaction/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/transaction/", queryItems: queryItems)
     }
 
 }

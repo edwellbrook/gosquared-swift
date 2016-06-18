@@ -28,7 +28,7 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/chats/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/chats/", queryItems: queryItems)
     }
 
     //
@@ -36,8 +36,6 @@ public class Chat {
     //
     //
     public func messages(_ user: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
-        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token),
@@ -45,7 +43,7 @@ public class Chat {
             URLQueryItem(name: "offset", value: String(offset))
         ]
 
-        return GETRequest("\(self.basePath)/chats/\(userId)/messages", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/chats/\(user)/messages", queryItems: queryItems)
     }
 
     //
@@ -58,7 +56,7 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(self.basePath)/stream/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/stream/", queryItems: queryItems)
     }
 
 }

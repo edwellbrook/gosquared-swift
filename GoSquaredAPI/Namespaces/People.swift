@@ -51,7 +51,7 @@ public class People {
             URLQueryItem(name: "sort", value: "\(opts.sort.key):\(opts.sort.direction)")
         ]
 
-        return GETRequest("\(self.basePath)/search/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/search/", queryItems: queryItems)
     }
 
     //
@@ -59,14 +59,12 @@ public class People {
     //
     //
     public func details(_ user: String) -> URLRequest {
-        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-
         let queryItems = [
             URLQueryItem(name: "site_token", value: self.client.token),
             URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest("\(self.basePath)/person/\(userId)/details/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/person/\(user)/details/", queryItems: queryItems)
     }
 
     //
@@ -74,8 +72,6 @@ public class People {
     //
     //
     public func feed(_ user: String, options opts: FeedOptions = FeedOptions()) -> URLRequest {
-        let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-
         let queryItems = [
             URLQueryItem(name: "site_token", value: self.client.token),
             URLQueryItem(name: "api_key", value: self.client.key),
@@ -84,7 +80,7 @@ public class People {
             URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)")
         ]
 
-        return GETRequest("\(self.basePath)/person/\(userId)/feed/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/person/\(user)/feed/", queryItems: queryItems)
     }
 
     //
@@ -97,7 +93,7 @@ public class People {
             URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest("\(self.basePath)/smartgroups/", queryItems: queryItems)
+        return GETRequest(path: "\(self.basePath)/smartgroups/", queryItems: queryItems)
     }
 
 }

@@ -33,7 +33,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return POSTRequest("\(self.basePath)/identify/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/identify/", queryItems: queryItems, body: body)
     }
 
     //
@@ -51,7 +51,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return POSTRequest("\(self.basePath)/properties/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/properties/", queryItems: queryItems, body: body)
     }
 
     //
@@ -72,7 +72,7 @@ public class Tracking {
             body.updateValue(additional, forKey: "data")
         }
 
-        return POSTRequest("\(self.basePath)/event/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/event/", queryItems: queryItems, body: body)
     }
 
     //
@@ -98,7 +98,7 @@ public class Tracking {
             "event": event
         ]
 
-        return POSTRequest("\(self.basePath)/event/", queryItems: queryItems, body: body)
+        return POSTRequest(path: "\(self.basePath)/event/", queryItems: queryItems, body: body)
     }
 
 }

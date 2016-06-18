@@ -57,21 +57,21 @@ public class GoSquaredAPI {
     
 }
 
-internal func GETRequest(_ URL: String, queryItems: [URLQueryItem]) -> URLRequest {
+internal func GETRequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
     var components = URLComponents()
     components.scheme = "https"
     components.host = "api.gosquared.com"
-    components.path = URL
+    components.path = path
     components.queryItems = queryItems
 
     return URLRequest(url: components.url!)
 }
 
-internal func DELETERequest(_ URL: String, queryItems: [URLQueryItem]) -> URLRequest {
+internal func DELETERequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
     var components = URLComponents()
     components.scheme = "https"
     components.host = "api.gosquared.com"
-    components.path = URL
+    components.path = path
     components.queryItems = queryItems
 
     let request = NSMutableURLRequest(url: components.url!)
@@ -80,11 +80,11 @@ internal func DELETERequest(_ URL: String, queryItems: [URLQueryItem]) -> URLReq
     return request as URLRequest
 }
 
-internal func POSTRequest(_ URL: String, queryItems: [URLQueryItem], body: AnyObject) -> URLRequest {
+internal func POSTRequest(path: String, queryItems: [URLQueryItem], body: AnyObject) -> URLRequest {
     var components = URLComponents()
     components.scheme = "https"
     components.host = "api.gosquared.com"
-    components.path = URL
+    components.path = path
     components.queryItems = queryItems
 
     let request = NSMutableURLRequest(url: components.url!)
