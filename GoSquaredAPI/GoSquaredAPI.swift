@@ -92,8 +92,7 @@ internal func POSTRequest(path: String, queryItems: [URLQueryItem], body: AnyObj
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
     do {
-        let data = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions(rawValue: 0))
-        request.httpBody = data
+        request.httpBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
     } catch _ {
     }
 
