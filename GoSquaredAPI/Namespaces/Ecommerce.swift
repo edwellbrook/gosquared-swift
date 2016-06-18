@@ -10,16 +10,12 @@ import Foundation
 
 public class Ecommerce {
 
-    private let key: String
-    private let token: String
     private let client: GoSquaredAPI
-    private let baseURL: String
+    private let basePath: String
 
     internal init(client: GoSquaredAPI) {
-        self.key = client.key
-        self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/ecommerce/v1"
+        self.basePath = "/ecommerce/v1"
     }
 
     //
@@ -27,12 +23,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/aggregate/
     //
     public func aggregate() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/aggregate/", query: query)
+        return GETRequest("\(self.basePath)/aggregate/", queryItems: queryItems)
     }
 
     //
@@ -40,12 +36,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/browser/
     //
     public func browser() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/browser/", query: query)
+        return GETRequest("\(self.basePath)/browser/", queryItems: queryItems)
     }
 
     //
@@ -53,12 +49,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/category/
     //
     public func category() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/category/", query: query)
+        return GETRequest("\(self.basePath)/category/", queryItems: queryItems)
     }
 
     //
@@ -66,12 +62,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/country/
     //
     public func country() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/country/", query: query)
+        return GETRequest("\(self.basePath)/country/", queryItems: queryItems)
     }
 
     //
@@ -79,12 +75,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/language/
     //
     public func language() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/language/", query: query)
+        return GETRequest("\(self.basePath)/language/", queryItems: queryItems)
     }
 
     //
@@ -92,12 +88,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/os/
     //
     public func os() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/os/", query: query)
+        return GETRequest("\(self.basePath)/os/", queryItems: queryItems)
     }
 
     //
@@ -105,12 +101,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/product/
     //
     public func product() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/product/", query: query)
+        return GETRequest("\(self.basePath)/product/", queryItems: queryItems)
     }
 
     //
@@ -118,12 +114,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/sources/
     //
     public func sources() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/sources/", query: query)
+        return GETRequest("\(self.basePath)/sources/", queryItems: queryItems)
     }
 
     //
@@ -131,12 +127,12 @@ public class Ecommerce {
     // https://www.gosquared.com/developer/api/ecommerce/v1/transaction/
     //
     public func transaction() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/transaction/", query: query)
+        return GETRequest("\(self.basePath)/transaction/", queryItems: queryItems)
     }
 
 }

@@ -10,16 +10,12 @@ import Foundation
 
 public class Now {
 
-    private let key: String
-    private let token: String
     private let client: GoSquaredAPI
-    private let baseURL: String
+    private let basePath: String
 
     internal init(client: GoSquaredAPI) {
-        self.key = client.key
-        self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/now/v3"
+        self.basePath = "/now/v3"
     }
 
     //
@@ -27,12 +23,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/aggregateStats/
     //
     public func aggregateStats() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/aggregateStats/", query: query)
+        return GETRequest("\(self.basePath)/aggregateStats/", queryItems: queryItems)
     }
 
     //
@@ -40,12 +36,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/campaigns/
     //
     public func campaigns() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/campaigns/", query: query)
+        return GETRequest("\(self.basePath)/campaigns/", queryItems: queryItems)
     }
 
     //
@@ -53,12 +49,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/concurrents/
     //
     public func concurrents() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/concurrents/", query: query)
+        return GETRequest("\(self.basePath)/concurrents/", queryItems: queryItems)
     }
 
     //
@@ -66,12 +62,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/engagement/
     //
     public func engagement() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/engagement/", query: query)
+        return GETRequest("\(self.basePath)/engagement/", queryItems: queryItems)
     }
 
     //
@@ -79,12 +75,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/geo/
     //
     public func geo() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/geo/", query: query)
+        return GETRequest("\(self.basePath)/geo/", queryItems: queryItems)
     }
 
     //
@@ -92,12 +88,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/overview/
     //
     public func overview() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/overview/", query: query)
+        return GETRequest("\(self.basePath)/overview/", queryItems: queryItems)
     }
 
     //
@@ -105,12 +101,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/pages/
     //
     public func pages() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/pages/", query: query)
+        return GETRequest("\(self.basePath)/pages/", queryItems: queryItems)
     }
 
     //
@@ -118,12 +114,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/sources/
     //
     public func sources() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/sources/", query: query)
+        return GETRequest("\(self.basePath)/sources/", queryItems: queryItems)
     }
 
     //
@@ -131,12 +127,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/timeSeries/
     //
     public func timeSeries() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/timeSeries/", query: query)
+        return GETRequest("\(self.basePath)/timeSeries/", queryItems: queryItems)
     }
 
     //
@@ -144,12 +140,12 @@ public class Now {
     // https://www.gosquared.com/developer/api/now/v3/visitors/
     //
     public func visitors() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/visitors/", query: query)
+        return GETRequest("\(self.basePath)/visitors/", queryItems: queryItems)
     }
 
 }

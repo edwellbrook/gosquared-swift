@@ -10,16 +10,12 @@ import Foundation
 
 public class Tracking {
 
-    private let key: String
-    private let token: String
     private let client: GoSquaredAPI
-    private let baseURL: String
+    private let basePath: String
 
     internal init(client: GoSquaredAPI) {
-        self.key = client.key
-        self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/tracking/v1"
+        self.basePath = "/tracking/v1"
     }
 
     //
@@ -27,9 +23,9 @@ public class Tracking {
     // https://www.gosquared.com/docs/tracking/api/http#identify
     //
     public func identify(_ id: String, properties: [String: AnyObject]) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
         let body = [
@@ -37,7 +33,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return POSTRequest("\(baseURL)/identify/", query: query, body: body)
+        return POSTRequest("\(self.basePath)/identify/", queryItems: queryItems, body: body)
     }
 
     //
@@ -45,9 +41,9 @@ public class Tracking {
     // https://www.gosquared.com/docs/tracking/api/http#properties
     //
     public func properties(_ id: String, properties: [String: AnyObject]) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
         let body = [
@@ -55,7 +51,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        return POSTRequest("\(baseURL)/properties/", query: query, body: body)
+        return POSTRequest("\(self.basePath)/properties/", queryItems: queryItems, body: body)
     }
 
     //
@@ -63,9 +59,9 @@ public class Tracking {
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
     public func event(_ name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
         var body: [String: AnyObject] = [
@@ -76,7 +72,7 @@ public class Tracking {
             body.updateValue(additional, forKey: "data")
         }
 
-        return POSTRequest("\(baseURL)/event/", query: query, body: body)
+        return POSTRequest("\(self.basePath)/event/", queryItems: queryItems, body: body)
     }
 
     //
@@ -84,9 +80,9 @@ public class Tracking {
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
     public func userEvent(_ id: String, name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
         var event: [String: AnyObject] = [
@@ -102,7 +98,7 @@ public class Tracking {
             "event": event
         ]
 
-        return POSTRequest("\(baseURL)/event/", query: query, body: body)
+        return POSTRequest("\(self.basePath)/event/", queryItems: queryItems, body: body)
     }
 
 }

@@ -17,6 +17,7 @@ public struct SearchOptions {
     public init() {}
 }
 
+
 public struct FeedOptions {
     public var eventTypes: [String] = ["sessionEvent", "event"]
     public var count: Int = 25
@@ -25,20 +26,15 @@ public struct FeedOptions {
     public init() {}
 }
 
+
 public class People {
 
-    private let key: String
-    private let token: String
     private let client: GoSquaredAPI
-    private let baseURL: String
-    private let stagingBaseURL: String
+    private let basePath: String
 
     internal init(client: GoSquaredAPI) {
-        self.key = client.key
-        self.token = client.token
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/people/v1"
-        self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/people/v1"
+        self.basePath = "/people/v1"
     }
 
     //
@@ -46,16 +42,16 @@ public class People {
     //
     //
     public func search(_ query: String = "", options opts: SearchOptions = SearchOptions()) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key,
-            "query": query,
-            "filters": opts.filters,
-            "limit": "\(opts.offset),\(opts.count)",
-            "sort": "\(opts.sort.key):\(opts.sort.direction)"
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "query", value: query),
+            URLQueryItem(name: "filters", value: opts.filters),
+            URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)"),
+            URLQueryItem(name: "sort", value: "\(opts.sort.key):\(opts.sort.direction)")
         ]
 
-        return GETRequest("\(baseURL)/search/", query: query)
+        return GETRequest("\(self.basePath)/search/", queryItems: queryItems)
     }
 
     //
@@ -64,12 +60,13 @@ public class People {
     //
     public func details(_ user: String) -> URLRequest {
         let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest("\(baseURL)/person/\(userId)/details/", query: query)
+        return GETRequest("\(self.basePath)/person/\(userId)/details/", queryItems: queryItems)
     }
 
     //
@@ -78,15 +75,16 @@ public class People {
     //
     public func feed(_ user: String, options opts: FeedOptions = FeedOptions()) -> URLRequest {
         let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key,
-            "presenter": "nice",
-            "type": opts.eventTypes.joined(separator: ","),
-            "limit": "\(opts.offset),\(opts.count)"
+
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "presenter", value: "nice"),
+            URLQueryItem(name: "type", value: opts.eventTypes.joined(separator: ",")),
+            URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)")
         ]
 
-        return GETRequest("\(baseURL)/person/\(userId)/feed/", query: query)
+        return GETRequest("\(self.basePath)/person/\(userId)/feed/", queryItems: queryItems)
     }
 
     //
@@ -94,12 +92,12 @@ public class People {
     //
     //
     public func smartGroup() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest("\(baseURL)/smartgroups/", query: query)
+        return GETRequest("\(self.basePath)/smartgroups/", queryItems: queryItems)
     }
 
 }

@@ -10,41 +10,38 @@ import Foundation
 
 public class Trends {
 
-    private let key: String
-    private let token: String
-    private let client: GoSquaredAPI
-    private let baseURL: String
-
-    internal init(client: GoSquaredAPI) {
-        self.key = client.key
-        self.token = client.token
-        self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/trends/v2"
-    }
-
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
 
+
+    private let client: GoSquaredAPI
+    private let basePath: String
+
+    internal init(client: GoSquaredAPI) {
+        self.client = client
+        self.basePath = "/trends/v2"
+    }
+
     //
     // docs:
     //
     //
-    public func aggregate(_ from: Date, to: Date) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key,
-            "from": dateFormatter.string(from: from),
-            "to": dateFormatter.string(from: to),
-            "interval": "hour"
+    public func aggregate(from: Date, to: Date) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "from", value: dateFormatter.string(from: from)),
+            URLQueryItem(name: "to", value: dateFormatter.string(from: to)),
+            URLQueryItem(name: "interval", value: "hour")
         ]
 
-        return GETRequest("\(baseURL)/aggregate/", query: query)
+        return GETRequest("\(self.basePath)/aggregate/", queryItems: queryItems)
     }
 
-    public func aggregateFunction(_ from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
+    public func aggregateFunction(from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
         return GoSquaredAPI.CombiningFunction(endpoint: "aggregate", params: [
             "from": dateFormatter.string(from: from),
             "to": dateFormatter.string(from: to),
@@ -58,15 +55,15 @@ public class Trends {
     //
     //
     public func page(_ from: Date, to: Date) -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key,
-            "from": dateFormatter.string(from: from),
-            "to": dateFormatter.string(from: to),
-            "interval": "hour"
+        let queryItems = [
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "from", value: dateFormatter.string(from: from)),
+            URLQueryItem(name: "to", value: dateFormatter.string(from: to)),
+            URLQueryItem(name: "interval", value: "hour")
         ]
 
-        return GETRequest("\(baseURL)/page/", query: query)
+        return GETRequest("\(self.basePath)/page/", queryItems: queryItems)
     }
 
     public func pageFunction(_ from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
@@ -82,21 +79,28 @@ public class Trends {
     // docs:
     //
     //
-    public func executeCombiningFunction(_ functions: [GoSquaredAPI.CombiningFunction], completionHandler: GoSquaredAPI.Handler) -> URLSessionDataTask? {
-        let funcs: [(name: String, params: String)] = functions.enumerated().map { idx, fn in
+    public func executeCombiningFunction(_ funcs: [GoSquaredAPI.CombiningFunction]) -> URLRequest {
+        let functions: [(name: String, params: [URLQueryItem])] = funcs.enumerated().map { idx, fn in
             let name = "\(fn.endpoint):\(idx)"
-            let params = fn.params.map({ key, val -> String in
-                return "\(name):\(key)=\(val)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            let params = fn.params.map({ key, val in
+                return URLQueryItem(name: "\(name):\(key)", value: val)
             })
 
-            return (name, params.joined(separator: "&"))
+            return (name, params)
         }
 
-        let fns = funcs.map({ $0.name }).joined(separator: ",")
-        let params = funcs.map({ $0.params }).joined(separator: "&")
-        let req = GETRequest("\(baseURL)/\(fns)/?api_key=\(key)&site_token=\(token)&\(params)", query: [:])
+        let functionList = functions.map({ $0.name }).joined(separator: ",")
 
-        return GoSquaredAPI.performRequest(req, completionHandler: completionHandler)
+        var queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        for function in functions {
+            queryItems.append(contentsOf: function.params)
+        }
+
+        return GETRequest("\(self.basePath)/\(functionList)/", queryItems: queryItems)
     }
 
 }

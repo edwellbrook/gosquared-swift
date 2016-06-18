@@ -11,13 +11,11 @@ import Foundation
 public class Chat {
 
     private let client: GoSquaredAPI
-    private let baseURL: String
-    private let stagingBaseURL: String
+    private let basePath: String
 
     internal init(client: GoSquaredAPI) {
         self.client = client
-        self.baseURL = "\(GoSquaredAPI.baseURL)/chat/v1"
-        self.stagingBaseURL = "\(GoSquaredAPI.stagingBaseURL)/chat/v1"
+        self.basePath = "/chat/v1"
     }
 
     // 
@@ -25,12 +23,12 @@ public class Chat {
     // 
     //
     public func chats() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/chats/", query: query)
+        return GETRequest("\(self.basePath)/chats/", queryItems: queryItems)
     }
 
     //
@@ -39,14 +37,15 @@ public class Chat {
     //
     public func messages(_ user: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
         let userId = user.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-        let query: [String : AnyObject] = [
-            "site_token": self.client.token,
-            "api_key": self.client.key,
-            "limit": limit,
-            "offset": offset
+
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "limit", value: String(limit)),
+            URLQueryItem(name: "offset", value: String(offset))
         ]
 
-        return GETRequest("\(baseURL)/chats/\(userId)/messages", query: query)
+        return GETRequest("\(self.basePath)/chats/\(userId)/messages", queryItems: queryItems)
     }
 
     //
@@ -54,12 +53,12 @@ public class Chat {
     //
     //
     public func stream() -> URLRequest {
-        let query = [
-            "site_token": self.client.token,
-            "api_key": self.client.key
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest("\(baseURL)/stream/", query: query)
+        return GETRequest("\(self.basePath)/stream/", queryItems: queryItems)
     }
 
 }

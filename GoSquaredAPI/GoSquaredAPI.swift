@@ -19,12 +19,10 @@ public class GoSquaredAPI {
     }
 
 
-    let key: String
-    public var token: String
+    public var key: String?
+    public var token: String?
 
     static var URLSession = Foundation.URLSession.shared()
-    static let baseURL = "https://api.gosquared.com"
-    static let stagingBaseURL = "https://api-staging.gosquared.com"
 
     lazy public var account: Account = Account(client: self)
     lazy public var chat: Chat = Chat(client: self)
@@ -35,7 +33,7 @@ public class GoSquaredAPI {
     lazy public var people: People = People(client: self)
 
 
-    public init(key: String, token: String = "") {
+    public init(key: String? = nil, token: String? = nil) {
         self.key = key
         self.token = token
     }
@@ -59,19 +57,37 @@ public class GoSquaredAPI {
     
 }
 
-internal func GETRequest(_ URL: String, query: [String: AnyObject]) -> URLRequest {
-    return URLRequest(url: buildURL(URL, query: query))
+internal func GETRequest(_ URL: String, queryItems: [URLQueryItem]) -> URLRequest {
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "api.gosquared.com"
+    components.path = URL
+    components.queryItems = queryItems
+
+    return URLRequest(url: components.url!)
 }
 
-internal func DELETERequest(_ URL: String, query: [String: AnyObject]) -> URLRequest {
-    let request = NSMutableURLRequest(url: buildURL(URL, query: query))
+internal func DELETERequest(_ URL: String, queryItems: [URLQueryItem]) -> URLRequest {
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "api.gosquared.com"
+    components.path = URL
+    components.queryItems = queryItems
+
+    let request = NSMutableURLRequest(url: components.url!)
     request.httpMethod = "DELETE"
 
     return request as URLRequest
 }
 
-internal func POSTRequest(_ URL: String, query: [String: AnyObject], body: AnyObject) -> URLRequest {
-    let request = NSMutableURLRequest(url: buildURL(URL, query: query))
+internal func POSTRequest(_ URL: String, queryItems: [URLQueryItem], body: AnyObject) -> URLRequest {
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "api.gosquared.com"
+    components.path = URL
+    components.queryItems = queryItems
+
+    let request = NSMutableURLRequest(url: components.url!)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
@@ -82,16 +98,4 @@ internal func POSTRequest(_ URL: String, query: [String: AnyObject], body: AnyOb
     }
 
     return request as URLRequest
-}
-
-private func buildURL(_ baseURL: String, query: [String: AnyObject]) -> URL {
-    guard query.count > 0 else {
-        return URL(string: baseURL)!
-    }
-
-    let queryString = "?" + query.map { key, val -> String in
-        return "\(key)=\(val)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-    }.joined(separator: "&")
-
-    return URL(string: baseURL + queryString)!
 }
