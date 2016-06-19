@@ -11,79 +11,55 @@ import XCTest
 
 class AccountTests: XCTestCase {
 
-    let gosquared = GoSquaredAPI(key: "demo", token: "GSN-106863-S")
+    let gosquared = GoSquaredAPI(key: "TEST_KEY", token: "TEST_TOKEN")
 
 
     func testAlertPreferences() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.alertPreferences()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/alertPreferences")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testBlocked() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.blocked()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testReportPreferences() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.reportPreferences()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/reportPreferences")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testSharedUsers() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.sharedUsers()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/sharedUsers")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testSites() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.sites()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/sites")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testTaggedVisitors() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.account.taggedVisitors()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/taggedVisitors")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
 }

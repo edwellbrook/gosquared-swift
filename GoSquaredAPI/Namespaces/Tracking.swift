@@ -22,14 +22,14 @@ public class Tracking {
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#identify
     //
-    public func identify(_ id: String, properties: [String: AnyObject]) -> URLRequest {
+    public func identify(personId: String, properties: [String: AnyObject]) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
         let body = [
-            "person_id": id,
+            "person_id": personId,
             "properties": properties
         ]
 
@@ -67,7 +67,7 @@ public class Tracking {
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func userEvent(_ id: String, name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
+    public func event(personId: String, name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -82,7 +82,7 @@ public class Tracking {
         }
 
         let body: [String: AnyObject] = [
-            "person_id": id,
+            "person_id": personId,
             "event": event
         ]
 

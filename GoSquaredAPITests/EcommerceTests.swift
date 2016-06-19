@@ -11,115 +11,79 @@ import XCTest
 
 class EcommerceTests: XCTestCase {
 
-    let gosquared = GoSquaredAPI(key: "demo", token: "GSN-106863-S")
+    let gosquared = GoSquaredAPI(key: "TEST_KEY", token: "TEST_TOKEN")
 
 
     func testAggregate() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.aggregate()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/aggregate")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testBrowser() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.browser()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/browser")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testCategory() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.category()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/category")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testCountry() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.country()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/country")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testLanguage() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.language()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/language")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testOs() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.os()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/os")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testProduct() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.product()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/product")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testSources() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.sources()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/sources")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
     func testTransaction() {
-        let ex = expectation(withDescription: "Handler called")
         let request = gosquared.ecommerce.transaction()
 
-        GoSquaredAPI.performRequest(request, completionHandler: { response, error in
-            ex.fulfill()
-            XCTAssertNil(error)
-        })?.resume()
-
-        waitForExpectations(withTimeout: 2.5, handler: nil)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/ecommerce/v1/transaction")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
 }
