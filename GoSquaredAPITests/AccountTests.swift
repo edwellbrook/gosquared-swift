@@ -112,8 +112,8 @@ class AccountTests: XCTestCase {
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
-    func testSites() {
-        let request = gosquared.account.sites()
+    func testProjects() {
+        let request = gosquared.account.projects()
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/account/v1/sites")

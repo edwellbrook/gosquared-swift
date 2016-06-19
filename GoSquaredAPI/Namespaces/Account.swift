@@ -216,7 +216,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/developer/api/account/v1/sites/
     //
-    public func sites() -> URLRequest {
+    public func projects() -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
