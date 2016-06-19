@@ -20,25 +20,9 @@ public class Account {
 
     //
     // docs:
-    // https://www.gosquared.com/developer/api/account/v1/alertPreferences/
+    // https://www.gosquared.com/docs/api/account/blocked/http/#retrieve_blocked_items
     //
-    public func alertPreferences() -> URLRequest {
-        let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
-        ]
-
-        let path = "\(self.basePath)/alertPreferences/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-
-        return URLRequest(url: components.url!)
-    }
-
-    //
-    // docs:
-    // https://www.gosquared.com/developer/api/account/v1/blocked/
-    //
-    public func blocked() -> URLRequest {
+    public func blockedItems() -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -48,6 +32,152 @@ public class Account {
         let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
         return URLRequest(url: components.url!)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#retrieve_blocked_bots_setting
+    //
+    public func isBotBlockingEnabled() -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let path = "\(self.basePath)/blocked/bots"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#update_blocked_bots_setting
+    //
+    public func setBotBlockingEnabled(enabled: Bool) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let body = [
+            "blocked": enabled
+        ]
+
+        let path = "\(self.basePath)/blocked/bots"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(method: "POST", url: components.url!, body: body)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#retrieve_blocked_ips
+    //
+    public func blockedIPs() -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let path = "\(self.basePath)/blocked/ips"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
+    }
+
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#update_blocked_ips
+    //
+    public func setBlockedIPs(ipAddresses: [String]) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let body = [
+            "ip": ipAddresses.joined(separator: ",")
+        ]
+
+        let path = "\(self.basePath)/blocked/ips"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(method: "POST", url: components.url!, body: body)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#unblock_ip_addresses
+    //
+    public func unblockIPs(ipAddresses: [String]) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let body = [
+            "ip": ipAddresses.joined(separator: ",")
+        ]
+
+        let path = "\(self.basePath)/blocked/ips"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(method: "DELETE", url: components.url!, body: body)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#retrieve_blocked_visitors
+    //
+    public func blockedVisitors() -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let path = "\(self.basePath)/blocked/visitors"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
+    }
+
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#update_blocked_visitors
+    //
+    public func setBlockedVisitors(visitorIds: [String]) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let body = [
+            "visitorID": visitorIds.joined(separator: ",")
+        ]
+
+        let path = "\(self.basePath)/blocked/visitors"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(method: "POST", url: components.url!, body: body)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/account/blocked/http/#unblock_visitors
+    //
+    public func unblockVisitors(visitorIds: [String]) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let body = [
+            "visitorID": visitorIds.joined(separator: ",")
+        ]
+
+        let path = "\(self.basePath)/blocked/visitors"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        
+        return URLRequest(method: "DELETE", url: components.url!, body: body)
     }
 
     //

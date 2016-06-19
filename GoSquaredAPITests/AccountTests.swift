@@ -14,20 +14,86 @@ class AccountTests: XCTestCase {
     let gosquared = GoSquaredAPI(key: "TEST_KEY", token: "TEST_TOKEN")
 
 
-    func testAlertPreferences() {
-        let request = gosquared.account.alertPreferences()
-
-        XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(request.url?.path, "/account/v1/alertPreferences")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
-    }
-
-    func testBlocked() {
-        let request = gosquared.account.blocked()
+    func testBlockedItems() {
+        let request = gosquared.account.blockedItems()
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/account/v1/blocked")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+    }
+
+    func testIsBotBlockingEnabled() {
+        let request = gosquared.account.isBotBlockingEnabled()
+
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/bots")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+    }
+
+    func testSetBotBlockingEnabled() {
+        let request = gosquared.account.setBotBlockingEnabled(enabled: true)
+
+        XCTAssertEqual(request.httpMethod, "POST")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/bots")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertNotNil(request.httpBody)
+    }
+
+    func testBlockedIPs() {
+        let request = gosquared.account.blockedIPs()
+
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/ips")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+    }
+
+    func testSetBlockedIPs() {
+        let request = gosquared.account.setBlockedIPs(ipAddresses: ["127.0.0.1"])
+
+        XCTAssertEqual(request.httpMethod, "POST")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/ips")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertNotNil(request.httpBody)
+    }
+
+    func testUnblockIPs() {
+        let request = gosquared.account.unblockIPs(ipAddresses: ["127.0.0.1"])
+
+        XCTAssertEqual(request.httpMethod, "DELETE")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/ips")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertNotNil(request.httpBody)
+    }
+
+    func testBlockedVisitors() {
+        let request = gosquared.account.blockedVisitors()
+
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/visitors")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+    }
+
+    func testSetBlockedVisitors() {
+        let request = gosquared.account.setBlockedVisitors(visitorIds: ["0"])
+
+        XCTAssertEqual(request.httpMethod, "POST")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/visitors")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertNotNil(request.httpBody)
+    }
+
+    func testUnblockVisitors() {
+        let request = gosquared.account.unblockVisitors(visitorIds: ["0"])
+
+        XCTAssertEqual(request.httpMethod, "DELETE")
+        XCTAssertEqual(request.url?.path, "/account/v1/blocked/visitors")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
+        XCTAssertNotNil(request.httpBody)
     }
 
     func testReportPreferences() {
@@ -77,7 +143,7 @@ class AccountTests: XCTestCase {
         XCTAssertEqual(request.url?.path, "/account/v1/webhooks")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
-        XCTAssertNotEqual(request.httpBody, nil)
+        XCTAssertNotNil(request.httpBody)
     }
 
     func testWebhookTriggers() {
@@ -95,7 +161,7 @@ class AccountTests: XCTestCase {
         XCTAssertEqual(request.url?.path, "/account/v1/webhooks/0/triggers")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
-        XCTAssertNotEqual(request.httpBody, nil)
+        XCTAssertNotNil(request.httpBody)
     }
 
     func testRemoveWebhookTrigger() {

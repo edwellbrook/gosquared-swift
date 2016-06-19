@@ -27,7 +27,7 @@ class TrackingTests: XCTestCase {
         XCTAssertEqual(request.url?.path, "/tracking/v1/identify")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
-        XCTAssertNotEqual(request.httpBody, nil)
+        XCTAssertNotNil(request.httpBody)
     }
 
     func testEvent() {
@@ -39,7 +39,7 @@ class TrackingTests: XCTestCase {
         XCTAssertEqual(request.url?.path, "/tracking/v1/event")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
-        XCTAssertNotEqual(request.httpBody, nil)
+        XCTAssertNotNil(request.httpBody)
     }
 
     func testUserEvent() {
@@ -51,7 +51,7 @@ class TrackingTests: XCTestCase {
         XCTAssertEqual(request.url?.path, "/tracking/v1/event")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Content-Type"), "application/json")
-        XCTAssertNotEqual(request.httpBody, nil)
+        XCTAssertNotNil(request.httpBody)
     }
 
 }
