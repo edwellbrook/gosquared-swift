@@ -10,9 +10,15 @@ import Foundation
 
 extension URLRequest {
 
-    init(method: String, url: URL, body: AnyObject? = nil) {
+    enum HTTPMethod: String {
+        case GET
+        case POST
+        case DELETE
+    }
+
+    init(method: HTTPMethod, url: URL, body: AnyObject? = nil) {
         self.init(url: url)
-        self.httpMethod = method
+        self.httpMethod = method.rawValue
 
         guard let json = body else {
             return
