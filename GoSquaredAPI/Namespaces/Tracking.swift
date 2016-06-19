@@ -43,7 +43,7 @@ public class Tracking {
     // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
-    public func event(_ name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
+    public func event(_ name: String, personId: String? = nil, properties: [String: AnyObject]? = nil) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -53,38 +53,13 @@ public class Tracking {
             "event": name
         ]
 
+        if let person = personId {
+            body.updateValue(person, forKey: "person_id")
+        }
+
         if let additional = properties {
             body.updateValue(additional, forKey: "data")
         }
-
-        let path = "\(self.basePath)/event/"
-        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
-
-        return URLRequest(method: .POST, url: url, body: body)
-    }
-
-    //
-    // docs:
-    // https://www.gosquared.com/docs/tracking/api/http#events
-    //
-    public func event(personId: String, name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
-        let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
-        ]
-
-        var event: [String: AnyObject] = [
-            "name": name
-        ]
-
-        if let props = properties {
-            event["data"] = props
-        }
-
-        let body: [String: AnyObject] = [
-            "person_id": personId,
-            "event": event
-        ]
 
         let path = "\(self.basePath)/event/"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!

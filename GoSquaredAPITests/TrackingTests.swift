@@ -43,7 +43,7 @@ class TrackingTests: XCTestCase {
     }
 
     func testUserEvent() {
-        let request = gosquared.tracking.event(personId: "test-node-gosquared", name: "Event Name", properties: [
+        let request = gosquared.tracking.event("Event Name", personId: "test-node-gosquared", properties: [
             "additional": "data"
         ])
 
