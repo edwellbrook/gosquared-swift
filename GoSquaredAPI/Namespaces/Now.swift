@@ -163,7 +163,7 @@ public class Now {
     }
 
     //
-    // visitors:
+    // docs:
     // https://www.gosquared.com/developer/api/now/v3/visitors/
     //
     public func visitors() -> URLRequest {
@@ -175,6 +175,35 @@ public class Now {
         let path = "\(self.basePath)/visitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/combining-functions
+    //
+    public func combiningFunction(functions funcs: [GoSquaredAPI.CombiningFunction]) -> URLRequest {
+        let functions: [(name: String, params: [URLQueryItem])] = funcs.enumerated().map { index, function in
+            let name = "\(function.endpoint):\(index)"
+            let params = function.parameters.map({ URLQueryItem(name: "\(name):\($0)", value: $1) })
+
+            return (name, params)
+        }
+
+        let functionList = functions.map({ $0.name }).joined(separator: ",")
+
+        var queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        for function in functions {
+            queryItems.append(contentsOf: function.params)
+        }
+
+        let path = "\(self.basePath)/\(functionList)"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+        
         return URLRequest(url: url)
     }
 

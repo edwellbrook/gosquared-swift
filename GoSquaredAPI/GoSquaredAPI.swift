@@ -15,7 +15,12 @@ public class GoSquaredAPI {
 
     public struct CombiningFunction {
         let endpoint: String
-        let params: [String: String]
+        let parameters: [String: String]
+
+        public init(endpoint: String, parameters: [String: String]) {
+            self.endpoint = endpoint
+            self.parameters = parameters
+        }
     }
 
 

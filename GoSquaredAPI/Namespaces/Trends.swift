@@ -305,12 +305,10 @@ public class Trends {
     // docs:
     // https://www.gosquared.com/docs/api/combining-functions
     //
-    public func executeCombiningFunction(functions funcs: [GoSquaredAPI.CombiningFunction]) -> URLRequest {
-        let functions: [(name: String, params: [URLQueryItem])] = funcs.enumerated().map { idx, fn in
-            let name = "\(fn.endpoint):\(idx)"
-            let params = fn.params.map({ key, val in
-                return URLQueryItem(name: "\(name):\(key)", value: val)
-            })
+    public func combiningFunction(functions funcs: [GoSquaredAPI.CombiningFunction]) -> URLRequest {
+        let functions: [(name: String, params: [URLQueryItem])] = funcs.enumerated().map { index, function in
+            let name = "\(function.endpoint):\(index)"
+            let params = function.parameters.map({ URLQueryItem(name: "\(name):\($0)", value: $1) })
 
             return (name, params)
         }

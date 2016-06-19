@@ -94,4 +94,15 @@ class NowTests: XCTestCase {
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
+    func testCombiningFunctions() {
+        let request = gosquared.now.combiningFunction(functions: [
+            GoSquaredAPI.CombiningFunction(endpoint: "timeSeries", parameters: [ "limit": "0" ]),
+            GoSquaredAPI.CombiningFunction(endpoint: "concurrents", parameters: [ "limit": "0" ])
+        ])
+
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/now/v3/timeSeries:0,concurrents:1")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&timeSeries:0:limit=0&concurrents:1:limit=0")
+    }
+
 }

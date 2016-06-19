@@ -154,4 +154,15 @@ class TrendsTests: XCTestCase {
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
+    func testCombiningFunctions() {
+        let request = gosquared.trends.combiningFunction(functions: [
+            GoSquaredAPI.CombiningFunction(endpoint: "browser", parameters: [ "limit": "0" ]),
+            GoSquaredAPI.CombiningFunction(endpoint: "country", parameters: [ "limit": "0" ])
+        ])
+
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.url?.path, "/trends/v2/browser:0,country:1")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&browser:0:limit=0&country:1:limit=0")
+    }
+
 }
