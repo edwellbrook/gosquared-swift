@@ -52,9 +52,9 @@ public class People {
         ]
 
         let path = "\(self.basePath)/search/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -68,9 +68,9 @@ public class People {
         ]
 
         let path = "\(self.basePath)/person/\(user)/details/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -87,9 +87,9 @@ public class People {
         ]
 
         let path = "\(self.basePath)/person/\(user)/feed/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -103,9 +103,9 @@ public class People {
         ]
 
         let path = "\(self.basePath)/smartgroups/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
 }

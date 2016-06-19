@@ -34,9 +34,9 @@ public class Tracking {
         ]
 
         let path = "\(self.basePath)/identify/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -58,9 +58,9 @@ public class Tracking {
         }
 
         let path = "\(self.basePath)/event/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -87,9 +87,9 @@ public class Tracking {
         ]
 
         let path = "\(self.basePath)/event/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
 }

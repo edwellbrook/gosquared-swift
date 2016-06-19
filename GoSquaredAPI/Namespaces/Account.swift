@@ -29,9 +29,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -45,9 +45,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/bots"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -65,9 +65,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/bots"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -81,9 +81,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/ips"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     // docs:
@@ -100,9 +100,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/ips"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -120,9 +120,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/ips"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .DELETE, url: components.url!, body: body)
+        return URLRequest(method: .DELETE, url: url, body: body)
     }
 
     //
@@ -136,9 +136,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/visitors"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     // docs:
@@ -155,9 +155,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/visitors"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -175,9 +175,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/blocked/visitors"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-        
-        return URLRequest(method: .DELETE, url: components.url!, body: body)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(method: .DELETE, url: url, body: body)
     }
 
     //
@@ -191,9 +191,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/reportPreferences/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -207,9 +207,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/sharedUsers/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -223,9 +223,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/sites/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -239,9 +239,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/taggedVisitors/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -255,9 +255,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/webhooks/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -276,9 +276,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/webhooks/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     //
@@ -292,9 +292,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -313,9 +313,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: components.url!, body: body)
+        return URLRequest(method: .POST, url: url, body: body)
     }
 
     // 
@@ -329,9 +329,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .DELETE, url: components.url!)
+        return URLRequest(method: .DELETE, url: url)
     }
 
     //
@@ -344,9 +344,9 @@ public class Account {
         ]
 
         let path = "\(self.basePath)/me/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
 }

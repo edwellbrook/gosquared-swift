@@ -39,9 +39,9 @@ public class Trends {
         ]
 
         let path = "\(self.basePath)/aggregate/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     public func aggregateFunction(from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
@@ -67,9 +67,9 @@ public class Trends {
         ]
 
         let path = "\(self.basePath)/page/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     public func pageFunction(_ from: Date, to: Date) -> GoSquaredAPI.CombiningFunction {
@@ -107,9 +107,9 @@ public class Trends {
         }
 
         let path = "\(self.basePath)/\(functionList)/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
 }

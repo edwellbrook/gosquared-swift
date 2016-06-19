@@ -29,9 +29,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/aggregate/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -45,9 +45,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/browser/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -61,9 +61,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/category/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -77,9 +77,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/country/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -93,9 +93,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/language/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -109,9 +109,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/os/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -125,9 +125,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/product/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -141,9 +141,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/sources/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
     //
@@ -157,9 +157,9 @@ public class Ecommerce {
         ]
 
         let path = "\(self.basePath)/transaction/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: components.url!)
+        return URLRequest(url: url)
     }
 
 }
