@@ -20,15 +20,15 @@ public class Now {
 
     //
     // docs:
-    // https://www.gosquared.com/developer/api/now/v3/aggregateStats/
+    // https://www.gosquared.com/docs/api/now/browsers/http/#retrieve_list_of_browsers
     //
-    public func aggregateStats() -> URLRequest {
+    public func browsers() -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/aggregateStats/"
+        let path = "\(self.basePath)/browsers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)

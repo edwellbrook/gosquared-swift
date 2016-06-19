@@ -14,11 +14,11 @@ class NowTests: XCTestCase {
     let gosquared = GoSquaredAPI(key: "TEST_KEY", token: "TEST_TOKEN")
 
 
-    func testAggregateStats() {
-        let request = gosquared.now.aggregateStats()
+    func testBrowsers() {
+        let request = gosquared.now.browsers()
 
         XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(request.url?.path, "/now/v3/aggregateStats")
+        XCTAssertEqual(request.url?.path, "/now/v3/browsers")
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
