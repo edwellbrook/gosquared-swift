@@ -60,29 +60,17 @@ public class GoSquaredAPI {
 internal func GETRequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
     let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
-    return URLRequest(url: components.url!)
+    return URLRequest(method: "GET", url: components.url!)
 }
 
 internal func DELETERequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
     let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
-    let request = NSMutableURLRequest(url: components.url!)
-    request.httpMethod = "DELETE"
-
-    return request as URLRequest
+    return URLRequest(method: "DELETE", url: components.url!)
 }
 
 internal func POSTRequest(path: String, queryItems: [URLQueryItem], body: AnyObject) -> URLRequest {
     let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
-    let request = NSMutableURLRequest(url: components.url!)
-    request.httpMethod = "POST"
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-    do {
-        request.httpBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-    } catch _ {
-    }
-
-    return request as URLRequest
+    return URLRequest(method: "POST", url: components.url!, body: body)
 }

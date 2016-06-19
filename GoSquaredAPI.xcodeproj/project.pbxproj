@@ -28,6 +28,8 @@
 		B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C7F81CF4FB3800EC87CD /* Chat.swift */; };
 		B7DD49211D1618970040350C /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49201D1618970040350C /* URLComponents.swift */; };
 		B7DD49221D1618970040350C /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49201D1618970040350C /* URLComponents.swift */; };
+		B7DD49251D1619980040350C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49241D1619980040350C /* URLRequest.swift */; };
+		B7DD49261D1619980040350C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49241D1619980040350C /* URLRequest.swift */; };
 		B7F25B591B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
 		B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
 		B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
@@ -72,6 +74,7 @@
 		B76F339C1B905C2900D1FB63 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Namespaces/People.swift; sourceTree = "<group>"; };
 		B7B3C7F81CF4FB3800EC87CD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Namespaces/Chat.swift; sourceTree = "<group>"; };
 		B7DD49201D1618970040350C /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Extensions/URLComponents.swift; sourceTree = "<group>"; };
+		B7DD49241D1619980040350C /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Extensions/URLRequest.swift; sourceTree = "<group>"; };
 		B7F25B551B225F7E009D8E97 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Namespaces/Account.swift; sourceTree = "<group>"; };
 		B7F25B561B225F7E009D8E97 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Namespaces/Ecommerce.swift; sourceTree = "<group>"; };
 		B7F25B571B225F7E009D8E97 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Namespaces/Now.swift; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DD49201D1618970040350C /* URLComponents.swift */,
+				B7DD49241D1619980040350C /* URLRequest.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +374,7 @@
 				B7B3C7F91CF4FB3800EC87CD /* Chat.swift in Sources */,
 				B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B591B225F7E009D8E97 /* Account.swift in Sources */,
+				B7DD49251D1619980040350C /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +402,7 @@
 				B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */,
 				B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */,
 				B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */,
+				B7DD49261D1619980040350C /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
