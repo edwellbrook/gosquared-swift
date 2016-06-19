@@ -24,8 +24,8 @@ public class Tracking {
     //
     public func identify(_ id: String, properties: [String: AnyObject]) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
         let body = [
@@ -41,33 +41,12 @@ public class Tracking {
 
     //
     // docs:
-    // https://www.gosquared.com/docs/tracking/api/http#properties
-    //
-    public func properties(_ id: String, properties: [String: AnyObject]) -> URLRequest {
-        let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
-        ]
-
-        let body = [
-            "person_id": id,
-            "properties": properties
-        ]
-
-        let path = "\(self.basePath)/properties/"
-        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-
-        return URLRequest(method: "POST", url: components.url!, body: body)
-    }
-
-    //
-    // docs:
     // https://www.gosquared.com/docs/tracking/api/http#events
     //
     public func event(_ name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
         var body: [String: AnyObject] = [
@@ -90,8 +69,8 @@ public class Tracking {
     //
     public func userEvent(_ id: String, name: String, properties: [String: AnyObject]? = nil) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
         var event: [String: AnyObject] = [
