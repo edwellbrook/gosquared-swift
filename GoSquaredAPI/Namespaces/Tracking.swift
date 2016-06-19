@@ -33,7 +33,7 @@ public class Tracking {
             "properties": properties
         ]
 
-        let path = "\(self.basePath)/identify/"
+        let path = "\(self.basePath)/identify"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(method: .POST, url: url, body: body)
@@ -61,7 +61,7 @@ public class Tracking {
             body.updateValue(additional, forKey: "data")
         }
 
-        let path = "\(self.basePath)/event/"
+        let path = "\(self.basePath)/event"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(method: .POST, url: url, body: body)

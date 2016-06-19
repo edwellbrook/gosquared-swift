@@ -28,7 +28,7 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/chats/"
+        let path = "\(self.basePath)/chats"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -62,7 +62,7 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/stream/"
+        let path = "\(self.basePath)/stream"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)

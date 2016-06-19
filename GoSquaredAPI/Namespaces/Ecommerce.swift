@@ -28,7 +28,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/aggregate/"
+        let path = "\(self.basePath)/aggregate"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -44,7 +44,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/browser/"
+        let path = "\(self.basePath)/browser"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -60,7 +60,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/category/"
+        let path = "\(self.basePath)/category"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -76,7 +76,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/country/"
+        let path = "\(self.basePath)/country"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -92,7 +92,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/language/"
+        let path = "\(self.basePath)/language"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -108,7 +108,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/os/"
+        let path = "\(self.basePath)/os"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -124,7 +124,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/product/"
+        let path = "\(self.basePath)/product"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -140,7 +140,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/sources/"
+        let path = "\(self.basePath)/sources"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -156,7 +156,7 @@ public class Ecommerce {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/transaction/"
+        let path = "\(self.basePath)/transaction"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)

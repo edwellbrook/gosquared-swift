@@ -28,7 +28,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/blocked/"
+        let path = "\(self.basePath)/blocked"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -190,7 +190,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/reportPreferences/"
+        let path = "\(self.basePath)/reportPreferences"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -206,7 +206,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/sharedUsers/"
+        let path = "\(self.basePath)/sharedUsers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -222,7 +222,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/sites/"
+        let path = "\(self.basePath)/sites"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -238,7 +238,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/taggedVisitors/"
+        let path = "\(self.basePath)/taggedVisitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -254,7 +254,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/webhooks/"
+        let path = "\(self.basePath)/webhooks"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -275,7 +275,7 @@ public class Account {
             "url": webhookUrl
         ]
 
-        let path = "\(self.basePath)/webhooks/"
+        let path = "\(self.basePath)/webhooks"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(method: .POST, url: url, body: body)
@@ -291,7 +291,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/"
+        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -312,7 +312,7 @@ public class Account {
             "value": value
         ]
 
-        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/"
+        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(method: .POST, url: url, body: body)
@@ -328,7 +328,7 @@ public class Account {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)/"
+        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(method: .DELETE, url: url)
@@ -343,7 +343,7 @@ public class Account {
             URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        let path = "\(self.basePath)/me/"
+        let path = "\(self.basePath)/me"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
