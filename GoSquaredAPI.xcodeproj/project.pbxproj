@@ -131,8 +131,8 @@
 		B70F32EA1B0F8CF20056DECE = {
 			isa = PBXGroup;
 			children = (
-				B70F32F61B0F8CF20056DECE /* GoSquaredAPI */,
-				B70F33031B0F8CF20056DECE /* GoSquaredAPITests */,
+				B70F32F61B0F8CF20056DECE /* Sources */,
+				B70F33031B0F8CF20056DECE /* Tests */,
 				B70F32F51B0F8CF20056DECE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B70F32F61B0F8CF20056DECE /* GoSquaredAPI */ = {
+		B70F32F61B0F8CF20056DECE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				B76619701D16EC87009437B3 /* GoSquaredAPI.h */,
@@ -157,6 +157,7 @@
 				B7DD49231D16189F0040350C /* Extensions */,
 				B70F32F71B0F8CF20056DECE /* Supporting Files */,
 			);
+			name = Sources;
 			path = GoSquaredAPI;
 			sourceTree = "<group>";
 		};
@@ -168,7 +169,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B70F33031B0F8CF20056DECE /* GoSquaredAPITests */ = {
+		B70F33031B0F8CF20056DECE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B76619961D16ED42009437B3 /* AccountTests.swift */,
@@ -180,6 +181,7 @@
 				B766199C1D16ED42009437B3 /* TrendsTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
+			name = Tests;
 			path = GoSquaredAPITests;
 			sourceTree = "<group>";
 		};
@@ -313,7 +315,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Go Squared Ltd";
+				ORGANIZATIONNAME = "Edward Wellbrook";
 				TargetAttributes = {
 					B70F32F31B0F8CF20056DECE = {
 						CreatedOnToolsVersion = 6.3.2;

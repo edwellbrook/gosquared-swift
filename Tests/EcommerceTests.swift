@@ -3,7 +3,7 @@
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 23/05/2015.
-//  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
+//  Copyright (c) 2015-2016 Edward Wellbrook. All rights reserved.
 //
 
 import XCTest
