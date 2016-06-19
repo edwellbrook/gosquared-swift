@@ -8,25 +8,6 @@
 
 import Foundation
 
-public struct SearchOptions {
-    public var filters: String = "[]"
-    public var count: Int = 35
-    public var offset: Int = 0
-    public var sort: (key: String, direction: String) = (key: "last.seen", direction: "desc")
-    
-    public init() {}
-}
-
-
-public struct FeedOptions {
-    public var eventTypes: [String] = ["sessionEvent", "event"]
-    public var count: Int = 25
-    public var offset: Int = 0
-    
-    public init() {}
-}
-
-
 public class People {
 
     private let client: GoSquaredAPI
@@ -39,19 +20,16 @@ public class People {
 
     //
     // docs:
+    // https://www.gosquared.com/docs/api/people/devices/http/#retrieve_a_list_of_all_devices
     //
-    //
-    public func search(_ query: String = "", options opts: SearchOptions = SearchOptions()) -> URLRequest {
+    public func devices(limit: Int = 25, offset: Int = 0) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
             URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "query", value: query),
-            URLQueryItem(name: "filters", value: opts.filters),
-            URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)"),
-            URLQueryItem(name: "sort", value: "\(opts.sort.key):\(opts.sort.direction)")
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "limit", value: "\(limit),\(offset)")
         ]
 
-        let path = "\(self.basePath)/search"
+        let path = "\(self.basePath)/devices"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -59,34 +37,15 @@ public class People {
 
     //
     // docs:
+    // https://www.gosquared.com/docs/api/people/devices/http/#retrieve_a_device
     //
-    //
-    public func details(_ user: String) -> URLRequest {
+    public func device(deviceId: String) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
-        ]
-
-        let path = "\(self.basePath)/person/\(user)/details"
-        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
-
-        return URLRequest(url: url)
-    }
-
-    //
-    // docs:
-    //
-    //
-    public func feed(_ user: String, options opts: FeedOptions = FeedOptions()) -> URLRequest {
-        let queryItems = [
-            URLQueryItem(name: "site_token", value: self.client.token),
             URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "presenter", value: "nice"),
-            URLQueryItem(name: "type", value: opts.eventTypes.joined(separator: ",")),
-            URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)")
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/person/\(user)/feed"
+        let path = "\(self.basePath)/devices/\(deviceId)"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
         return URLRequest(url: url)
@@ -94,12 +53,102 @@ public class People {
 
     //
     // docs:
+    // https://www.gosquared.com/docs/api/people/eventTypes/http/#retrieve_a_list_of_event_types
     //
-    //
-    public func smartGroup() -> URLRequest {
+    public func eventTypes() -> URLRequest {
         let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let path = "\(self.basePath)/eventTypes"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/people/people/http/#search_for_a_list_of_people
+    //
+    public func search(_ query: String, parameters: [String: String]) -> URLRequest {
+        var queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token),
-            URLQueryItem(name: "api_key", value: self.client.key)
+            URLQueryItem(name: "query", value: query)
+        ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
+
+        let path = "\(self.basePath)/people"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/people/people/http/#retrieve_a_person
+    //
+    public func details(personId: String) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        let path = "\(self.basePath)/people/\(personId)"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/people/people/http/#retrieve_a_list_of_devices_for_a_person
+    //
+    public func devices(personId: String, limit: Int = 15, offset: Int = 0) -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "limit", value: "\(limit),\(offset)")
+        ]
+
+        let path = "\(self.basePath)/people/\(personId)/devices"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/people/people/http/#retrieve_a_feed_of_events_for_a_person
+    //
+    public func feed(personId: String, parameters: [String: String]) -> URLRequest {
+        var queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
+        ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
+
+        let path = "\(self.basePath)/people/\(personId)/feed"
+        let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
+
+        return URLRequest(url: url)
+    }
+
+    //
+    // docs:
+    // https://www.gosquared.com/docs/api/people/smartgroups/http/#retrieve_all_smart_groups
+    //
+    public func smartGroups() -> URLRequest {
+        let queryItems = [
+            URLQueryItem(name: "api_key", value: self.client.key),
+            URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
         let path = "\(self.basePath)/smartgroups"
