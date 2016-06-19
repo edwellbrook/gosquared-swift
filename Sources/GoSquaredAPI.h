@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Go Squared Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for GoSquaredAPI.
 FOUNDATION_EXPORT double GoSquaredAPIVersionNumber;

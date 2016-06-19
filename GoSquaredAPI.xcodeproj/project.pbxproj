@@ -7,45 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B70F32FA1B0F8CF20056DECE /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B70F33001B0F8CF20056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */; };
-		B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */; };
-		B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
 		B70F333D1B10E91B0056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */; };
-		B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F331B1B0FD42D0056DECE /* NowTests.swift */; };
-		B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */; };
-		B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
-		B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33571B1107C90056DECE /* EcommerceTests.swift */; };
-		B70F335E1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
-		B70F335F1B111EEA0056DECE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F335D1B111EEA0056DECE /* AccountTests.swift */; };
-		B70F33661B1148180056DECE /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33651B1148180056DECE /* TrackingTests.swift */; };
-		B70F33671B1148180056DECE /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F33651B1148180056DECE /* TrackingTests.swift */; };
-		B76351931C1CCCDB00E92B01 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76351921C1CCCDB00E92B01 /* Trends.swift */; };
-		B76351941C1CCCDB00E92B01 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76351921C1CCCDB00E92B01 /* Trends.swift */; };
-		B76F339D1B905C2900D1FB63 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F339C1B905C2900D1FB63 /* People.swift */; };
-		B76F339E1B905C2900D1FB63 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F339C1B905C2900D1FB63 /* People.swift */; };
-		B7B3C7F91CF4FB3800EC87CD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C7F81CF4FB3800EC87CD /* Chat.swift */; };
-		B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C7F81CF4FB3800EC87CD /* Chat.swift */; };
-		B7DD49211D1618970040350C /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49201D1618970040350C /* URLComponents.swift */; };
-		B7DD49221D1618970040350C /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49201D1618970040350C /* URLComponents.swift */; };
-		B7DD49251D1619980040350C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49241D1619980040350C /* URLRequest.swift */; };
-		B7DD49261D1619980040350C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49241D1619980040350C /* URLRequest.swift */; };
-		B7DD493B1D163AA20040350C /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD493A1D163AA20040350C /* ChatTests.swift */; };
-		B7DD493C1D163AA20040350C /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD493A1D163AA20040350C /* ChatTests.swift */; };
-		B7DD493E1D16983D0040350C /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD493D1D16983D0040350C /* TrendsTests.swift */; };
-		B7DD493F1D16983D0040350C /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD493D1D16983D0040350C /* TrendsTests.swift */; };
-		B7DD49411D169B050040350C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49401D169B050040350C /* DateFormatter.swift */; };
-		B7DD49421D169B050040350C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49401D169B050040350C /* DateFormatter.swift */; };
-		B7DD49441D16AABC0040350C /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49431D16AABC0040350C /* PeopleTests.swift */; };
-		B7DD49451D16AABC0040350C /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD49431D16AABC0040350C /* PeopleTests.swift */; };
-		B7F25B591B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
-		B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B551B225F7E009D8E97 /* Account.swift */; };
-		B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
-		B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B561B225F7E009D8E97 /* Ecommerce.swift */; };
-		B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B571B225F7E009D8E97 /* Now.swift */; };
-		B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B571B225F7E009D8E97 /* Now.swift */; };
-		B7F25B5F1B225F7E009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B581B225F7E009D8E97 /* Tracking.swift */; };
-		B7F25B601B225F7E009D8E97 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F25B581B225F7E009D8E97 /* Tracking.swift */; };
+		B76619711D16EC87009437B3 /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B76619701D16EC87009437B3 /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B76619721D16EC87009437B3 /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B76619701D16EC87009437B3 /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B76619741D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */; };
+		B76619751D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */; };
+		B766197D1D16ECB5009437B3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619761D16ECB5009437B3 /* Account.swift */; };
+		B766197E1D16ECB5009437B3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619761D16ECB5009437B3 /* Account.swift */; };
+		B766197F1D16ECB5009437B3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619771D16ECB5009437B3 /* Chat.swift */; };
+		B76619801D16ECB5009437B3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619771D16ECB5009437B3 /* Chat.swift */; };
+		B76619811D16ECB5009437B3 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619781D16ECB5009437B3 /* Ecommerce.swift */; };
+		B76619821D16ECB5009437B3 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619781D16ECB5009437B3 /* Ecommerce.swift */; };
+		B76619831D16ECB5009437B3 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619791D16ECB5009437B3 /* Now.swift */; };
+		B76619841D16ECB5009437B3 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619791D16ECB5009437B3 /* Now.swift */; };
+		B76619851D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
+		B76619861D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
+		B76619871D16ECB5009437B3 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197B1D16ECB5009437B3 /* Tracking.swift */; };
+		B76619881D16ECB5009437B3 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197B1D16ECB5009437B3 /* Tracking.swift */; };
+		B76619891D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
+		B766198A1D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
+		B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198B1D16ECC5009437B3 /* DateFormatter.swift */; };
+		B766198F1D16ECC5009437B3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198B1D16ECC5009437B3 /* DateFormatter.swift */; };
+		B76619901D16ECC5009437B3 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198C1D16ECC5009437B3 /* URLComponents.swift */; };
+		B76619911D16ECC5009437B3 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198C1D16ECC5009437B3 /* URLComponents.swift */; };
+		B76619921D16ECC5009437B3 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198D1D16ECC5009437B3 /* URLRequest.swift */; };
+		B76619931D16ECC5009437B3 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198D1D16ECC5009437B3 /* URLRequest.swift */; };
+		B76619AE1D16ED57009437B3 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619961D16ED42009437B3 /* AccountTests.swift */; };
+		B76619AF1D16ED57009437B3 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619971D16ED42009437B3 /* ChatTests.swift */; };
+		B76619B01D16ED57009437B3 /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619981D16ED42009437B3 /* EcommerceTests.swift */; };
+		B76619B11D16ED57009437B3 /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619991D16ED42009437B3 /* NowTests.swift */; };
+		B76619B21D16ED57009437B3 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199A1D16ED42009437B3 /* PeopleTests.swift */; };
+		B76619B31D16ED57009437B3 /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199B1D16ED42009437B3 /* TrackingTests.swift */; };
+		B76619B41D16ED57009437B3 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199C1D16ED42009437B3 /* TrendsTests.swift */; };
+		B76619B51D16ED58009437B3 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619961D16ED42009437B3 /* AccountTests.swift */; };
+		B76619B61D16ED58009437B3 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619971D16ED42009437B3 /* ChatTests.swift */; };
+		B76619B71D16ED58009437B3 /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619981D16ED42009437B3 /* EcommerceTests.swift */; };
+		B76619B81D16ED58009437B3 /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619991D16ED42009437B3 /* NowTests.swift */; };
+		B76619B91D16ED58009437B3 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199A1D16ED42009437B3 /* PeopleTests.swift */; };
+		B76619BA1D16ED58009437B3 /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199B1D16ED42009437B3 /* TrackingTests.swift */; };
+		B76619BB1D16ED58009437B3 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766199C1D16ED42009437B3 /* TrendsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,30 +68,30 @@
 
 /* Begin PBXFileReference section */
 		B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F32F81B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSquaredAPI.h; sourceTree = "<group>"; };
 		B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F33051B0F8CF20056DECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoSquaredAPI.swift; sourceTree = "<group>"; };
-		B70F331B1B0FD42D0056DECE /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowTests.swift; sourceTree = "<group>"; };
 		B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F33571B1107C90056DECE /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTests.swift; sourceTree = "<group>"; };
-		B70F335D1B111EEA0056DECE /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
-		B70F33651B1148180056DECE /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
-		B76351921C1CCCDB00E92B01 /* Trends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trends.swift; path = Namespaces/Trends.swift; sourceTree = "<group>"; };
-		B76F339C1B905C2900D1FB63 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Namespaces/People.swift; sourceTree = "<group>"; };
-		B7B3C7F81CF4FB3800EC87CD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Namespaces/Chat.swift; sourceTree = "<group>"; };
-		B7DD49201D1618970040350C /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Extensions/URLComponents.swift; sourceTree = "<group>"; };
-		B7DD49241D1619980040350C /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Extensions/URLRequest.swift; sourceTree = "<group>"; };
-		B7DD493A1D163AA20040350C /* ChatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTests.swift; sourceTree = "<group>"; };
-		B7DD493D1D16983D0040350C /* TrendsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendsTests.swift; sourceTree = "<group>"; };
-		B7DD49401D169B050040350C /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Extensions/DateFormatter.swift; sourceTree = "<group>"; };
-		B7DD49431D16AABC0040350C /* PeopleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTests.swift; sourceTree = "<group>"; };
-		B7F25B551B225F7E009D8E97 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Namespaces/Account.swift; sourceTree = "<group>"; };
-		B7F25B561B225F7E009D8E97 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Namespaces/Ecommerce.swift; sourceTree = "<group>"; };
-		B7F25B571B225F7E009D8E97 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Namespaces/Now.swift; sourceTree = "<group>"; };
-		B7F25B581B225F7E009D8E97 /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tracking.swift; path = Namespaces/Tracking.swift; sourceTree = "<group>"; };
+		B76619701D16EC87009437B3 /* GoSquaredAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoSquaredAPI.h; path = Sources/GoSquaredAPI.h; sourceTree = SOURCE_ROOT; };
+		B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoSquaredAPI.swift; path = Sources/GoSquaredAPI.swift; sourceTree = SOURCE_ROOT; };
+		B76619761D16ECB5009437B3 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Sources/Account.swift; sourceTree = SOURCE_ROOT; };
+		B76619771D16ECB5009437B3 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Sources/Chat.swift; sourceTree = SOURCE_ROOT; };
+		B76619781D16ECB5009437B3 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Sources/Ecommerce.swift; sourceTree = SOURCE_ROOT; };
+		B76619791D16ECB5009437B3 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Sources/Now.swift; sourceTree = SOURCE_ROOT; };
+		B766197A1D16ECB5009437B3 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Sources/People.swift; sourceTree = SOURCE_ROOT; };
+		B766197B1D16ECB5009437B3 /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tracking.swift; path = Sources/Tracking.swift; sourceTree = SOURCE_ROOT; };
+		B766197C1D16ECB5009437B3 /* Trends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trends.swift; path = Sources/Trends.swift; sourceTree = SOURCE_ROOT; };
+		B766198B1D16ECC5009437B3 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/DateFormatter.swift; sourceTree = SOURCE_ROOT; };
+		B766198C1D16ECC5009437B3 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Sources/URLComponents.swift; sourceTree = SOURCE_ROOT; };
+		B766198D1D16ECC5009437B3 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Sources/URLRequest.swift; sourceTree = SOURCE_ROOT; };
+		B76619941D16ECE0009437B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		B76619961D16ED42009437B3 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTests.swift; path = Tests/AccountTests.swift; sourceTree = SOURCE_ROOT; };
+		B76619971D16ED42009437B3 /* ChatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTests.swift; path = Tests/ChatTests.swift; sourceTree = SOURCE_ROOT; };
+		B76619981D16ED42009437B3 /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EcommerceTests.swift; path = Tests/EcommerceTests.swift; sourceTree = SOURCE_ROOT; };
+		B76619991D16ED42009437B3 /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NowTests.swift; path = Tests/NowTests.swift; sourceTree = SOURCE_ROOT; };
+		B766199A1D16ED42009437B3 /* PeopleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleTests.swift; path = Tests/PeopleTests.swift; sourceTree = SOURCE_ROOT; };
+		B766199B1D16ED42009437B3 /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackingTests.swift; path = Tests/TrackingTests.swift; sourceTree = SOURCE_ROOT; };
+		B766199C1D16ED42009437B3 /* TrendsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendsTests.swift; path = Tests/TrendsTests.swift; sourceTree = SOURCE_ROOT; };
+		B76619AB1D16ED4F009437B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +151,8 @@
 		B70F32F61B0F8CF20056DECE /* GoSquaredAPI */ = {
 			isa = PBXGroup;
 			children = (
-				B70F32F91B0F8CF20056DECE /* GoSquaredAPI.h */,
-				B70F33101B0F8D090056DECE /* GoSquaredAPI.swift */,
+				B76619701D16EC87009437B3 /* GoSquaredAPI.h */,
+				B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */,
 				B7F25B1D1B22599F009D8E97 /* Namespaces */,
 				B7DD49231D16189F0040350C /* Extensions */,
 				B70F32F71B0F8CF20056DECE /* Supporting Files */,
@@ -162,7 +163,7 @@
 		B70F32F71B0F8CF20056DECE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B70F32F81B0F8CF20056DECE /* Info.plist */,
+				B76619941D16ECE0009437B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,13 +171,13 @@
 		B70F33031B0F8CF20056DECE /* GoSquaredAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				B70F335D1B111EEA0056DECE /* AccountTests.swift */,
-				B7DD493A1D163AA20040350C /* ChatTests.swift */,
-				B70F33571B1107C90056DECE /* EcommerceTests.swift */,
-				B70F331B1B0FD42D0056DECE /* NowTests.swift */,
-				B7DD49431D16AABC0040350C /* PeopleTests.swift */,
-				B70F33651B1148180056DECE /* TrackingTests.swift */,
-				B7DD493D1D16983D0040350C /* TrendsTests.swift */,
+				B76619961D16ED42009437B3 /* AccountTests.swift */,
+				B76619971D16ED42009437B3 /* ChatTests.swift */,
+				B76619981D16ED42009437B3 /* EcommerceTests.swift */,
+				B76619991D16ED42009437B3 /* NowTests.swift */,
+				B766199A1D16ED42009437B3 /* PeopleTests.swift */,
+				B766199B1D16ED42009437B3 /* TrackingTests.swift */,
+				B766199C1D16ED42009437B3 /* TrendsTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
 			path = GoSquaredAPITests;
@@ -185,7 +186,7 @@
 		B70F33041B0F8CF20056DECE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B70F33051B0F8CF20056DECE /* Info.plist */,
+				B76619AB1D16ED4F009437B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,9 +194,9 @@
 		B7DD49231D16189F0040350C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B7DD49401D169B050040350C /* DateFormatter.swift */,
-				B7DD49201D1618970040350C /* URLComponents.swift */,
-				B7DD49241D1619980040350C /* URLRequest.swift */,
+				B766198B1D16ECC5009437B3 /* DateFormatter.swift */,
+				B766198C1D16ECC5009437B3 /* URLComponents.swift */,
+				B766198D1D16ECC5009437B3 /* URLRequest.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -203,13 +204,13 @@
 		B7F25B1D1B22599F009D8E97 /* Namespaces */ = {
 			isa = PBXGroup;
 			children = (
-				B7F25B551B225F7E009D8E97 /* Account.swift */,
-				B7B3C7F81CF4FB3800EC87CD /* Chat.swift */,
-				B7F25B561B225F7E009D8E97 /* Ecommerce.swift */,
-				B7F25B571B225F7E009D8E97 /* Now.swift */,
-				B76F339C1B905C2900D1FB63 /* People.swift */,
-				B7F25B581B225F7E009D8E97 /* Tracking.swift */,
-				B76351921C1CCCDB00E92B01 /* Trends.swift */,
+				B76619761D16ECB5009437B3 /* Account.swift */,
+				B76619771D16ECB5009437B3 /* Chat.swift */,
+				B76619781D16ECB5009437B3 /* Ecommerce.swift */,
+				B76619791D16ECB5009437B3 /* Now.swift */,
+				B766197A1D16ECB5009437B3 /* People.swift */,
+				B766197B1D16ECB5009437B3 /* Tracking.swift */,
+				B766197C1D16ECB5009437B3 /* Trends.swift */,
 			);
 			name = Namespaces;
 			sourceTree = "<group>";
@@ -221,7 +222,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F32FA1B0F8CF20056DECE /* GoSquaredAPI.h in Headers */,
+				B76619711D16EC87009437B3 /* GoSquaredAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +230,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76619721D16EC87009437B3 /* GoSquaredAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +260,6 @@
 			buildPhases = (
 				B70F32FB1B0F8CF20056DECE /* Sources */,
 				B70F32FC1B0F8CF20056DECE /* Frameworks */,
-				B70F32FD1B0F8CF20056DECE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +278,6 @@
 				B70F332D1B10E91A0056DECE /* Sources */,
 				B70F332E1B10E91A0056DECE /* Frameworks */,
 				B70F332F1B10E91A0056DECE /* Headers */,
-				B70F33301B10E91A0056DECE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -294,7 +294,6 @@
 			buildPhases = (
 				B70F33381B10E91B0056DECE /* Sources */,
 				B70F33391B10E91B0056DECE /* Frameworks */,
-				B70F333A1B10E91B0056DECE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +317,7 @@
 				TargetAttributes = {
 					B70F32F31B0F8CF20056DECE = {
 						CreatedOnToolsVersion = 6.3.2;
+						ProvisioningStyle = Manual;
 					};
 					B70F32FE1B0F8CF20056DECE = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -352,46 +352,22 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		B70F32FD1B0F8CF20056DECE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F33301B10E91A0056DECE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F333A1B10E91B0056DECE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B70F32EF1B0F8CF20056DECE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7DD49211D1618970040350C /* URLComponents.swift in Sources */,
-				B76351931C1CCCDB00E92B01 /* Trends.swift in Sources */,
-				B7F25B5F1B225F7E009D8E97 /* Tracking.swift in Sources */,
-				B7F25B5D1B225F7E009D8E97 /* Now.swift in Sources */,
-				B7F25B5B1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
-				B7DD49411D169B050040350C /* DateFormatter.swift in Sources */,
-				B76F339D1B905C2900D1FB63 /* People.swift in Sources */,
-				B7B3C7F91CF4FB3800EC87CD /* Chat.swift in Sources */,
-				B70F33111B0F8D090056DECE /* GoSquaredAPI.swift in Sources */,
-				B7F25B591B225F7E009D8E97 /* Account.swift in Sources */,
-				B7DD49251D1619980040350C /* URLRequest.swift in Sources */,
+				B76619891D16ECB5009437B3 /* Trends.swift in Sources */,
+				B76619811D16ECB5009437B3 /* Ecommerce.swift in Sources */,
+				B766197D1D16ECB5009437B3 /* Account.swift in Sources */,
+				B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
+				B76619871D16ECB5009437B3 /* Tracking.swift in Sources */,
+				B76619901D16ECC5009437B3 /* URLComponents.swift in Sources */,
+				B76619831D16ECB5009437B3 /* Now.swift in Sources */,
+				B76619921D16ECC5009437B3 /* URLRequest.swift in Sources */,
+				B766197F1D16ECB5009437B3 /* Chat.swift in Sources */,
+				B76619741D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */,
+				B76619851D16ECB5009437B3 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,13 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F33581B1107C90056DECE /* EcommerceTests.swift in Sources */,
-				B70F335E1B111EEA0056DECE /* AccountTests.swift in Sources */,
-				B70F331C1B0FD42D0056DECE /* NowTests.swift in Sources */,
-				B7DD493E1D16983D0040350C /* TrendsTests.swift in Sources */,
-				B7DD49441D16AABC0040350C /* PeopleTests.swift in Sources */,
-				B70F33661B1148180056DECE /* TrackingTests.swift in Sources */,
-				B7DD493B1D163AA20040350C /* ChatTests.swift in Sources */,
+				B76619B41D16ED57009437B3 /* TrendsTests.swift in Sources */,
+				B76619B21D16ED57009437B3 /* PeopleTests.swift in Sources */,
+				B76619B11D16ED57009437B3 /* NowTests.swift in Sources */,
+				B76619AE1D16ED57009437B3 /* AccountTests.swift in Sources */,
+				B76619B01D16ED57009437B3 /* EcommerceTests.swift in Sources */,
+				B76619B31D16ED57009437B3 /* TrackingTests.swift in Sources */,
+				B76619AF1D16ED57009437B3 /* ChatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,17 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7DD49221D1618970040350C /* URLComponents.swift in Sources */,
-				B76351941C1CCCDB00E92B01 /* Trends.swift in Sources */,
-				B7F25B601B225F7E009D8E97 /* Tracking.swift in Sources */,
-				B7F25B5E1B225F7E009D8E97 /* Now.swift in Sources */,
-				B7F25B5C1B225F7E009D8E97 /* Ecommerce.swift in Sources */,
-				B7DD49421D169B050040350C /* DateFormatter.swift in Sources */,
-				B76F339E1B905C2900D1FB63 /* People.swift in Sources */,
-				B7B3C7FA1CF4FB3800EC87CD /* Chat.swift in Sources */,
-				B70F334D1B10F2C70056DECE /* GoSquaredAPI.swift in Sources */,
-				B7F25B5A1B225F7E009D8E97 /* Account.swift in Sources */,
-				B7DD49261D1619980040350C /* URLRequest.swift in Sources */,
+				B766198A1D16ECB5009437B3 /* Trends.swift in Sources */,
+				B76619821D16ECB5009437B3 /* Ecommerce.swift in Sources */,
+				B766197E1D16ECB5009437B3 /* Account.swift in Sources */,
+				B766198F1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
+				B76619881D16ECB5009437B3 /* Tracking.swift in Sources */,
+				B76619911D16ECC5009437B3 /* URLComponents.swift in Sources */,
+				B76619841D16ECB5009437B3 /* Now.swift in Sources */,
+				B76619931D16ECC5009437B3 /* URLRequest.swift in Sources */,
+				B76619801D16ECB5009437B3 /* Chat.swift in Sources */,
+				B76619751D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */,
+				B76619861D16ECB5009437B3 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,13 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70F33591B1107C90056DECE /* EcommerceTests.swift in Sources */,
-				B70F335F1B111EEA0056DECE /* AccountTests.swift in Sources */,
-				B70F334C1B10F26A0056DECE /* NowTests.swift in Sources */,
-				B7DD493F1D16983D0040350C /* TrendsTests.swift in Sources */,
-				B7DD49451D16AABC0040350C /* PeopleTests.swift in Sources */,
-				B70F33671B1148180056DECE /* TrackingTests.swift in Sources */,
-				B7DD493C1D163AA20040350C /* ChatTests.swift in Sources */,
+				B76619BB1D16ED58009437B3 /* TrendsTests.swift in Sources */,
+				B76619B91D16ED58009437B3 /* PeopleTests.swift in Sources */,
+				B76619B81D16ED58009437B3 /* NowTests.swift in Sources */,
+				B76619B51D16ED58009437B3 /* AccountTests.swift in Sources */,
+				B76619B71D16ED58009437B3 /* EcommerceTests.swift in Sources */,
+				B76619BA1D16ED58009437B3 /* TrackingTests.swift in Sources */,
+				B76619B61D16ED58009437B3 /* ChatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,12 +529,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -574,12 +550,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -594,11 +570,12 @@
 		B70F330E1B0F8CF20056DECE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,7 +585,8 @@
 		B70F330F1B0F8CF20056DECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
+				CODE_SIGN_IDENTITY = "";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -619,6 +597,7 @@
 		B70F33461B10E91B0056DECE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -630,7 +609,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -645,13 +624,14 @@
 		B70F33471B10E91B0056DECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/GoSquaredAPI/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -667,6 +647,7 @@
 		B70F33491B10E91B0056DECE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -677,7 +658,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
@@ -690,12 +671,13 @@
 		B70F334A1B10E91B0056DECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GoSquaredAPITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
