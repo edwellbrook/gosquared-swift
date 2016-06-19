@@ -38,7 +38,7 @@ public class Chat {
     // docs:
     //
     //
-    public func messages(_ user: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
+    public func messages(personId: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token),
@@ -46,7 +46,7 @@ public class Chat {
             URLQueryItem(name: "offset", value: String(offset))
         ]
 
-        let path = "\(self.basePath)/chats/\(user)/messages"
+        let path = "\(self.basePath)/chats/\(personId)/messages"
         let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
         return URLRequest(url: components.url!)
