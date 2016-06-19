@@ -51,7 +51,10 @@ public class People {
             URLQueryItem(name: "sort", value: "\(opts.sort.key):\(opts.sort.direction)")
         ]
 
-        return GETRequest(path: "\(self.basePath)/search/", queryItems: queryItems)
+        let path = "\(self.basePath)/search/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
     //
@@ -64,7 +67,10 @@ public class People {
             URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest(path: "\(self.basePath)/person/\(user)/details/", queryItems: queryItems)
+        let path = "\(self.basePath)/person/\(user)/details/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
     //
@@ -80,7 +86,10 @@ public class People {
             URLQueryItem(name: "limit", value: "\(opts.offset),\(opts.count)")
         ]
 
-        return GETRequest(path: "\(self.basePath)/person/\(user)/feed/", queryItems: queryItems)
+        let path = "\(self.basePath)/person/\(user)/feed/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
     //
@@ -93,7 +102,10 @@ public class People {
             URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
-        return GETRequest(path: "\(self.basePath)/smartgroups/", queryItems: queryItems)
+        let path = "\(self.basePath)/smartgroups/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
 }

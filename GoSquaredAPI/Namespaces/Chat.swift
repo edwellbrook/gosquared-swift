@@ -28,7 +28,10 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest(path: "\(self.basePath)/chats/", queryItems: queryItems)
+        let path = "\(self.basePath)/chats/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
     //
@@ -43,7 +46,10 @@ public class Chat {
             URLQueryItem(name: "offset", value: String(offset))
         ]
 
-        return GETRequest(path: "\(self.basePath)/chats/\(user)/messages", queryItems: queryItems)
+        let path = "\(self.basePath)/chats/\(user)/messages"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
     //
@@ -56,7 +62,10 @@ public class Chat {
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        return GETRequest(path: "\(self.basePath)/stream/", queryItems: queryItems)
+        let path = "\(self.basePath)/stream/"
+        let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
+
+        return URLRequest(url: components.url!)
     }
 
 }

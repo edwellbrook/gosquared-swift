@@ -56,21 +56,3 @@ public class GoSquaredAPI {
     }
     
 }
-
-internal func GETRequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
-    let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-
-    return URLRequest(method: "GET", url: components.url!)
-}
-
-internal func DELETERequest(path: String, queryItems: [URLQueryItem]) -> URLRequest {
-    let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-
-    return URLRequest(method: "DELETE", url: components.url!)
-}
-
-internal func POSTRequest(path: String, queryItems: [URLQueryItem], body: AnyObject) -> URLRequest {
-    let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
-
-    return URLRequest(method: "POST", url: components.url!, body: body)
-}
