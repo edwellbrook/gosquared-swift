@@ -27,7 +27,7 @@ public class GoSquaredAPI {
     public var key: String?
     public var token: String?
 
-    static var URLSession = Foundation.URLSession.shared()
+    static var urlSession = URLSession.shared()
 
     lazy public var account: Account = Account(client: self)
     lazy public var chat: Chat = Chat(client: self)
@@ -45,7 +45,7 @@ public class GoSquaredAPI {
 
 
     public static func performRequest(_ request: URLRequest, completionHandler: Handler?) -> URLSessionDataTask? {
-        return GoSquaredAPI.URLSession.dataTask(with: request) { (data, response, error) in
+        return GoSquaredAPI.urlSession.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 completionHandler?(response: nil, error: error)
                 return
