@@ -155,23 +155,23 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_triggers_for_a_webhook
     // 
-    public func webhookTriggers(_ webhookId: Int) -> URLRequest {
+    public func webhookTriggers(webhookId: Int) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
 
-        let path = "\(self.basePath)/triggers/"
+        let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/"
         let components = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems)
 
-        return URLRequest(method: "DELETE", url: components.url!)
+        return URLRequest(method: "GET", url: components.url!)
     }
 
     //
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#add_an_trigger_to_a_webhook
     // 
-    public func addWebhookTrigger(_ webhookId: Int, trigger: String, value: String) -> URLRequest {
+    public func addWebhookTrigger(webhookId: Int, trigger: String, value: AnyObject) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -210,8 +210,7 @@ public class Account {
     //
     public func me() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.key)
         ]
 
         let path = "\(self.basePath)/me/"
