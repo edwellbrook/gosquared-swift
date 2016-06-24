@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/edwellbrook/gosquared-swift"
 
   s.source       = { :git => "https://github.com/edwellbrook/gosquared-swift.git", :tag => "v#{s.version}" }
-  s.source_files = "GoSquaredAPI/**/**"
+  s.source_files = "Sources/*"
 
   s.ios.deployment_target = "9.0"
   s.osx.deployment_target = "10.10"
