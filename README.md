@@ -11,7 +11,7 @@ It is written in Swift 3 and has support for the [Swift Package Manager](https:/
 ```ruby
 # In your Podfile add the following, then
 # save and run `pod install`:
-pod 'GoSquaredAPI', :git => 'https://github.com/edwellbrook/gosquared-swift.git', :tag => '0.1.0'
+pod 'GoSquaredAPI', :git => 'https://github.com/edwellbrook/gosquared-swift.git', :tag => 'v0.1.0'
 ```
 
 > **Note:** Although I recommend CocoaPods, you can install this library manually, with git submodules, the Swift Package Manager or Carthage.
