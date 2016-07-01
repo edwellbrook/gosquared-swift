@@ -47,10 +47,10 @@ The request building and execution are decoupled to give you full control over y
  - `isBotBlockingEnabled()`
  - `setBotBlockingEnabled(enabled: Bool)`
  - `blockedIPs()`
- - `setBlockedIPs(ipAddresses: [String])`
+ - `blockIPs(ipAddresses: [String])`
  - `unblockIPs(ipAddresses: [String])`
  - `blockedVisitors()`
- - `setBlockedVisitors(visitorIds: [String])`
+ - `blockVisitors(visitorIds: [String])`
  - `unblockVisitors(visitorIds: [String])`
  - `reportPreferences()`
  - `sharedUsers()`
@@ -72,14 +72,14 @@ The request building and execution are decoupled to give you full control over y
 ### Ecommerce
 
  - `aggregate()`
- - `browser()`
- - `category()`
- - `country()`
- - `language()`
+ - `browsers()`
+ - `categories()`
+ - `countries()`
+ - `languages()`
  - `os()`
- - `product()`
+ - `products()`
  - `sources()`
- - `transaction()`
+ - `transactions()`
 
 ### Now
 

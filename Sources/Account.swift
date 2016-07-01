@@ -89,7 +89,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/blocked/http/#update_blocked_ips
     //
-    public func setBlockedIPs(ipAddresses: [String]) -> URLRequest {
+    public func blockIPs(ipAddresses: [String]) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -144,7 +144,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/blocked/http/#update_blocked_visitors
     //
-    public func setBlockedVisitors(visitorIds: [String]) -> URLRequest {
+    public func blockVisitors(visitorIds: [String]) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
@@ -263,7 +263,7 @@ public class Account {
     //
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http/#add_a_webhook
-    // 
+    //
     public func addWebhook(_ webhookUrl: String, name: String = "") -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
@@ -284,7 +284,7 @@ public class Account {
     //
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/#retrieve_all_triggers_for_a_webhook
-    // 
+    //
     public func webhookTriggers(webhookId: Int) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
@@ -300,7 +300,7 @@ public class Account {
     //
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#add_an_trigger_to_a_webhook
-    // 
+    //
     public func addWebhookTrigger(webhookId: Int, trigger: String, value: AnyObject) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
@@ -318,7 +318,7 @@ public class Account {
         return URLRequest(method: .POST, url: url, body: body)
     }
 
-    // 
+    //
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#remove_an_trigger_from_a_webhook
     //
@@ -336,7 +336,7 @@ public class Account {
 
     //
     // docs:
-    // 
+    //
     //
     public func me() -> URLRequest {
         let queryItems = [

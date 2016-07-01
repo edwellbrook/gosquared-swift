@@ -15,75 +15,93 @@ class EcommerceTests: XCTestCase {
 
 
     func testAggregate() {
-        let request = gosquared.ecommerce.aggregate()
+        let request = gosquared.ecommerce.aggregate(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/aggregate")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testBrowser() {
-        let request = gosquared.ecommerce.browser()
+        let request = gosquared.ecommerce.browsers(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/browser")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testCategory() {
-        let request = gosquared.ecommerce.category()
+        let request = gosquared.ecommerce.categories(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/category")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testCountry() {
-        let request = gosquared.ecommerce.country()
+        let request = gosquared.ecommerce.countries(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/country")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testLanguage() {
-        let request = gosquared.ecommerce.language()
+        let request = gosquared.ecommerce.languages(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/language")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testOs() {
-        let request = gosquared.ecommerce.os()
+        let request = gosquared.ecommerce.os(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/os")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testProduct() {
-        let request = gosquared.ecommerce.product()
+        let request = gosquared.ecommerce.products(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/product")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testSources() {
-        let request = gosquared.ecommerce.sources()
+        let request = gosquared.ecommerce.sources(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/sources")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
     func testTransaction() {
-        let request = gosquared.ecommerce.transaction()
+        let request = gosquared.ecommerce.transactions(parameters: [
+            "limit": String(0)
+        ])
 
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.path, "/ecommerce/v1/transaction")
-        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
+        XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN&limit=0")
     }
 
 }

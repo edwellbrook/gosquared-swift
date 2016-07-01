@@ -48,8 +48,8 @@ class AccountTests: XCTestCase {
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
-    func testSetBlockedIPs() {
-        let request = gosquared.account.setBlockedIPs(ipAddresses: ["127.0.0.1"])
+    func testBlockIPs() {
+        let request = gosquared.account.blockIPs(ipAddresses: ["127.0.0.1"])
 
         XCTAssertEqual(request.httpMethod, "POST")
         XCTAssertEqual(request.url?.path, "/account/v1/blocked/ips")
@@ -76,8 +76,8 @@ class AccountTests: XCTestCase {
         XCTAssertEqual(request.url?.query, "api_key=TEST_KEY&site_token=TEST_TOKEN")
     }
 
-    func testSetBlockedVisitors() {
-        let request = gosquared.account.setBlockedVisitors(visitorIds: ["0"])
+    func testBlockVisitors() {
+        let request = gosquared.account.blockVisitors(visitorIds: ["0"])
 
         XCTAssertEqual(request.httpMethod, "POST")
         XCTAssertEqual(request.url?.path, "/account/v1/blocked/visitors")

@@ -22,11 +22,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/aggregate/
     //
-    public func aggregate() -> URLRequest {
-        let queryItems = [
+    public func aggregate(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/aggregate"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -38,11 +42,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/browser/
     //
-    public func browser() -> URLRequest {
-        let queryItems = [
+    public func browsers(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/browser"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -54,11 +62,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/category/
     //
-    public func category() -> URLRequest {
-        let queryItems = [
+    public func categories(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/category"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -70,11 +82,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/country/
     //
-    public func country() -> URLRequest {
-        let queryItems = [
+    public func countries(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/country"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -86,11 +102,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/language/
     //
-    public func language() -> URLRequest {
-        let queryItems = [
+    public func languages(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/language"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -102,11 +122,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/os/
     //
-    public func os() -> URLRequest {
-        let queryItems = [
+    public func os(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/os"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -118,11 +142,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/product/
     //
-    public func product() -> URLRequest {
-        let queryItems = [
+    public func products(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/product"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -134,11 +162,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/sources/
     //
-    public func sources() -> URLRequest {
-        let queryItems = [
+    public func sources(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/sources"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
@@ -150,11 +182,15 @@ public class Ecommerce {
     // docs:
     // https://www.gosquared.com/developer/api/ecommerce/v1/transaction/
     //
-    public func transaction() -> URLRequest {
-        let queryItems = [
+    public func transactions(parameters: [String: String]) -> URLRequest {
+        var queryItems = [
             URLQueryItem(name: "api_key", value: self.client.key),
             URLQueryItem(name: "site_token", value: self.client.token)
         ]
+
+        for (key, value) in parameters {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
 
         let path = "\(self.basePath)/transaction"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
