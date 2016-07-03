@@ -71,15 +71,15 @@ The request building and execution are decoupled to give you full control over y
 
 ### Ecommerce
 
- - `aggregate()`
- - `browsers()`
- - `categories()`
- - `countries()`
- - `languages()`
- - `os()`
- - `products()`
- - `sources()`
- - `transactions()`
+ - `aggregate(parameters: [String: String])`
+ - `browsers(parameters: [String: String])`
+ - `categories(parameters: [String: String])`
+ - `countries(parameters: [String: String])`
+ - `languages(parameters: [String: String])`
+ - `os(parameters: [String: String])`
+ - `products(parameters: [String: String])`
+ - `sources(parameters: [String: String])`
+ - `transactions(parameters: [String: String])`
 
 ### Now
 
