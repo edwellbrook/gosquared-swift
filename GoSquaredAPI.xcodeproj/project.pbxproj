@@ -23,8 +23,6 @@
 		B76619841D16ECB5009437B3 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619791D16ECB5009437B3 /* Now.swift */; };
 		B76619851D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
 		B76619861D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
-		B76619871D16ECB5009437B3 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197B1D16ECB5009437B3 /* Tracking.swift */; };
-		B76619881D16ECB5009437B3 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197B1D16ECB5009437B3 /* Tracking.swift */; };
 		B76619891D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
 		B766198A1D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
 		B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198B1D16ECC5009437B3 /* DateFormatter.swift */; };
@@ -43,8 +41,6 @@
 		B782919F1D17337300E1B636 /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291941D17337300E1B636 /* NowTests.swift */; };
 		B78291A01D17337300E1B636 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291951D17337300E1B636 /* PeopleTests.swift */; };
 		B78291A11D17337300E1B636 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291951D17337300E1B636 /* PeopleTests.swift */; };
-		B78291A21D17337300E1B636 /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291961D17337300E1B636 /* TrackingTests.swift */; };
-		B78291A31D17337300E1B636 /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291961D17337300E1B636 /* TrackingTests.swift */; };
 		B78291A41D17337300E1B636 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291971D17337300E1B636 /* TrendsTests.swift */; };
 		B78291A51D17337300E1B636 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291971D17337300E1B636 /* TrendsTests.swift */; };
 /* End PBXBuildFile section */
@@ -78,7 +74,6 @@
 		B76619781D16ECB5009437B3 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Sources/Ecommerce.swift; sourceTree = SOURCE_ROOT; };
 		B76619791D16ECB5009437B3 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Sources/Now.swift; sourceTree = SOURCE_ROOT; };
 		B766197A1D16ECB5009437B3 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Sources/People.swift; sourceTree = SOURCE_ROOT; };
-		B766197B1D16ECB5009437B3 /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tracking.swift; path = Sources/Tracking.swift; sourceTree = SOURCE_ROOT; };
 		B766197C1D16ECB5009437B3 /* Trends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trends.swift; path = Sources/Trends.swift; sourceTree = SOURCE_ROOT; };
 		B766198B1D16ECC5009437B3 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/DateFormatter.swift; sourceTree = SOURCE_ROOT; };
 		B766198C1D16ECC5009437B3 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Sources/URLComponents.swift; sourceTree = SOURCE_ROOT; };
@@ -90,7 +85,6 @@
 		B78291931D17337300E1B636 /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EcommerceTests.swift; path = Tests/GoSquaredAPI/EcommerceTests.swift; sourceTree = SOURCE_ROOT; };
 		B78291941D17337300E1B636 /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NowTests.swift; path = Tests/GoSquaredAPI/NowTests.swift; sourceTree = SOURCE_ROOT; };
 		B78291951D17337300E1B636 /* PeopleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleTests.swift; path = Tests/GoSquaredAPI/PeopleTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291961D17337300E1B636 /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackingTests.swift; path = Tests/GoSquaredAPI/TrackingTests.swift; sourceTree = SOURCE_ROOT; };
 		B78291971D17337300E1B636 /* TrendsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendsTests.swift; path = Tests/GoSquaredAPI/TrendsTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -177,7 +171,6 @@
 				B78291931D17337300E1B636 /* EcommerceTests.swift */,
 				B78291941D17337300E1B636 /* NowTests.swift */,
 				B78291951D17337300E1B636 /* PeopleTests.swift */,
-				B78291961D17337300E1B636 /* TrackingTests.swift */,
 				B78291971D17337300E1B636 /* TrendsTests.swift */,
 				B70F33041B0F8CF20056DECE /* Supporting Files */,
 			);
@@ -211,7 +204,6 @@
 				B76619781D16ECB5009437B3 /* Ecommerce.swift */,
 				B76619791D16ECB5009437B3 /* Now.swift */,
 				B766197A1D16ECB5009437B3 /* People.swift */,
-				B766197B1D16ECB5009437B3 /* Tracking.swift */,
 				B766197C1D16ECB5009437B3 /* Trends.swift */,
 			);
 			name = Namespaces;
@@ -363,7 +355,6 @@
 				B76619811D16ECB5009437B3 /* Ecommerce.swift in Sources */,
 				B766197D1D16ECB5009437B3 /* Account.swift in Sources */,
 				B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
-				B76619871D16ECB5009437B3 /* Tracking.swift in Sources */,
 				B76619901D16ECC5009437B3 /* URLComponents.swift in Sources */,
 				B76619831D16ECB5009437B3 /* Now.swift in Sources */,
 				B76619921D16ECC5009437B3 /* URLRequest.swift in Sources */,
@@ -382,7 +373,6 @@
 				B78291A41D17337300E1B636 /* TrendsTests.swift in Sources */,
 				B78291A01D17337300E1B636 /* PeopleTests.swift in Sources */,
 				B782919A1D17337300E1B636 /* ChatTests.swift in Sources */,
-				B78291A21D17337300E1B636 /* TrackingTests.swift in Sources */,
 				B782919E1D17337300E1B636 /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +385,6 @@
 				B76619821D16ECB5009437B3 /* Ecommerce.swift in Sources */,
 				B766197E1D16ECB5009437B3 /* Account.swift in Sources */,
 				B766198F1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
-				B76619881D16ECB5009437B3 /* Tracking.swift in Sources */,
 				B76619911D16ECC5009437B3 /* URLComponents.swift in Sources */,
 				B76619841D16ECB5009437B3 /* Now.swift in Sources */,
 				B76619931D16ECC5009437B3 /* URLRequest.swift in Sources */,
@@ -414,7 +403,6 @@
 				B78291A51D17337300E1B636 /* TrendsTests.swift in Sources */,
 				B78291A11D17337300E1B636 /* PeopleTests.swift in Sources */,
 				B782919B1D17337300E1B636 /* ChatTests.swift in Sources */,
-				B78291A31D17337300E1B636 /* TrackingTests.swift in Sources */,
 				B782919F1D17337300E1B636 /* NowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

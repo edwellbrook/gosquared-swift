@@ -107,11 +107,6 @@ The request building and execution are decoupled to give you full control over y
  - `feed(personId: String, parameters: [String: String])`
  - `smartGroups()`
 
-### Tracking
-
- - `identify(personId: String, properties: [String: AnyObject])`
- - `event(_ name: String, personId: String?, properties: [String: AnyObject]?)`
-
 ### Trends
 
  - `aggregate(parameters: [String: String])`
