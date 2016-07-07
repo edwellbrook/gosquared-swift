@@ -1,8 +1,10 @@
 # GoSquared Swift API
 
-The GoSquared Swift API library allows you to interact with the [GoSquared API](https://www.gosquared.com/docs/api/). It was written to make building apps to present the GoSquared data easier. **I recommend using the [official iOS library](https://github.com/gosquared/gosquared-ios) for tracking.**
+The GoSquared Swift API library allows you to interact with the [GoSquared API](https://www.gosquared.com/docs/api/). It was written to make building apps to present the GoSquared data easier.
 
 It is written in Swift 3 and has support for the [Swift Package Manager](https://github.com/apple/swift-package-manager).
+
+> **Note:** If you're just looking to track your app, I recommend using the [official iOS library](https://github.com/gosquared/gosquared-ios).
 
 ## Installation
 
