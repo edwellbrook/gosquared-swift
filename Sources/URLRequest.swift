@@ -16,8 +16,16 @@ extension URLRequest {
         case DELETE
     }
 
-    init(method: HTTPMethod, url: URL, body: AnyObject? = nil) {
+    init(url: URL, bearer: String?) {
         self.init(url: url)
+
+        if let token = bearer {
+            self.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+    }
+
+    init(method: HTTPMethod, url: URL, body: AnyObject? = nil, bearer: String? = nil) {
+        self.init(url: url, bearer: bearer)
         self.httpMethod = method.rawValue
 
         guard let json = body else {

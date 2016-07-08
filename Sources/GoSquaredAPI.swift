@@ -24,8 +24,9 @@ public class GoSquaredAPI {
     }
 
 
-    public var key: String?
-    public var token: String?
+    public var apiKey: String?
+    public var project: String?
+    public var bearerToken: String?
 
     static var urlSession = URLSession.shared()
 
@@ -37,9 +38,14 @@ public class GoSquaredAPI {
     lazy public var people: People = People(client: self)
 
 
-    public init(key: String? = nil, token: String? = nil) {
-        self.key = key
-        self.token = token
+    public init(apiKey: String? = nil, project: String? = nil) {
+        self.apiKey = apiKey
+        self.project = project
+    }
+
+    public init(bearerToken: String? = nil, project: String? = nil) {
+        self.bearerToken = bearerToken
+        self.project = project
     }
 
 

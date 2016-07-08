@@ -11,7 +11,7 @@ import GoSquaredAPI
 
 class NowTests: XCTestCase {
 
-    let gosquared = GoSquaredAPI(key: "TEST_KEY", token: "TEST_TOKEN")
+    let gosquared = GoSquaredAPI(apiKey: "TEST_KEY", project: "TEST_TOKEN")
 
 
     func testBrowsers() {

@@ -24,15 +24,15 @@ public class People {
     //
     public func devices(limit: Int = 25, offset: Int = 0) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project),
             URLQueryItem(name: "limit", value: "\(limit),\(offset)")
         ]
 
         let path = "\(self.basePath)/devices"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -41,14 +41,14 @@ public class People {
     //
     public func device(deviceId: String) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/devices/\(deviceId)"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -57,14 +57,14 @@ public class People {
     //
     public func eventTypes() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/eventTypes"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -73,8 +73,8 @@ public class People {
     //
     public func search(_ query: String, parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project),
             URLQueryItem(name: "query", value: query)
         ]
 
@@ -85,7 +85,7 @@ public class People {
         let path = "\(self.basePath)/people"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -94,14 +94,14 @@ public class People {
     //
     public func details(personId: String) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/people/\(personId)"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -110,15 +110,15 @@ public class People {
     //
     public func devices(personId: String, limit: Int = 15, offset: Int = 0) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project),
             URLQueryItem(name: "limit", value: "\(limit),\(offset)")
         ]
 
         let path = "\(self.basePath)/people/\(personId)/devices"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -127,8 +127,8 @@ public class People {
     //
     public func feed(personId: String, parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -138,7 +138,7 @@ public class People {
         let path = "\(self.basePath)/people/\(personId)/feed"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -147,14 +147,14 @@ public class People {
     //
     public func smartGroups() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/smartgroups"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
 }

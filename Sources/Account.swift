@@ -24,14 +24,14 @@ public class Account {
     //
     public func blockedItems() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/blocked"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -40,14 +40,14 @@ public class Account {
     //
     public func isBotBlockingEnabled() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/blocked/bots"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -56,8 +56,8 @@ public class Account {
     //
     public func setBotBlockingEnabled(enabled: Bool) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -67,7 +67,7 @@ public class Account {
         let path = "\(self.basePath)/blocked/bots"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: url, body: body)
+        return URLRequest(method: .POST, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -76,14 +76,14 @@ public class Account {
     //
     public func blockedIPs() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/blocked/ips"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     // docs:
@@ -91,8 +91,8 @@ public class Account {
     //
     public func blockIPs(ipAddresses: [String]) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -102,7 +102,7 @@ public class Account {
         let path = "\(self.basePath)/blocked/ips"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: url, body: body)
+        return URLRequest(method: .POST, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -111,8 +111,8 @@ public class Account {
     //
     public func unblockIPs(ipAddresses: [String]) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -122,7 +122,7 @@ public class Account {
         let path = "\(self.basePath)/blocked/ips"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .DELETE, url: url, body: body)
+        return URLRequest(method: .DELETE, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -131,14 +131,14 @@ public class Account {
     //
     public func blockedVisitors() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/blocked/visitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     // docs:
@@ -146,8 +146,8 @@ public class Account {
     //
     public func blockVisitors(visitorIds: [String]) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -157,7 +157,7 @@ public class Account {
         let path = "\(self.basePath)/blocked/visitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: url, body: body)
+        return URLRequest(method: .POST, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -166,8 +166,8 @@ public class Account {
     //
     public func unblockVisitors(visitorIds: [String]) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -177,7 +177,7 @@ public class Account {
         let path = "\(self.basePath)/blocked/visitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .DELETE, url: url, body: body)
+        return URLRequest(method: .DELETE, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -186,14 +186,14 @@ public class Account {
     //
     public func reportPreferences() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/reportPreferences"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -202,14 +202,14 @@ public class Account {
     //
     public func sharedUsers() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/sharedUsers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -218,14 +218,14 @@ public class Account {
     //
     public func projects() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/sites"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -234,14 +234,14 @@ public class Account {
     //
     public func taggedVisitors() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/taggedVisitors"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -250,14 +250,14 @@ public class Account {
     //
     public func webhooks() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/webhooks"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -266,8 +266,8 @@ public class Account {
     //
     public func addWebhook(_ webhookUrl: String, name: String = "") -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -278,7 +278,7 @@ public class Account {
         let path = "\(self.basePath)/webhooks"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: url, body: body)
+        return URLRequest(method: .POST, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -287,14 +287,14 @@ public class Account {
     //
     public func webhookTriggers(webhookId: Int) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -303,8 +303,8 @@ public class Account {
     //
     public func addWebhookTrigger(webhookId: Int, trigger: String, value: AnyObject) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let body = [
@@ -315,7 +315,7 @@ public class Account {
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .POST, url: url, body: body)
+        return URLRequest(method: .POST, url: url, body: body, bearer: self.client.bearerToken)
     }
 
     //
@@ -324,14 +324,14 @@ public class Account {
     //
     public func removeWebhookTrigger(_ webhookId: Int, triggerId: Int) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/webhooks/\(webhookId)/triggers/\(triggerId)"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(method: .DELETE, url: url)
+        return URLRequest(method: .DELETE, url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -340,13 +340,13 @@ public class Account {
     //
     public func me() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key)
+            URLQueryItem(name: "api_key", value: self.client.apiKey)
         ]
 
         let path = "\(self.basePath)/me"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
 }

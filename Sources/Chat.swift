@@ -24,14 +24,14 @@ public class Chat {
     //
     public func chats() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/chats"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -40,8 +40,8 @@ public class Chat {
     //
     public func messages(personId: String, limit: Int = 20, offset: Int = 0) -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token),
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project),
             URLQueryItem(name: "limit", value: String(limit)),
             URLQueryItem(name: "offset", value: String(offset))
         ]
@@ -49,7 +49,7 @@ public class Chat {
         let path = "\(self.basePath)/chats/\(personId)/messages"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -58,14 +58,14 @@ public class Chat {
     //
     public func stream() -> URLRequest {
         let queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         let path = "\(self.basePath)/stream"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
 }

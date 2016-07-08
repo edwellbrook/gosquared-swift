@@ -24,8 +24,8 @@ public class Ecommerce {
     //
     public func aggregate(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -35,7 +35,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/aggregate"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -44,8 +44,8 @@ public class Ecommerce {
     //
     public func browsers(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -55,7 +55,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/browser"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -64,8 +64,8 @@ public class Ecommerce {
     //
     public func categories(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -75,7 +75,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/category"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -84,8 +84,8 @@ public class Ecommerce {
     //
     public func countries(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -95,7 +95,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/country"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -104,8 +104,8 @@ public class Ecommerce {
     //
     public func languages(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -115,7 +115,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/language"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -124,8 +124,8 @@ public class Ecommerce {
     //
     public func os(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -135,7 +135,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/os"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -144,8 +144,8 @@ public class Ecommerce {
     //
     public func products(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -155,7 +155,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/product"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -164,8 +164,8 @@ public class Ecommerce {
     //
     public func sources(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -175,7 +175,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/sources"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
     //
@@ -184,8 +184,8 @@ public class Ecommerce {
     //
     public func transactions(parameters: [String: String]) -> URLRequest {
         var queryItems = [
-            URLQueryItem(name: "api_key", value: self.client.key),
-            URLQueryItem(name: "site_token", value: self.client.token)
+            URLQueryItem(name: "api_key", value: self.client.apiKey),
+            URLQueryItem(name: "site_token", value: self.client.project)
         ]
 
         for (key, value) in parameters {
@@ -195,7 +195,7 @@ public class Ecommerce {
         let path = "\(self.basePath)/transaction"
         let url = URLComponents(host: "api.gosquared.com", path: path, queryItems: queryItems).url!
 
-        return URLRequest(url: url)
+        return URLRequest(url: url, bearer: self.client.bearerToken)
     }
 
 }
