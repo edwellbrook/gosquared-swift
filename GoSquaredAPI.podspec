@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name    = "GoSquaredAPI"
-  s.version = "0.3.0"
+  s.version = "0.4.0"
   s.summary = "GoSquared API"
   s.author  = { "Ed Wellbrook" => "edwellbrook@gmail.com" }
 
