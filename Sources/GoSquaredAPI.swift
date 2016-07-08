@@ -49,8 +49,8 @@ public class GoSquaredAPI {
     }
 
 
-    public static func performRequest(_ request: URLRequest, completionHandler: Handler?) -> URLSessionDataTask? {
-        return GoSquaredAPI.urlSession.dataTask(with: request) { (data, response, error) in
+    public static func performRequest(_ request: URLRequest, completionHandler: Handler?) {
+        GoSquaredAPI.urlSession.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 completionHandler?(response: nil, error: error)
                 return
@@ -62,7 +62,7 @@ public class GoSquaredAPI {
             } catch let err as NSError {
                 completionHandler?(response: nil, error: err)
             }
-        }
+        }.resume()
     }
     
 }
