@@ -24,7 +24,7 @@ pod 'GoSquaredAPI', :git => 'https://github.com/edwellbrook/gosquared-swift.git'
 import GoSquaredAPI
 
 // Configure client
-let gosquared = GoSquared(key: "API_KEY", token: "PROJECT_KEY")
+let gosquared = GoSquared(apiKey: "API_KEY", project: "PROJECT_TOKEN")
 
 // Build request
 let request = gosquared.now.concurrents()
@@ -132,7 +132,7 @@ The **Now** and **Trends** namespaces offer the ability to group multiple calls 
 import GoSquaredAPI
 
 // Configure client
-let gosquared = GoSquared(key: "API_KEY", token: "PROJECT_KEY")
+let gosquared = GoSquared(apiKey: "API_KEY", project: "PROJECT_TOKEN")
 
 // Build request with endpoints and parameters
 let request = gosquared.now.combiningFunction(functions: [
