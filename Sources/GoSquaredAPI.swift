@@ -38,12 +38,12 @@ public class GoSquaredAPI {
     lazy public var people: People = People(client: self)
 
 
-    public init(apiKey: String? = nil, project: String? = nil) {
+    public init(apiKey: String?, project: String? = nil) {
         self.apiKey = apiKey
         self.project = project
     }
 
-    public init(bearerToken: String? = nil, project: String? = nil) {
+    public init(bearerToken: String?, project: String? = nil) {
         self.bearerToken = bearerToken
         self.project = project
     }
