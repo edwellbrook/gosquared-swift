@@ -51,16 +51,18 @@ public class GoSquaredAPI {
 
     public static func performRequest(_ request: URLRequest, completionHandler: Handler?) {
         GoSquaredAPI.urlSession.dataTask(with: request) { (data, response, error) in
-            if error != nil {
-                completionHandler?(response: nil, error: error)
-                return
-            }
+            DispatchQueue.main.async {
+                if error != nil {
+                    completionHandler?(response: nil, error: error)
+                    return
+                }
 
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                completionHandler?(response: json, error: nil)
-            } catch let err as NSError {
-                completionHandler?(response: nil, error: err)
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                    completionHandler?(response: json, error: nil)
+                } catch let err as NSError {
+                    completionHandler?(response: nil, error: err)
+                }
             }
         }.resume()
     }
