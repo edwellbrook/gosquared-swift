@@ -1,6 +1,4 @@
 language: objective-c
 osx_image: xcode8
-before_install:
-  - xcodebuild -version
 script:
   - xcodebuild clean build test -project GoSquaredAPI.xcodeproj -scheme 'GoSquaredAPI OSX'
