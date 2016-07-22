@@ -6,8 +6,6 @@ The GoSquared Swift API library allows you to interact with the [GoSquared API](
 
 It is written in Swift 3 and has support for the [Swift Package Manager](https://github.com/apple/swift-package-manager).
 
-> **Note:** If you're just looking to track your app, I recommend using the [official iOS library](https://github.com/gosquared/gosquared-ios).
-
 ## Installation
 
 [CocoaPods](https://cocoapods.org) is the recommended way to install this library:
