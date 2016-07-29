@@ -10,9 +10,6 @@ import Foundation
 
 public class Trends {
 
-    static let dateFormatter = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm:ss")
-    static let dateFormat = "YYYY-MM-DD HH:mm:ss"
-
     private let client: GoSquaredAPI
     private let basePath: String
 
