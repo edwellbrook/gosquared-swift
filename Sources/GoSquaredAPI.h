@@ -1,5 +1,5 @@
 //
-//  GoSquared.h
+//  GoSquaredAPI.h
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 22/05/2015.
