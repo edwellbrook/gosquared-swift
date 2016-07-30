@@ -1,5 +1,5 @@
 //
-//  GoSquared.swift
+//  GoSquaredAPI.swift
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 22/05/2015.
