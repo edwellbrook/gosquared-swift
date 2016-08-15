@@ -301,7 +301,7 @@ public class Account {
     // docs:
     // https://www.gosquared.com/docs/api/account/webhooks/http#add_an_trigger_to_a_webhook
     //
-    public func addWebhookTrigger(webhookId: Int, trigger: String, value: AnyObject) -> URLRequest {
+    public func addWebhookTrigger(webhookId: Int, trigger: String, value: Any) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "api_key", value: self.client.apiKey),
             URLQueryItem(name: "site_token", value: self.client.project)

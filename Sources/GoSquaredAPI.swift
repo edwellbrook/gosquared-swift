@@ -10,7 +10,7 @@ import Foundation
 
 public class GoSquaredAPI {
 
-    public typealias Handler = (response: AnyObject?, error: NSError?) -> Void
+    public typealias Handler = (_ response: Any?, _ error: Error?) -> Void
 
     public static let CommonDateFormatter = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm:ss")
     public static let CommonDateFormat = "YYYY-MM-DD HH:mm:ss"
@@ -55,15 +55,15 @@ public class GoSquaredAPI {
         GoSquaredAPI.urlSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 if error != nil {
-                    completionHandler?(response: nil, error: error)
+                    completionHandler?(nil, error)
                     return
                 }
 
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                    completionHandler?(response: json, error: nil)
+                    completionHandler?(json, nil)
                 } catch let err as NSError {
-                    completionHandler?(response: nil, error: err)
+                    completionHandler?(nil, err)
                 }
             }
         }.resume()

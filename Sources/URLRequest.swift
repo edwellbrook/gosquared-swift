@@ -24,7 +24,7 @@ extension URLRequest {
         }
     }
 
-    init(method: HTTPMethod, url: URL, body: AnyObject? = nil, bearer: String? = nil) {
+    init(method: HTTPMethod, url: URL, body: Any? = nil, bearer: String? = nil) {
         self.init(url: url, bearer: bearer)
         self.httpMethod = method.rawValue
 
