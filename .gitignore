@@ -1,4 +1,7 @@
-# Modified from https://www.gitignore.io/api/swift,xcode
+# Modified from https://www.gitignore.io/api/osx,swift,xcode
+
+## OS X
+*.DS_Store
 
 ## Build generated
 build/
