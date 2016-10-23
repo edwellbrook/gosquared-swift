@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name    = "GoSquaredAPI"
   s.version = "0.6.1"
-  s.summary = "GoSquared API"
+  s.summary = "Swift library for interacting with the GoSquared API"
   s.author  = { "Ed Wellbrook" => "edwellbrook@gmail.com" }
 
   s.license  = "MIT"
@@ -13,5 +13,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   s.osx.deployment_target = "10.10"
+  
+  s.requires_arc = true
 
 end
