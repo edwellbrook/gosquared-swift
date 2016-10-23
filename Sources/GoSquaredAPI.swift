@@ -30,7 +30,7 @@ public class GoSquaredAPI {
     public var project: String?
     public var bearerToken: String?
 
-    static var urlSession = URLSession.shared
+    public static var urlSession = URLSession.shared
 
     lazy public var account: Account = Account(client: self)
     lazy public var chat: Chat = Chat(client: self)
