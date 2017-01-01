@@ -3,7 +3,7 @@
 //  GoSquaredAPI
 //
 //  Created by Edward Wellbrook on 19/06/2016.
-//  Copyright © 2016 Edward Wellbrook. All rights reserved.
+//  Copyright © 2017 Edward Wellbrook. All rights reserved.
 //
 
 import XCTest
@@ -13,7 +13,7 @@ class TrendsTests: XCTestCase {
 
     let gosquared = GoSquaredAPI(apiKey: "TEST_KEY", project: "TEST_TOKEN")
 
-    
+
     func testAggregate() {
         let request = gosquared.trends.aggregate(parameters: [
             "limit": String(0)
