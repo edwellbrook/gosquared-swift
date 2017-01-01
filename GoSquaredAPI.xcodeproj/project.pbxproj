@@ -1,738 +1,552 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		B70F33001B0F8CF20056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */; };
-		B70F333D1B10E91B0056DECE /* GoSquaredAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */; };
-		B76619711D16EC87009437B3 /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B76619701D16EC87009437B3 /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B76619721D16EC87009437B3 /* GoSquaredAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B76619701D16EC87009437B3 /* GoSquaredAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B76619741D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */; };
-		B76619751D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */; };
-		B766197D1D16ECB5009437B3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619761D16ECB5009437B3 /* Account.swift */; };
-		B766197E1D16ECB5009437B3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619761D16ECB5009437B3 /* Account.swift */; };
-		B766197F1D16ECB5009437B3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619771D16ECB5009437B3 /* Chat.swift */; };
-		B76619801D16ECB5009437B3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619771D16ECB5009437B3 /* Chat.swift */; };
-		B76619811D16ECB5009437B3 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619781D16ECB5009437B3 /* Ecommerce.swift */; };
-		B76619821D16ECB5009437B3 /* Ecommerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619781D16ECB5009437B3 /* Ecommerce.swift */; };
-		B76619831D16ECB5009437B3 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619791D16ECB5009437B3 /* Now.swift */; };
-		B76619841D16ECB5009437B3 /* Now.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76619791D16ECB5009437B3 /* Now.swift */; };
-		B76619851D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
-		B76619861D16ECB5009437B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197A1D16ECB5009437B3 /* People.swift */; };
-		B76619891D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
-		B766198A1D16ECB5009437B3 /* Trends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766197C1D16ECB5009437B3 /* Trends.swift */; };
-		B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198B1D16ECC5009437B3 /* DateFormatter.swift */; };
-		B766198F1D16ECC5009437B3 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198B1D16ECC5009437B3 /* DateFormatter.swift */; };
-		B76619901D16ECC5009437B3 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198C1D16ECC5009437B3 /* URLComponents.swift */; };
-		B76619911D16ECC5009437B3 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198C1D16ECC5009437B3 /* URLComponents.swift */; };
-		B76619921D16ECC5009437B3 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198D1D16ECC5009437B3 /* URLRequest.swift */; };
-		B76619931D16ECC5009437B3 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766198D1D16ECC5009437B3 /* URLRequest.swift */; };
-		B78291981D17337300E1B636 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291911D17337300E1B636 /* AccountTests.swift */; };
-		B78291991D17337300E1B636 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291911D17337300E1B636 /* AccountTests.swift */; };
-		B782919A1D17337300E1B636 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291921D17337300E1B636 /* ChatTests.swift */; };
-		B782919B1D17337300E1B636 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291921D17337300E1B636 /* ChatTests.swift */; };
-		B782919C1D17337300E1B636 /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291931D17337300E1B636 /* EcommerceTests.swift */; };
-		B782919D1D17337300E1B636 /* EcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291931D17337300E1B636 /* EcommerceTests.swift */; };
-		B782919E1D17337300E1B636 /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291941D17337300E1B636 /* NowTests.swift */; };
-		B782919F1D17337300E1B636 /* NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291941D17337300E1B636 /* NowTests.swift */; };
-		B78291A01D17337300E1B636 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291951D17337300E1B636 /* PeopleTests.swift */; };
-		B78291A11D17337300E1B636 /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291951D17337300E1B636 /* PeopleTests.swift */; };
-		B78291A41D17337300E1B636 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291971D17337300E1B636 /* TrendsTests.swift */; };
-		B78291A51D17337300E1B636 /* TrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78291971D17337300E1B636 /* TrendsTests.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B70F33011B0F8CF20056DECE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B70F32F31B0F8CF20056DECE;
-			remoteInfo = GoSquaredAPI;
-		};
-		B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B70F32EB1B0F8CF20056DECE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B70F33311B10E91A0056DECE;
-			remoteInfo = GoSquaredAPI;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSquaredAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSquaredAPI OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B76619701D16EC87009437B3 /* GoSquaredAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoSquaredAPI.h; path = Sources/GoSquaredAPI.h; sourceTree = SOURCE_ROOT; };
-		B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoSquaredAPI.swift; path = Sources/GoSquaredAPI.swift; sourceTree = SOURCE_ROOT; };
-		B76619761D16ECB5009437B3 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Sources/Account.swift; sourceTree = SOURCE_ROOT; };
-		B76619771D16ECB5009437B3 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Sources/Chat.swift; sourceTree = SOURCE_ROOT; };
-		B76619781D16ECB5009437B3 /* Ecommerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ecommerce.swift; path = Sources/Ecommerce.swift; sourceTree = SOURCE_ROOT; };
-		B76619791D16ECB5009437B3 /* Now.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Now.swift; path = Sources/Now.swift; sourceTree = SOURCE_ROOT; };
-		B766197A1D16ECB5009437B3 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Sources/People.swift; sourceTree = SOURCE_ROOT; };
-		B766197C1D16ECB5009437B3 /* Trends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trends.swift; path = Sources/Trends.swift; sourceTree = SOURCE_ROOT; };
-		B766198B1D16ECC5009437B3 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/DateFormatter.swift; sourceTree = SOURCE_ROOT; };
-		B766198C1D16ECC5009437B3 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Sources/URLComponents.swift; sourceTree = SOURCE_ROOT; };
-		B766198D1D16ECC5009437B3 /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Sources/URLRequest.swift; sourceTree = SOURCE_ROOT; };
-		B76619941D16ECE0009437B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
-		B76619AB1D16ED4F009437B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
-		B78291911D17337300E1B636 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountTests.swift; path = Tests/GoSquaredAPI/AccountTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291921D17337300E1B636 /* ChatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTests.swift; path = Tests/GoSquaredAPI/ChatTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291931D17337300E1B636 /* EcommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EcommerceTests.swift; path = Tests/GoSquaredAPI/EcommerceTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291941D17337300E1B636 /* NowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NowTests.swift; path = Tests/GoSquaredAPI/NowTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291951D17337300E1B636 /* PeopleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleTests.swift; path = Tests/GoSquaredAPI/PeopleTests.swift; sourceTree = SOURCE_ROOT; };
-		B78291971D17337300E1B636 /* TrendsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendsTests.swift; path = Tests/GoSquaredAPI/TrendsTests.swift; sourceTree = SOURCE_ROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		B70F32F01B0F8CF20056DECE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F32FC1B0F8CF20056DECE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B70F33001B0F8CF20056DECE /* GoSquaredAPI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F332E1B10E91A0056DECE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F33391B10E91B0056DECE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B70F333D1B10E91B0056DECE /* GoSquaredAPI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		B70F32EA1B0F8CF20056DECE = {
-			isa = PBXGroup;
-			children = (
-				B70F32F61B0F8CF20056DECE /* Sources */,
-				B70F33031B0F8CF20056DECE /* Tests */,
-				B70F32F51B0F8CF20056DECE /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B70F32F51B0F8CF20056DECE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */,
-				B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */,
-				B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */,
-				B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B70F32F61B0F8CF20056DECE /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				B76619701D16EC87009437B3 /* GoSquaredAPI.h */,
-				B76619731D16ECA4009437B3 /* GoSquaredAPI.swift */,
-				B7F25B1D1B22599F009D8E97 /* Namespaces */,
-				B7DD49231D16189F0040350C /* Extensions */,
-				B70F32F71B0F8CF20056DECE /* Supporting Files */,
-			);
-			name = Sources;
-			path = GoSquaredAPI;
-			sourceTree = "<group>";
-		};
-		B70F32F71B0F8CF20056DECE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B76619941D16ECE0009437B3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B70F33031B0F8CF20056DECE /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				B78291911D17337300E1B636 /* AccountTests.swift */,
-				B78291921D17337300E1B636 /* ChatTests.swift */,
-				B78291931D17337300E1B636 /* EcommerceTests.swift */,
-				B78291941D17337300E1B636 /* NowTests.swift */,
-				B78291951D17337300E1B636 /* PeopleTests.swift */,
-				B78291971D17337300E1B636 /* TrendsTests.swift */,
-				B70F33041B0F8CF20056DECE /* Supporting Files */,
-			);
-			name = Tests;
-			path = GoSquaredAPITests;
-			sourceTree = "<group>";
-		};
-		B70F33041B0F8CF20056DECE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B76619AB1D16ED4F009437B3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B7DD49231D16189F0040350C /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B766198B1D16ECC5009437B3 /* DateFormatter.swift */,
-				B766198C1D16ECC5009437B3 /* URLComponents.swift */,
-				B766198D1D16ECC5009437B3 /* URLRequest.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		B7F25B1D1B22599F009D8E97 /* Namespaces */ = {
-			isa = PBXGroup;
-			children = (
-				B76619761D16ECB5009437B3 /* Account.swift */,
-				B76619771D16ECB5009437B3 /* Chat.swift */,
-				B76619781D16ECB5009437B3 /* Ecommerce.swift */,
-				B76619791D16ECB5009437B3 /* Now.swift */,
-				B766197A1D16ECB5009437B3 /* People.swift */,
-				B766197C1D16ECB5009437B3 /* Trends.swift */,
-			);
-			name = Namespaces;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		B70F32F11B0F8CF20056DECE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B76619711D16EC87009437B3 /* GoSquaredAPI.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F332F1B10E91A0056DECE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B76619721D16EC87009437B3 /* GoSquaredAPI.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS" */;
-			buildPhases = (
-				B70F32EF1B0F8CF20056DECE /* Sources */,
-				B70F32F01B0F8CF20056DECE /* Frameworks */,
-				B70F32F11B0F8CF20056DECE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "GoSquaredAPI iOS";
-			productName = GoSquaredAPI;
-			productReference = B70F32F41B0F8CF20056DECE /* GoSquaredAPI.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B70F32FE1B0F8CF20056DECE /* GoSquaredAPI iOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS Tests" */;
-			buildPhases = (
-				B70F32FB1B0F8CF20056DECE /* Sources */,
-				B70F32FC1B0F8CF20056DECE /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B70F33021B0F8CF20056DECE /* PBXTargetDependency */,
-			);
-			name = "GoSquaredAPI iOS Tests";
-			productName = GoSquaredAPITests;
-			productReference = B70F32FF1B0F8CF20056DECE /* GoSquaredAPI iOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX" */;
-			buildPhases = (
-				B70F332D1B10E91A0056DECE /* Sources */,
-				B70F332E1B10E91A0056DECE /* Frameworks */,
-				B70F332F1B10E91A0056DECE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "GoSquaredAPI OSX";
-			productName = GoSquaredAPI;
-			productReference = B70F33321B10E91A0056DECE /* GoSquaredAPI.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B70F333B1B10E91B0056DECE /* GoSquaredAPI OSX Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX Tests" */;
-			buildPhases = (
-				B70F33381B10E91B0056DECE /* Sources */,
-				B70F33391B10E91B0056DECE /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B70F333F1B10E91B0056DECE /* PBXTargetDependency */,
-			);
-			name = "GoSquaredAPI OSX Tests";
-			productName = GoSquaredAPITests;
-			productReference = B70F333C1B10E91B0056DECE /* GoSquaredAPI OSX Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		B70F32EB1B0F8CF20056DECE /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Edward Wellbrook";
-				TargetAttributes = {
-					B70F32F31B0F8CF20056DECE = {
-						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
-					};
-					B70F32FE1B0F8CF20056DECE = {
-						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
-					};
-					B70F33311B10E91A0056DECE = {
-						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
-					};
-					B70F333B1B10E91B0056DECE = {
-						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
-					};
-				};
-			};
-			buildConfigurationList = B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquaredAPI" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = B70F32EA1B0F8CF20056DECE;
-			productRefGroup = B70F32F51B0F8CF20056DECE /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */,
-				B70F32FE1B0F8CF20056DECE /* GoSquaredAPI iOS Tests */,
-				B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */,
-				B70F333B1B10E91B0056DECE /* GoSquaredAPI OSX Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		B70F32EF1B0F8CF20056DECE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B76619891D16ECB5009437B3 /* Trends.swift in Sources */,
-				B76619811D16ECB5009437B3 /* Ecommerce.swift in Sources */,
-				B766197D1D16ECB5009437B3 /* Account.swift in Sources */,
-				B766198E1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
-				B76619901D16ECC5009437B3 /* URLComponents.swift in Sources */,
-				B76619831D16ECB5009437B3 /* Now.swift in Sources */,
-				B76619921D16ECC5009437B3 /* URLRequest.swift in Sources */,
-				B766197F1D16ECB5009437B3 /* Chat.swift in Sources */,
-				B76619741D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */,
-				B76619851D16ECB5009437B3 /* People.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F32FB1B0F8CF20056DECE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B782919C1D17337300E1B636 /* EcommerceTests.swift in Sources */,
-				B78291981D17337300E1B636 /* AccountTests.swift in Sources */,
-				B78291A41D17337300E1B636 /* TrendsTests.swift in Sources */,
-				B78291A01D17337300E1B636 /* PeopleTests.swift in Sources */,
-				B782919A1D17337300E1B636 /* ChatTests.swift in Sources */,
-				B782919E1D17337300E1B636 /* NowTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F332D1B10E91A0056DECE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B766198A1D16ECB5009437B3 /* Trends.swift in Sources */,
-				B76619821D16ECB5009437B3 /* Ecommerce.swift in Sources */,
-				B766197E1D16ECB5009437B3 /* Account.swift in Sources */,
-				B766198F1D16ECC5009437B3 /* DateFormatter.swift in Sources */,
-				B76619911D16ECC5009437B3 /* URLComponents.swift in Sources */,
-				B76619841D16ECB5009437B3 /* Now.swift in Sources */,
-				B76619931D16ECC5009437B3 /* URLRequest.swift in Sources */,
-				B76619801D16ECB5009437B3 /* Chat.swift in Sources */,
-				B76619751D16ECA4009437B3 /* GoSquaredAPI.swift in Sources */,
-				B76619861D16ECB5009437B3 /* People.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B70F33381B10E91B0056DECE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B782919D1D17337300E1B636 /* EcommerceTests.swift in Sources */,
-				B78291991D17337300E1B636 /* AccountTests.swift in Sources */,
-				B78291A51D17337300E1B636 /* TrendsTests.swift in Sources */,
-				B78291A11D17337300E1B636 /* PeopleTests.swift in Sources */,
-				B782919B1D17337300E1B636 /* ChatTests.swift in Sources */,
-				B782919F1D17337300E1B636 /* NowTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B70F33021B0F8CF20056DECE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B70F32F31B0F8CF20056DECE /* GoSquaredAPI iOS */;
-			targetProxy = B70F33011B0F8CF20056DECE /* PBXContainerItemProxy */;
-		};
-		B70F333F1B10E91B0056DECE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B70F33311B10E91A0056DECE /* GoSquaredAPI OSX */;
-			targetProxy = B70F333E1B10E91B0056DECE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		B70F33081B0F8CF20056DECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B70F33091B0F8CF20056DECE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B70F330B1B0F8CF20056DECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquaredAPI;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B70F330C1B0F8CF20056DECE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquaredAPI;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B70F330E1B0F8CF20056DECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B70F330F1B0F8CF20056DECE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		B70F33461B10E91B0056DECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Sources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquaredAPI;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B70F33471B10E91B0056DECE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GoSquaredAPI;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		B70F33491B10E91B0056DECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B70F334A1B10E91B0056DECE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gosquared.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		B70F32EE1B0F8CF20056DECE /* Build configuration list for PBXProject "GoSquaredAPI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70F33081B0F8CF20056DECE /* Debug */,
-				B70F33091B0F8CF20056DECE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B70F330A1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70F330B1B0F8CF20056DECE /* Debug */,
-				B70F330C1B0F8CF20056DECE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B70F330D1B0F8CF20056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI iOS Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70F330E1B0F8CF20056DECE /* Debug */,
-				B70F330F1B0F8CF20056DECE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B70F33451B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70F33461B10E91B0056DECE /* Debug */,
-				B70F33471B10E91B0056DECE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B70F33481B10E91B0056DECE /* Build configuration list for PBXNativeTarget "GoSquaredAPI OSX Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B70F33491B10E91B0056DECE /* Debug */,
-				B70F334A1B10E91B0056DECE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = B70F32EB1B0F8CF20056DECE /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      OBJ_1 = {
+         isa = "PBXProject";
+         attributes = {
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = OBJ_2;
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "English";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en",
+         );
+         mainGroup = OBJ_5;
+         productRefGroup = OBJ_29;
+         projectDirPath = ".";
+         targets = (
+            OBJ_32,
+            OBJ_49,
+         );
+      };
+      OBJ_10 = {
+         isa = "PBXFileReference";
+         path = "Auth.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_11 = {
+         isa = "PBXFileReference";
+         path = "Chat.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_12 = {
+         isa = "PBXFileReference";
+         path = "DateFormatter.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_13 = {
+         isa = "PBXFileReference";
+         path = "Ecommerce.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_14 = {
+         isa = "PBXFileReference";
+         path = "GoSquaredAPI.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_15 = {
+         isa = "PBXFileReference";
+         path = "Now.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_16 = {
+         isa = "PBXFileReference";
+         path = "People.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_17 = {
+         isa = "PBXFileReference";
+         path = "Trends.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_18 = {
+         isa = "PBXFileReference";
+         path = "URLComponents.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_19 = {
+         isa = "PBXFileReference";
+         path = "URLRequest.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_2 = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            OBJ_3,
+            OBJ_4,
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
+      };
+      OBJ_20 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_21,
+         );
+         path = "Tests";
+         sourceTree = "<group>";
+      };
+      OBJ_21 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_22,
+            OBJ_23,
+            OBJ_24,
+            OBJ_25,
+            OBJ_26,
+            OBJ_27,
+            OBJ_28,
+         );
+         name = "GoSquaredAPITests";
+         path = "Tests/GoSquaredAPITests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      OBJ_22 = {
+         isa = "PBXFileReference";
+         path = "AccountTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_23 = {
+         isa = "PBXFileReference";
+         path = "AuthTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_24 = {
+         isa = "PBXFileReference";
+         path = "ChatTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_25 = {
+         isa = "PBXFileReference";
+         path = "EcommerceTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_26 = {
+         isa = "PBXFileReference";
+         path = "NowTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_27 = {
+         isa = "PBXFileReference";
+         path = "PeopleTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_28 = {
+         isa = "PBXFileReference";
+         path = "TrendsTests.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_29 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_30,
+            OBJ_31,
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      OBJ_3 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "-DXcode",
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator",
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            SWIFT_VERSION = "3.0";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      OBJ_30 = {
+         isa = "PBXFileReference";
+         path = "GoSquaredAPI.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      OBJ_31 = {
+         isa = "PBXFileReference";
+         path = "GoSquaredAPITests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      OBJ_32 = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = OBJ_33;
+         buildPhases = (
+            OBJ_36,
+            OBJ_48,
+         );
+         dependencies = (
+         );
+         name = "GoSquaredAPI";
+         productName = "GoSquaredAPI";
+         productReference = OBJ_30;
+         productType = "com.apple.product-type.framework";
+      };
+      OBJ_33 = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            OBJ_34,
+            OBJ_35,
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
+      };
+      OBJ_34 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "Packages/CommonCrypto-0.1.4",
+            );
+            INFOPLIST_FILE = "GoSquaredAPI.xcodeproj/GoSquaredAPI_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "GoSquaredAPI";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            TARGET_NAME = "GoSquaredAPI";
+         };
+         name = "Debug";
+      };
+      OBJ_35 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "Packages/CommonCrypto-0.1.4",
+            );
+            INFOPLIST_FILE = "GoSquaredAPI.xcodeproj/GoSquaredAPI_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "GoSquaredAPI";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            TARGET_NAME = "GoSquaredAPI";
+         };
+         name = "Release";
+      };
+      OBJ_36 = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            OBJ_37,
+            OBJ_38,
+            OBJ_39,
+            OBJ_40,
+            OBJ_41,
+            OBJ_42,
+            OBJ_43,
+            OBJ_44,
+            OBJ_45,
+            OBJ_46,
+            OBJ_47,
+         );
+      };
+      OBJ_37 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_9;
+      };
+      OBJ_38 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_10;
+      };
+      OBJ_39 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_11;
+      };
+      OBJ_4 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "-DXcode",
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator",
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
+            SWIFT_OPTIMIZATION_LEVEL = "-O";
+            SWIFT_VERSION = "3.0";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      OBJ_40 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_12;
+      };
+      OBJ_41 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_13;
+      };
+      OBJ_42 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_14;
+      };
+      OBJ_43 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_15;
+      };
+      OBJ_44 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_16;
+      };
+      OBJ_45 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_17;
+      };
+      OBJ_46 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_18;
+      };
+      OBJ_47 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_19;
+      };
+      OBJ_48 = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      OBJ_49 = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = OBJ_50;
+         buildPhases = (
+            OBJ_53,
+            OBJ_61,
+         );
+         dependencies = (
+            OBJ_63,
+         );
+         name = "GoSquaredAPITests";
+         productName = "GoSquaredAPITests";
+         productReference = OBJ_31;
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      OBJ_5 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_6,
+            OBJ_7,
+            OBJ_20,
+            OBJ_29,
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      OBJ_50 = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            OBJ_51,
+            OBJ_52,
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Debug";
+      };
+      OBJ_51 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "Packages/CommonCrypto-0.1.4",
+            );
+            INFOPLIST_FILE = "GoSquaredAPI.xcodeproj/GoSquaredAPITests_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "@loader_path/../Frameworks",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            TARGET_NAME = "GoSquaredAPITests";
+         };
+         name = "Debug";
+      };
+      OBJ_52 = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "Packages/CommonCrypto-0.1.4",
+            );
+            INFOPLIST_FILE = "GoSquaredAPI.xcodeproj/GoSquaredAPITests_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "@loader_path/../Frameworks",
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)",
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+            );
+            TARGET_NAME = "GoSquaredAPITests";
+         };
+         name = "Release";
+      };
+      OBJ_53 = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            OBJ_54,
+            OBJ_55,
+            OBJ_56,
+            OBJ_57,
+            OBJ_58,
+            OBJ_59,
+            OBJ_60,
+         );
+      };
+      OBJ_54 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_22;
+      };
+      OBJ_55 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_23;
+      };
+      OBJ_56 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_24;
+      };
+      OBJ_57 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_25;
+      };
+      OBJ_58 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_26;
+      };
+      OBJ_59 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_27;
+      };
+      OBJ_6 = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      OBJ_60 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_28;
+      };
+      OBJ_61 = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            OBJ_62,
+         );
+      };
+      OBJ_62 = {
+         isa = "PBXBuildFile";
+         fileRef = OBJ_30;
+      };
+      OBJ_63 = {
+         isa = "PBXTargetDependency";
+         target = OBJ_32;
+      };
+      OBJ_7 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_8,
+         );
+         path = "Sources";
+         sourceTree = "<group>";
+      };
+      OBJ_8 = {
+         isa = "PBXGroup";
+         children = (
+            OBJ_9,
+            OBJ_10,
+            OBJ_11,
+            OBJ_12,
+            OBJ_13,
+            OBJ_14,
+            OBJ_15,
+            OBJ_16,
+            OBJ_17,
+            OBJ_18,
+            OBJ_19,
+         );
+         name = "GoSquaredAPI";
+         path = "Sources";
+         sourceTree = "SOURCE_ROOT";
+      };
+      OBJ_9 = {
+         isa = "PBXFileReference";
+         path = "Account.swift";
+         sourceTree = "<group>";
+      };
+   };
+   rootObject = OBJ_1;
 }
