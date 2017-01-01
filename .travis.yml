@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode8
 script:
-  - xcodebuild clean build test -project GoSquaredAPI.xcodeproj -scheme 'GoSquaredAPI OSX'
+  - swift test
