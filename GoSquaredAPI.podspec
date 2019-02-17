@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name    = 'GoSquaredAPI'
-  s.version = '0.7.0'
+  s.version = '0.8.0'
   s.summary = 'Swift library for interacting with the GoSquared API'
   s.author  = { 'Ed Wellbrook' => 'edwellbrook@gmail.com' }
 
